@@ -1,0 +1,29 @@
+.container.contacts {
+    padding: 2em 0;
+    color: #f0f5fa;
+    background-color: var(--bg-color);
+    color: var(--heading-color);
+}
+
+.container.contacts .left {
+    padding: 1em;
+}
+
+.container.contacts .left .heading p {
+    line-height: 30px;
+    letter-spacing: 1.2px;
+}
+
+.container.contacts form label {
+    font-size: 0.775rem;
+    letter-spacing: 1.1px;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: var(--text-primary-color);
+}
+
+.container.contacts form input {
+    margin: 1em 0;
+    border-radius: 0.2em;
+    background-color: var(--text-secondary-color);
+}

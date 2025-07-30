@@ -5,6 +5,7 @@
 
 /* CSS Includes */
 @use './partials/header';
+@use './partials/contacts.scss';
 
 /* Font Inter Include */
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
@@ -42,6 +43,11 @@ body.dark-theme {
     max-width: 60%;
     margin: 0 auto;
     // background-color: var(--bg-color);
+}
+
+main {
+    background-color: var(--bg-color);
+    color: var(--heading-color);
 }
 
 // /* Font Awesome Includes */
