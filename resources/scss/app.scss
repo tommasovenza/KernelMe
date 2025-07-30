@@ -1,10 +1,13 @@
 /* Tailwind CSS Includes */
-// @use "tailwindcss/base";
-// @use "tailwindcss/components";
-// @use "tailwindcss/utilities";
+// @use 'tailwindcss/base';
+// @use 'tailwindcss/components';
+// @use 'tailwindcss/utilities';
 
 /* CSS Includes */
 @use './partials/header';
+
+/* Font Inter Include */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 /* Colors Variables */
 :root {
@@ -33,6 +36,12 @@ body.dark-theme {
     --text-secondary-color: #cbd5e1;
     --heading-color: #cbd5e1;
     --icon-header-color: #ffc800;
+}
+
+.container {
+    max-width: 60%;
+    margin: 0 auto;
+    // background-color: var(--bg-color);
 }
 
 // /* Font Awesome Includes */

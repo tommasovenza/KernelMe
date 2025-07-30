@@ -1,11 +1,12 @@
 .header {
     background-color: var(--bg-color);
-    // color: var(--text-light-color);
     color: var(--heading-color);
+    padding: 2em;
+}
+.header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2em;
 }
 .header .logo {
     display: flex;
@@ -14,16 +15,12 @@
     align-items: center;
 }
 .header .image-logo {
-    max-width: 90px;
+    max-width: 60px;
 }
 .header .navigation ul {
     display: flex;
     align-items: center;
     gap: 20px;
-}
-.header .navigation ul li {
-    font-size: 1.125rem;
-    font-weight: 400;
 }
 .header .navigation ul li:hover {
     color: var(--accent-color);

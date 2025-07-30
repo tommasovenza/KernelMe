@@ -15,28 +15,31 @@
 </head>
 <body>
     <header class="header">
-        <div class="logo">
-            <div class="image-logo">
-                <img src="{{asset('images/logo/logo.svg')}}" alt="logo">
+        <div class="container">
+            <div class="logo">
+                <div class="image-logo">
+                    {{-- <img src="{{asset('images/logo/logo.svg')}}" alt="logo"> --}}
+                    <img src="{{asset('images/logo/tommino.svg')}}" alt="logo">
+                </div>
+                <div class="image-text">
+                    <span class="text-xl">Tommaso Venza</span>
+                </div>
             </div>
-            <div class="image-text">
-                <span class="text-lg">Tommaso Venza</span>
+            <div class="navigation">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Uses</a></li>
+                    <li><a href="{{ route('contacts') }}">Contacts</a></li>
+                    <li>
+                        <a href="#" class="icon">
+                            {{-- icon --}}
+                            {{-- <i class="fa-solid fa-sun"></i> --}}
+                            <i class="fa-solid fa-moon"></i>
+                        </a>
+                    </li>
+                </ul>
             </div>
-        </div>
-        <div class="navigation">
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Uses</a></li>
-                <li><a href="#">Contact</a></li>
-                <li>
-                    <a href="#" class="icon">
-                        {{-- icon --}}
-                        {{-- <i class="fa-solid fa-sun"></i> --}}
-                        <i class="fa-solid fa-moon"></i>
-                    </a>
-                </li>
-            </ul>
         </div>
     </header>
     {{-- Main --}}
