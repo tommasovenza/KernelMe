@@ -1,0 +1,21 @@
+.header {
+    background-color: var(--bglight-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em;
+}
+.header .logo {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+}
+.header .image-logo {
+    max-width: 90px;
+}
+.header .navigation ul {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}

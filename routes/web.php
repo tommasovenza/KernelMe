@@ -8,5 +8,5 @@ Route::get('/welcome', function () {
 
 
 Route::get('/', function () {
-    return view('view-test');
+    return view('layout.app');
 });
