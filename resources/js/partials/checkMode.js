@@ -1,12 +1,15 @@
-let lightMode = true
-console.log(lightMode)
+// Element
 const icon = document.querySelector('.icon')
+// initial mode
+let lightMode = false
+
+if (localStorage.getItem('light-dark-mode') !== null) {
+    lightMode = localStorage.getItem('light-dark-mode')
+}
 
 // set localStorage
-localStorage.setItem('light-dark-mode', 'light')
-
 if (!lightMode) {
-    localStorage.setItem('light-dark-mode', 'dark')
+    localStorage.setItem('light-dark-mode', 'light')
 }
 
 function checkLightDarkMode() {
@@ -28,4 +31,19 @@ function checkLightDarkMode() {
     }
 }
 
+function changeMode(e) {
+    //
+    if (e.target.classList.contains('fa-moon')) {
+        lightMode = false
+        localStorage.setItem('light-dark-mode', 'dark')
+    } else {
+        lightMode = true
+        localStorage.setItem('light-dark-mode', 'light')
+    }
+    checkLightDarkMode()
+}
+
+// event listener
+icon.addEventListener('click', changeMode)
+// init
 checkLightDarkMode()
