@@ -30,7 +30,7 @@
                 <li><a href="#">Uses</a></li>
                 <li><a href="#">Contact</a></li>
                 <li>
-                    <a href="#">
+                    <a href="#" class="icon">
                         {{-- icon --}}
                         {{-- <i class="fa-solid fa-sun"></i> --}}
                         <i class="fa-solid fa-moon"></i>

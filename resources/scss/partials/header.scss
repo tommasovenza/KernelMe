@@ -1,7 +1,7 @@
 .header {
-    background-color: var(--bglight-color);
+    background-color: var(--bg-color);
     // color: var(--text-light-color);
-    color: var(--headingLightColor);
+    color: var(--heading-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -26,9 +26,10 @@
     font-weight: 400;
 }
 .header .navigation ul li:hover {
-    color: var(--accentLightColor);
+    color: var(--accent-color);
 }
 .header .navigation ul li:last-child:hover {
-    color: #005f78; // Moon Color
+    color: var(--icon-header-color);
+    // color: #005f78; // Moon Color
     // color: #ffc800; Sun Color
 }
