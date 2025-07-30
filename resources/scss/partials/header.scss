@@ -1,7 +1,7 @@
 .header {
     background-color: var(--bg-color);
     color: var(--heading-color);
-    padding: 2em;
+    padding: 2em 0;
 }
 .header .container {
     display: flex;
@@ -15,7 +15,7 @@
     align-items: center;
 }
 .header .image-logo {
-    max-width: 60px;
+    max-width: 50px;
 }
 .header .navigation ul {
     display: flex;

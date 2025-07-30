@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 // Home Route
 Route::get('/', function () {
-    return view('layout.app');
+    return view('layout.home');
 });
 
 Route::get('/contacts', function () {

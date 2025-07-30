@@ -5,8 +5,12 @@
     color: var(--heading-color);
 }
 
-.container.contacts .left {
-    padding: 1em;
+// .container.contacts .left {
+//     padding: 1em;
+// }
+
+.container.contacts > div {
+    width: 50%;
 }
 
 .container.contacts .left .heading p {

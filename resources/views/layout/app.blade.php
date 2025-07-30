@@ -22,7 +22,7 @@
                     <img src="{{asset('images/logo/tommino.svg')}}" alt="logo">
                 </div>
                 <div class="image-text">
-                    <span class="text-xl">Tommaso Venza</span>
+                    <span class="text-xl font-semibold tracking-wide">Tommaso Venza</span>
                 </div>
             </div>
             <div class="navigation">

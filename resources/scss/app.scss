@@ -39,15 +39,16 @@ body.dark-theme {
     --icon-header-color: #ffc800;
 }
 
-.container {
-    max-width: 60%;
-    margin: 0 auto;
-    // background-color: var(--bg-color);
-}
-
 main {
     background-color: var(--bg-color);
     color: var(--heading-color);
+}
+
+/* container */
+.container {
+    max-width: 80%;
+    margin: 0 auto;
+    // background-color: var(--bg-color);
 }
 
 // /* Font Awesome Includes */

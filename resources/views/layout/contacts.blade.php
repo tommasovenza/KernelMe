@@ -6,7 +6,7 @@
 
 @section('content')
     <div class="contacts-content pt-10">
-        <div class="container contacts flex">
+        <div class="container contacts flex gap-10">
             <div class="left">
                 <div class="heading">
                     <h1 class="text-3xl font-semibold">Get in touch</h1>
