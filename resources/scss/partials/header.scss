@@ -1,5 +1,7 @@
 .header {
     background-color: var(--bglight-color);
+    // color: var(--text-light-color);
+    color: var(--headingLightColor);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -18,4 +20,15 @@
     display: flex;
     align-items: center;
     gap: 20px;
+}
+.header .navigation ul li {
+    font-size: 1.125rem;
+    font-weight: 400;
+}
+.header .navigation ul li:hover {
+    color: var(--accentLightColor);
+}
+.header .navigation ul li:last-child:hover {
+    color: #005f78; // Moon Color
+    // color: #ffc800; Sun Color
 }

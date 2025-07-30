@@ -2,11 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/welcome', function () {
-    return view('welcome');
-});
-
-
+// Home Route
 Route::get('/', function () {
     return view('layout.app');
 });

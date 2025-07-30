@@ -1,1 +1,4 @@
-import './bootstrap';
+import "./bootstrap";
+
+// JS Includes
+import "./partials/checkMode";
