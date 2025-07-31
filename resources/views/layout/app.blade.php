@@ -46,5 +46,28 @@
     <main>
         @yield('content')
     </main>
+
+    <footer class="footer">
+        <div class="container">
+            {{-- footer info --}}
+            <div class="footer-info-container flex justify-between items-center">
+                <div class="footer-info">
+                    <span class="block font-semibolg text-sm">Tommaso Venza</span>
+                    <span class="block text-sm">&copy; {{ date("Y") }}</span>
+                </div>
+                {{-- Social --}}
+                <div class="social">
+                    <ul class="footer-social-menu">
+                        <li><a href="#"><i class="fa-brands fa-github"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

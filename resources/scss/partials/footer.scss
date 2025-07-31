@@ -1,0 +1,28 @@
+.footer {
+    background-color: var(--bg-color);
+    color: var(--text-secondary-color);
+    height: 100px;
+}
+
+.footer-info-container {
+    position: relative;
+}
+
+.footer-info-container::before {
+    content: '';
+    width: 100%;
+    height: 0.5px;
+    background-color: var(--text-secondary-color);
+    position: absolute;
+    top: -15px;
+}
+
+.footer-social-menu {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-secondary-color);
+}
+.footer-social-menu li {
+    font-size: 1.5rem;
+}
