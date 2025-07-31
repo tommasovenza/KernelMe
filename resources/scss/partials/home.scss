@@ -1,0 +1,18 @@
+span.name {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+}
+span.name::after {
+    content: '';
+    background-color: var(--accent-color);
+    clip-path: polygon(30% 0, 65% 0, 70% 100%, 35% 100%);
+    width: 140px;
+    height: 230px;
+    display: block;
+    transform: rotate(90deg);
+    position: absolute;
+    left: 43px;
+    top: -98px;
+    z-index: -1;
+}
