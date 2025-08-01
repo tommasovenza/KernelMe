@@ -28,7 +28,7 @@ section.projects .container > .projects-container {
     height: 100px;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 550px) {
     .container {
         max-width: 90%;
     }
@@ -37,5 +37,8 @@ section.projects .container > .projects-container {
     }
     span.name::after {
         width: 100px;
+        left: 65px;
+        top: -101px;
+        clip-path: polygon(35% 20%, 70% 20%, 70% 100%, 35% 100%);
     }
 }
