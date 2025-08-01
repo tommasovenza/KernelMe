@@ -43,11 +43,11 @@
         </div>
     </header>
     {{-- Main --}}
-    <main>
+    <main class="pb-10">
         @yield('content')
     </main>
 
-    <footer class="footer">
+    <footer class="footer pt-10">
         <div class="container">
             {{-- footer info --}}
             <div class="footer-info-container flex justify-between items-center">

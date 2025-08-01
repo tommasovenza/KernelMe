@@ -7,4 +7,23 @@
             <p>A Full Stack Web Developer based in the Italy with a passion for Laravel, CSS, Javascript.</p>
         </div>
     </div>
+
+    <section class="projects">
+        <div class="container">
+            <div class="heading-projects p-4">
+                <h2 class="text-center text-2xl text-blue-500 font-semibold">Projects</h2>
+            </div>
+            <div class="projects-container">
+                <div class="project-card">Vue</div>
+                <div class="project-card">React</div>
+                <div class="project-card">Laravel</div>
+                <div class="project-card">Javascript</div>
+                <div class="project-card">CSS</div>
+                <div class="project-card">Tailwind CSS</div>
+                <div class="project-card">Angular</div>
+                <div class="project-card">JQuery</div>
+                <div class="project-card">PHP</div>
+            </div>
+        </div>
+    </section>
 @endsection

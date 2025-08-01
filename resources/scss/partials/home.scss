@@ -16,3 +16,14 @@ span.name::after {
     top: -98px;
     z-index: -1;
 }
+/* projects */
+section.projects .container > .projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2em;
+}
+.project-card {
+    border-radius: 0.2em;
+    background-color: var(--text-secondary-color);
+    height: 100px;
+}
