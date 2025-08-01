@@ -52,7 +52,7 @@
                             {{-- First Name Label --}}
                             <div class="form-control first-name flex flex-col w-full">
                                 <label for="first_name">First Name</label>
-                                <input type="text" name="first_name" id="first_name">
+                                <input type="text" name="first_name" id="first_name" placeholder="Ken">
                                 @error('first_name')
                                     <div class="text-red-500 font-semibold">{{ $message }}</div>
                                 @enderror
@@ -60,7 +60,7 @@
                             {{-- Last Name Label --}}
                             <div class="form-control last-name flex flex-col w-full">
                                 <label for="last_name">Last Name</label>
-                                <input type="text" name="last_name" id="last_name">
+                                <input type="text" name="last_name" id="last_name" placeholder="Master">
                                 @error('last_name')
                                     <div class="text-red-500 font-semibold">{{ $message }}</div>
                                 @enderror
@@ -70,7 +70,7 @@
                         {{-- Last Name Label --}}
                         <div class="form-control email">
                             <label for="email">Email</label>
-                            <input type="email" name="email" id="email">
+                            <input type="email" name="email" id="email" placeholder="kenmaster@email.com">
                             @error('email')
                                 <div class="text-red-500 font-semibold">{{ $message }}</div>
                             @enderror
@@ -79,8 +79,7 @@
                         {{-- Last Name Label --}}
                         <div class="form-control text-area flex flex-col">
                             <label for="message">Message</label>
-                            <textarea name="message" id="message" cols="10" rows="10">
-                            </textarea>
+                            <textarea name="message" id="message" cols="10" rows="10" placeholder="Hello there..."></textarea>
                             @error('message')
                                 <div class="text-red-500 font-semibold">{{ $message }}</div>
                             @enderror
