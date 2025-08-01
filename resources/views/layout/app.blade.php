@@ -43,11 +43,11 @@
         </div>
     </header>
     {{-- Main --}}
-    <main class="pb-10">
+    <main>
         @yield('content')
     </main>
 
-    <footer class="footer pt-10">
+    <footer class="footer pt-2">
         <div class="container">
             {{-- footer info --}}
             <div class="footer-info-container flex justify-between items-center">
@@ -65,7 +65,7 @@
                         <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
                     </ul>
                 </div>
-                
+
             </div>
         </div>
     </footer>

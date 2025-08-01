@@ -8,7 +8,7 @@
         </div>
     </div>
 
-    <section class="projects">
+    <section class="projects pb-10">
         <div class="container">
             <div class="heading-projects p-4">
                 <h2 class="text-center text-2xl text-blue-500 font-semibold">Projects</h2>

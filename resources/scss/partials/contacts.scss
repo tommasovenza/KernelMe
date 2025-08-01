@@ -4,13 +4,16 @@
     background-color: var(--bg-color);
     color: var(--heading-color);
 }
-
-// .container.contacts .left {
-//     padding: 1em;
-// }
-
 .container.contacts > div {
     width: 50%;
+}
+.left .heading {
+    font-size: 1.125rem;
+    padding-bottom: 1em;
+}
+
+.left .social-menu li {
+    margin: 0.5em 0;
 }
 
 .container.contacts .left .heading p {
@@ -26,8 +29,39 @@
     color: var(--text-primary-color);
 }
 
-.container.contacts form input {
+.container.contacts form input,
+.container.contacts form textarea {
+    padding: 0.5em;
+    color: var(--bg-color);
+}
+
+.container.contacts form input,
+.container.contacts form textarea {
     margin: 1em 0;
     border-radius: 0.2em;
     background-color: var(--text-secondary-color);
+}
+
+.form-control.email,
+.form-control.email input,
+.form-control.message,
+.form-control.message textarea {
+    width: 100%;
+}
+
+.form-control textarea {
+    height: 150px;
+}
+
+// Media queries
+@media (max-width: 1024px) {
+    .container.contacts {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .container.contacts .left,
+    .container.contacts .right {
+        width: 100%;
+    }
 }
