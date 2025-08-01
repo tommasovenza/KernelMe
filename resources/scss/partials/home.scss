@@ -27,3 +27,15 @@ section.projects .container > .projects-container {
     background-color: var(--text-secondary-color);
     height: 100px;
 }
+
+@media (max-width: 500px) {
+    .container {
+        max-width: 90%;
+    }
+    span.name {
+        font-size: 24px;
+    }
+    span.name::after {
+        width: 100px;
+    }
+}
