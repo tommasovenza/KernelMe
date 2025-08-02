@@ -11,6 +11,7 @@ Route::get('/', function () {
 
 // Post Controller
 Route::get('/blog', [PostController::class, 'getPostsBlog'])->name('blog');
+Route::get('/posts/{post}', [PostController::class, 'postShow'])->name('posts.show');
 
 
 // Contact Form Controller
