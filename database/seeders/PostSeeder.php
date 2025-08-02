@@ -6,7 +6,6 @@ use Carbon\Carbon;
 use App\Models\Post;
 use Illuminate\Support\Str;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
 
 class PostSeeder extends Seeder
 {
@@ -41,7 +40,8 @@ class PostSeeder extends Seeder
                 "title" => $data[$i]["title"],
                 "subtitle" => $data[$i]["subtitle"],
                 "slug" => Str::slug($data[$i]["title"]),
-                "content" => "lorem ipsum sit dolor amet",
+                "content" => fake()->paragraph(10, true),
+                "excerpt" => fake()->paragraph(3, true),
                 "date" => Carbon::now(),
                 "tags" => $data[$i]["tags"],
                 "read_time" => "{$randomNumber} min"

@@ -12,6 +12,7 @@ class Post extends Model
         'subtitle',
         'slug',
         'content',
+        'excerpt',
         'date',
         'tags',
         'read_time',

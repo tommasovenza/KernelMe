@@ -8,8 +8,13 @@ use Illuminate\Support\Facades\Mail;
 
 class ContactController extends Controller
 {
-    //
-    public function contactForm(Request $request) {
+    // Show Contact Page
+    public function showContactPage() {
+        return view('layout.contacts');
+    }
+    
+    // Submit Contact Form and send Email
+    public function submitContactForm(Request $request) {
 
         // capture data
         $validatedData = $request->validate([
@@ -24,8 +29,9 @@ class ContactController extends Controller
 
             // sending email
             Mail::to('tommasovenza@gmail.com')->send(new ContactMail($validatedData));
-
-            return back()->with('success', 'Thank you for your message!');
+            // 
+            return back()
+                ->with('success', 'Thank you for your message!');
         }
     }
 }

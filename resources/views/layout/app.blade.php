@@ -30,13 +30,11 @@
             <div class="navigation">
                 <ul>
                     <li><a href="/">Home</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Uses</a></li>
+                    <li><a href="{{ route('blog') }}">Blog</a></li>
                     <li><a href="{{ route('contacts') }}">Contacts</a></li>
                     <li>
                         <a href="#" class="icon">
                             {{-- icon --}}
-                            {{-- <i class="fa-solid fa-sun"></i> --}}
                             <i class="fa-solid fa-moon"></i>
                         </a>
                     </li>

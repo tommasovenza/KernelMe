@@ -1,17 +1,18 @@
 <?php
 
-use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\ContactController;
 
 // Home Route
 Route::get('/', function () {
     return view('layout.home');
 });
 
-Route::get('/contacts', function () {
-    return view('layout.contacts');
-})->name('contacts');
+// Post Controller
+Route::get('/blog', [PostController::class, 'getPostsBlog'])->name('blog');
 
 
 // Contact Form Controller
-Route::post('/contact-form', [ContactController::class, 'contactForm'])->name('contact-form');
+Route::get('/contacts', [ContactController::class, 'showContactPage'])->name('contacts');
+Route::post('/contact-form', [ContactController::class, 'submitContactForm'])->name('contact-form');

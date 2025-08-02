@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('subtitle')->nullable();
             $table->string('slug')->nullable();
             $table->longText('content');
+            $table->text('excerpt');
             $table->string('date')->nullable();
             $table->string('tags')->nullable();
             $table->string('read_time')->nullable();
