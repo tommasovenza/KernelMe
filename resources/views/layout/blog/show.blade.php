@@ -10,7 +10,7 @@
  
         <ul class="mt-4 mb-4">
             <li><strong>Post ID:</strong> {{ $post->id }}</li>
-            <li><strong>Post Title:</strong> {{ $post->title }}</li>
+            <li><strong>Post Title:</strong> {!! $post->title !!}</li>
             <li><strong>Post Subtitle:</strong> {{ $post->subtitle }}</li>
             <li><strong>Post Slug:</strong> {{ $post->slug }}</li>
             <li><strong>Post Content:</strong> {{ $post->content }}</li>

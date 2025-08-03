@@ -7,7 +7,7 @@ use App\Http\Controllers\ContactController;
 // Home Route
 Route::get('/', function () {
     return view('layout.home');
-});
+})->name('home');
 
 // Post Controller
 Route::get('/blog', [PostController::class, 'getPostsBlog'])->name('blog');

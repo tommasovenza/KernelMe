@@ -25,9 +25,53 @@ section.projects .container > .projects-container {
 .project-card {
     border-radius: 0.2em;
     background-color: var(--text-secondary-color);
-    height: 100px;
+    color: var(--bg-color);
+    height: 200px;
+    cursor: pointer;
+    // background
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    // position
+    position: relative;
+    transition: 0.4s ease;
+}
+.project-card .project-name {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 40px;
+    width: 100px;
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 0.5em;
+}
+.project-card .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: 0.5s ease;
+    background-color: var(--accent-color);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+.project-card:hover .overlay {
+    color: #fff;
+    opacity: 1;
+}
+
+// Media Queries
 @media (max-width: 550px) {
     .container {
         max-width: 90%;

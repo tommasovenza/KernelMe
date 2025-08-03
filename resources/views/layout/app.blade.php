@@ -19,13 +19,16 @@
     <header class="header">
         <div class="container">
             <div class="logo">
-                <div class="image-logo">
+                <a href="{{ route('home') }}" class="block flex items-center gap-4">
+                    <div class="image-logo">
                     {{-- <img src="{{asset('images/logo/logo.svg')}}" alt="logo"> --}}
-                    <img src="{{asset('images/logo/tommino.svg')}}" alt="logo">
+                    {{-- <img src="{{asset('images/logo/tommino.svg')}}" alt="logo"> --}}
+                    <img src="{{asset('images/head.ico')}}" alt="logo">
                 </div>
                 <div class="image-text">
                     <span class="text-xl font-semibold tracking-wide">Tommaso Venza</span>
                 </div>
+                </a>
             </div>
             <div class="navigation">
                 <ul>
