@@ -16,27 +16,27 @@
                 <div class="social-links">
                     <ul class="social-menu">
                         <li>
-                            <a href="#">
+                            <a href="https://github.com/tommasovenza">
                                 <i class="fa-brands fa-github"></i> Github: @tommasovenza
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="https://www.linkedin.com/in/tommasovenza/">
                                 <i class="fa-brands fa-linkedin-in"></i> Linkedin
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="https://x.com/tomminoDev">
                                 <i class="fa-brands fa-x-twitter"></i> X (formerly Twitter): @tommasovenza
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="https://www.facebook.com/tommibommi">
                                 <i class="fa-brands fa-facebook-f"></i> Facebook
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="https://www.instagram.com/tommasovenza/">
                                 <i class="fa-brands fa-instagram"></i> Instagram
                             </a>
                         </li>

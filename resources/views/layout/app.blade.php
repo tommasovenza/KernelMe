@@ -21,8 +21,6 @@
             <div class="logo">
                 <a href="{{ route('home') }}" class="block flex items-center gap-4">
                     <div class="image-logo">
-                    {{-- <img src="{{asset('images/logo/logo.svg')}}" alt="logo"> --}}
-                    {{-- <img src="{{asset('images/logo/tommino.svg')}}" alt="logo"> --}}
                     <img src="{{asset('images/head.ico')}}" alt="logo">
                 </div>
                 <div class="image-text">
@@ -36,7 +34,7 @@
                     <li><a href="{{ route('blog') }}">Blog</a></li>
                     <li><a href="{{ route('contacts') }}">Contacts</a></li>
                     <li>
-                        <a href="#" class="icon">
+                        <a href="" class="icon">
                             {{-- icon --}}
                             <i class="fa-solid fa-moon"></i>
                         </a>
@@ -61,11 +59,11 @@
                 {{-- Social --}}
                 <div class="social">
                     <ul class="footer-social-menu">
-                        <li><a href="#"><i class="fa-brands fa-github"></i></a></li>
-                        <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
-                        <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="https://github.com/tommasovenza"><i class="fa-brands fa-github"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/tommasovenza/"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                        <li><a href="https://x.com/tomminoDev"><i class="fa-brands fa-x-twitter"></i></a></li>
+                        <li><a href="https://www.facebook.com/tommibommi"><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li><a href="https://www.instagram.com/tommasovenza/"><i class="fa-brands fa-instagram"></i></a></li>
                     </ul>
                 </div>
 

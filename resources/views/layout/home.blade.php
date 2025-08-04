@@ -77,6 +77,15 @@
                         </div>
                     </a>
                 </div>
+
+                <div class="project-card" style="background-image: url('{{ asset('/images/projects/qr-maker.jpg')}}');">
+                    <div class="project-name">JS</div>
+                    <a href="https://qr-maker-gen.netlify.app/">
+                        <div class="overlay">
+                            <div class="text-2xl">QR Maker</div>
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
