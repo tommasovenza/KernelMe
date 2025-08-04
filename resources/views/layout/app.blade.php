@@ -34,7 +34,7 @@
                     <li><a href="{{ route('blog') }}">Blog</a></li>
                     <li><a href="{{ route('contacts') }}">Contacts</a></li>
                     <li>
-                        <a href="" class="icon">
+                        <a href="#" class="icon">
                             {{-- icon --}}
                             <i class="fa-solid fa-moon"></i>
                         </a>
