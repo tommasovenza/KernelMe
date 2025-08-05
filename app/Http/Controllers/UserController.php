@@ -25,7 +25,9 @@ class UserController extends Controller
             // dd($credentials);
             $request->session()->regenerate();
             // return view('layout.blog.create');
-            return redirect()->intended('/blog/create');
+            return redirect()
+                ->intended('/blog/create')
+                ->with('message', 'User Login Successfully');
         }
  
         return back()->withErrors([
@@ -44,7 +46,8 @@ class UserController extends Controller
     
         $request->session()->regenerateToken();
     
-        return redirect('/');
+        return redirect('/')->with('message', 'User Logout Successfully');
+        
     }
 
 }
