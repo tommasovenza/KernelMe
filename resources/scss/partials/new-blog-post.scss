@@ -1,0 +1,39 @@
+.container.new-blog-post {
+    display: grid;
+    place-content: center;
+}
+
+.new-blog-post-form-wrapper {
+    background-color: #fff;
+    width: 600px;
+    padding: 1em;
+}
+.form-new-post .form-control {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0.5em 0;
+}
+
+.new-blog-post-form-wrapper .form-control > label {
+    color: var(--text-color);
+}
+.new-blog-post-form-wrapper .form-control > input,
+.new-blog-post-form-wrapper .form-control > textarea {
+    color: var(--bg-color);
+    background-color: var(--text-secondary-color);
+    width: 100%;
+    padding: 0.5em;
+}
+
+@media (max-width: 700px) {
+    .new-blog-post-form-wrapper {
+        width: 400px;
+    }
+}
+
+@media (max-width: 500px) {
+    .new-blog-post-form-wrapper {
+        width: 100%;
+    }
+}

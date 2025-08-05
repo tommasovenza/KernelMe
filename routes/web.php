@@ -12,9 +12,9 @@ Route::get('/', function () {
 
 // Post Controller
 Route::get('/blog', [PostController::class, 'getPostsBlog'])->name('blog');
-Route::get('/blog/create', [PostController::class, 'postCreate'])->middleware('auth');;
-Route::get('/posts/{post}', [PostController::class, 'postShow'])->name('posts.show');
-
+Route::get('/blog/create', [PostController::class, 'postCreate'])->middleware('auth');
+Route::post('/post/store', [PostController::class, 'postStore'])->name('post.store');
+Route::get('/post/{post}', [PostController::class, 'postShow'])->name('post.show');
 
 // Contact Form Controller
 Route::get('/contacts', [ContactController::class, 'showContactPage'])->name('contacts');
