@@ -15,6 +15,10 @@ class PostController extends Controller
         return view('layout.blog.index', compact('posts'));
     }
 
+    public function postCreate() {
+        return view('layout.blog.create');
+    }
+
     // Post Show
     public function postShow($url) {
         // get post from url

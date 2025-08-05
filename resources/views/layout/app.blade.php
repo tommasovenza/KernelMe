@@ -33,6 +33,15 @@
                     <li><a href="/">Home</a></li>
                     <li><a href="{{ route('blog') }}">Blog</a></li>
                     <li><a href="{{ route('contacts') }}">Contacts</a></li>
+                    {{-- If Auth --}}
+                    @auth
+                    <li>
+                        <form action="{{ route('logout') }}" method="POST">
+                            @csrf
+                            <button type="submit">Logout</button>
+                        </form>
+                    </li>
+                    @endauth
                     <li>
                         <a href="#" class="icon">
                             {{-- icon --}}

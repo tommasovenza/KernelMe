@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-// use Illuminate\Http\RedirectResponse;
+use Illuminate\Http\RedirectResponse;
 
 class UserController extends Controller
 {
@@ -13,9 +13,9 @@ class UserController extends Controller
         return view('layout.login');
     }
 
-    public function authUser(Request $request) {
+    public function authUser(Request $request) : RedirectResponse {
 
-        
+        // getting credentials
         $credentials = $request->validate([
             'email' => 'required|email',
             'password' => 'required',
@@ -24,12 +24,27 @@ class UserController extends Controller
         if (Auth::attempt($credentials)) {
             // dd($credentials);
             $request->session()->regenerate();
-            return view('layout.blog.create');
-            // return redirect()->intended('layout.blog.create');
+            // return view('layout.blog.create');
+            return redirect()->intended('/blog/create');
         }
  
         return back()->withErrors([
             'email' => 'The provided credentials do not match our records.',
         ])->onlyInput('email');
     }
+
+    /**
+    * Log the user out of the application.
+    */
+    public function logout(Request $request): RedirectResponse
+    {
+        Auth::logout();
+    
+        $request->session()->invalidate();
+    
+        $request->session()->regenerateToken();
+    
+        return redirect('/');
+    }
+
 }

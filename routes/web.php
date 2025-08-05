@@ -12,6 +12,7 @@ Route::get('/', function () {
 
 // Post Controller
 Route::get('/blog', [PostController::class, 'getPostsBlog'])->name('blog');
+Route::get('/blog/create', [PostController::class, 'postCreate'])->middleware('auth');;
 Route::get('/posts/{post}', [PostController::class, 'postShow'])->name('posts.show');
 
 
@@ -22,3 +23,4 @@ Route::post('/contact-form', [ContactController::class, 'submitContactForm'])->n
 // User form
 Route::get('/login', [UserController::class, 'showLogin'])->name('show-login');
 Route::post('/auth', [UserController::class, 'authUser'])->name('auth-user');
+Route::post('/logout', [UserController::class, 'logout'])->name('logout')->middleware('auth');
