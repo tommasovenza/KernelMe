@@ -10,6 +10,11 @@ Route::get('/', function () {
     return view('layout.home');
 })->name('home');
 
+// Music Route
+Route::get('/music', function () {
+    return view('layout.music');
+})->name('music');
+
 // Post Controller
 Route::get('/blog', [PostController::class, 'getPostsBlog'])->name('blog');
 Route::get('/blog/create', [PostController::class, 'postCreate'])->middleware('auth');

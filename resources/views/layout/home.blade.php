@@ -1,5 +1,9 @@
 @extends('layout.app')
 
+@section('page_title')
+    Home
+@endsection
+
 @section('content')
     <div class="container pt-10 pb-10">
         <div class="home-heading">
