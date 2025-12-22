@@ -1,0 +1,9 @@
+.last-fm-list-style {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid var(--text-secondary-color);
+    padding: 0.4em;
+    margin: 1em 0;
+    border-radius: 0.2em;
+}

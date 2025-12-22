@@ -21,6 +21,32 @@ async function callBackend() {
 
 function printRecentTracks(data) {
     console.log(data)
+    outputDom.innerHTML = ''
+    const recent = data.recenttracks.track
+
+    const newList = document.createElement('ul')
+    recent.map(item => {
+        const listItem = document.createElement('li')
+        //
+        // console.log(item)
+
+        const currentSize = item.image[0].size
+        const imageUrl = item.image[0]['#text']
+        const currentArtist = item.artist.name
+        const song = item.name
+        const text = document.createElement('p')
+        const image = document.createElement('img')
+        image.src = imageUrl
+        image.alt = song
+        image.style.height = '40px'
+        image.style.width = '40px'
+        text.innerText = `${song} - ${currentArtist} - ${currentSize}`
+        listItem.classList.add('last-fm-list-style')
+        listItem.appendChild(image)
+        listItem.appendChild(text)
+        newList.appendChild(listItem)
+    })
+    outputDom.appendChild(newList)
 }
 
 function printListening(data) {
