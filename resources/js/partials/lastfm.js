@@ -27,7 +27,7 @@ function printRecentTracks(data) {
     recent.map(item => {
         const listItem = document.createElement('li')
         //
-        // console.log(item)
+        console.log(item)
 
         const currentSize = item.image[0].size
         const imageUrl = item.image[0]['#text']
@@ -35,11 +35,17 @@ function printRecentTracks(data) {
         const song = item.name
         const text = document.createElement('p')
         const image = document.createElement('img')
+        const album = item.album['#text']
+        const artist = item.artist['#text']
+
+        // console.log(album)
+        // console.log(artist)
+
         image.src = imageUrl
         image.alt = song
         image.style.height = '40px'
         image.style.width = '40px'
-        text.innerText = `${song} - ${currentArtist} - ${currentSize}`
+        text.innerText = `${song} - ${artist} - ${album}`
         listItem.classList.add('last-fm-list-style')
         listItem.appendChild(image)
         listItem.appendChild(text)
@@ -56,7 +62,7 @@ function printListening(data) {
     cleanData.map(item => {
         const listItem = document.createElement('li')
         //
-        // console.log(item)
+        console.log(item)
 
         const currentSize = item.image[0].size
         const imageUrl = item.image[0]['#text']
@@ -67,13 +73,13 @@ function printListening(data) {
         image.alt = song
         image.style.height = '40px'
         image.style.width = '40px'
-        listItem.innerText = `${song} - ${currentArtist} - ${currentSize}`
+        listItem.innerText = `${song} - ${currentArtist} - ${album}`
         listItem.appendChild(image)
         newList.appendChild(listItem)
     })
     outputDom.appendChild(newList)
 }
 
-if (url.includes('last')) {
+if (url.includes('listens')) {
     lastFmButton.addEventListener('click', callBackend)
 }

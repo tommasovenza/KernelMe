@@ -35,6 +35,7 @@
                     <li><a href="/">Home</a></li>
                     <li><a href="{{ route('blog') }}">Blog</a></li>
                     <li><a href="{{ route('music') }}">Music</a></li>
+                    <li><a href="{{ route('listens') }}">Listens</a></li>
                     <li><a href="{{ route('contacts') }}">Contacts</a></li>
                     {{-- If Auth --}}
                     @auth

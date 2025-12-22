@@ -32,6 +32,6 @@ Route::post('/auth', [UserController::class, 'authUser'])->name('auth-user');
 Route::post('/logout', [UserController::class, 'logout'])->name('logout')->middleware('auth');
 
 // Last Fm API
-Route::get('/last-fm-view', [LastFmController::class, 'showLastFmView']);
+Route::get('/my-listens', [LastFmController::class, 'showLastFmView'])->name('listens');
 Route::get('/last-fm/top-tracks', [LastFmController::class, 'getTopTracks']); // get-top-tracks
 Route::get('/last-fm/recent-tracks', [LastFmController::class, 'recentTracks']); // recent tracks
