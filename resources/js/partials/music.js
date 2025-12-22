@@ -14,7 +14,7 @@ function showMusicCard(e) {
     if (e.target.classList.contains('instrument')) {
         console.log(e.target)
         // show modal
-        modal.style.display = 'block'
+        modal.style.display = 'flex'
         // const musicCard = document.createElement('div')
         // get src and alt attributes
         const src = e.target.src

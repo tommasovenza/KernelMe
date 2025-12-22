@@ -15,7 +15,6 @@ async function callBackend() {
 
     // print data
     // printTopTracks(data)
-
     printRecentTracks(newData)
 }
 
