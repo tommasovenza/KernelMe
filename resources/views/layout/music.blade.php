@@ -31,17 +31,28 @@
             <div class="music-card">
                 <img src="{{ asset('/images/music/telecaster.jpg') }}" alt="telecaster" class="instrument">
             </div>
+
             <div class="music-card">
-                <img src="{{ asset('/images/music/telecaster.jpg') }}" alt="telecaster" class="instrument">
+                <img src="{{ asset('/images/music/guitars.jpg') }}" alt="guitars" class="instrument">
+            </div>
+            <div class="music-card">
+                <img src="{{ asset('/images/music/live-2.jpg') }}" alt="live photo 2" class="instrument">
             </div>
 
             <div class="music-card">
-                <img src="{{ asset('/images/music/les-paul.jpg') }}" alt="Gibson Les Paul" class="instrument">
+                <img src="{{ asset('/images/music/live.jpg') }}" alt="live photo" class="instrument">
             </div>
             
-            
             <div class="music-card">
-                <img src="{{ asset('/images/music/stratocaster.jpg') }}" alt="stratocaster" class="instrument">
+                <img src="{{ asset('/images/music/lonely.png') }}" alt="lonely boy" class="instrument">
+            </div>
+
+            <div class="music-card">
+                <img src="{{ asset('/images/music/tommino.jpg') }}" alt="tommino" class="instrument">
+            </div>
+
+            <div class="music-card">
+                <img src="{{ asset('/images/music/vespa.jpg') }}" alt="vespa" class="instrument">
             </div>
         </div>
     </div>
