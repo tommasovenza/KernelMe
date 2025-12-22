@@ -2,8 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
-use App\Http\Controllers\ContactController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\LastFmController;
+use App\Http\Controllers\ContactController;
 
 // Home Route
 Route::get('/', function () {
@@ -29,3 +30,8 @@ Route::post('/contact-form', [ContactController::class, 'submitContactForm'])->n
 Route::get('/login', [UserController::class, 'showLogin'])->name('show-login');
 Route::post('/auth', [UserController::class, 'authUser'])->name('auth-user');
 Route::post('/logout', [UserController::class, 'logout'])->name('logout')->middleware('auth');
+
+// Last Fm API
+
+Route::get('/test', [LastFmController::class, 'test']);
+Route::get('/last-fm-test', [LastFmController::class, 'showLastFmView']);
