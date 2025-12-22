@@ -35,4 +35,15 @@ return [
         ],
     ],
 
+    /*
+    |--------------------------------------------------------------------------
+    | Last FM Keys and Shared Secret
+    |--------------------------------------------------------------------------
+    |
+    | These configuration fetches from file env Last FM Key
+    |
+    */
+
+    'last_fm_key' => env('LAST_FM_KEY'),
+    'last_fm_shared_secret' => env('LAST_FM_SHARED_SECRET')
 ];

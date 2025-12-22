@@ -3,25 +3,58 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Http\JsonResponse;
+use Illuminate\Support\Facades\Http;
+
+use function Pest\Laravel\json;
 
 class LastFmController extends Controller
 {
-    //
-
-    public function test()
+    // Get Top Tracks call Last FM API
+    public function getTopTracks(): JsonResponse
     {
-
-        $key = "5ee5b01c22b96cd927911599fafdbd5d";
-        $sharedSecret = "e851a111af000982bf6ca947c09183f6";
-        $endpoint = "http://www.last.fm/api/auth/?api_key={$key}";
         $user = "tommibommi";
         $baseEndpoint = "https://ws.audioscrobbler.com/2.0/";
+        $lastFmKey = config('services.last_fm_key');
 
-        // https://ws.audioscrobbler.com/2.0/?method=user.getTopTracks&user=aidan-&limit=3&api_key=YOUR_API_KEY&format=json
+        // Call API through, PHP HTTP client => Guzzle
+        $response = Http::get($baseEndpoint, [
+            'method' => 'user.gettoptracks',
+            'user' => $user,
+            'limit' => 10,
+            'api_key' => $lastFmKey,
+            'format' => 'json',
+            'period' => '1month'
+        ])->throw();
 
-        $string = "{$baseEndpoint}?method=user.getTopTracks&user={$user}&limit=3&api_key={$key}&format=json";
+        // get JSON
+        $json = $response->json();
 
-        dd($string);
+        // return json to
+        return response()->json($json, 200);
+    }
+
+    public function recentTracks(): JsonResponse
+    {
+        $user = "tommibommi";
+        $baseEndpoint = "https://ws.audioscrobbler.com/2.0/";
+        $lastFmKey = config('services.last_fm_key');
+
+        // Call API through, PHP HTTP client => Guzzle
+        $response = Http::get($baseEndpoint, [
+            'method' => 'user.getrecenttracks',
+            'user' => $user,
+            'limit' => 10,
+            'api_key' => $lastFmKey,
+            'format' => 'json',
+            'period' => '1month'
+        ])->throw();
+
+        // get JSON
+        $json = $response->json();
+
+        // return json to
+        return response()->json($json, 200);
     }
 
     public function showLastFmView()
