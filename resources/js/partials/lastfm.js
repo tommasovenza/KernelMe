@@ -1,21 +1,35 @@
 const url = window.location.href
-const lastFmButton = document.querySelector('#last-fm')
+const recentTracksBtn = document.querySelector('#recent-tracks')
+const last7DaysBtn = document.querySelector('#last-7-days')
+const last30DaysBtn = document.querySelector('#last-30-days')
 const outputDom = document.querySelector('#showTracks')
 
 // functions
-async function callBackend() {
+async function callBackend(endpoint) {
     console.log('called last fm!')
 
+    const cleanEndpoint = endpoint.trim()
+    console.log(cleanEndpoint)
+
     // fetch endpoint
-    const response = await fetch('/last-fm/top-tracks')
-    // await for data
-    const data = await response.json()
-    const secondResponse = await fetch('/last-fm/recent-tracks')
-    const newData = await secondResponse.json()
+    if (cleanEndpoint.includes('recent')) {
+        const response = await fetch(cleanEndpoint)
+        const data = await response.json()
+        printRecentTracks(data)
+    } else if (cleanEndpoint.includes('7')) {
+        console.log('seven')
+    } else {
+        console.log('thirty')
+    }
+
+    // OLD
+    // const response = await fetch('/last-fm/top-tracks')
+    // // await for data
+    // const secondResponse = await fetch()
+    // const newData = await secondResponse.json()
 
     // print data
     // printTopTracks(data)
-    printRecentTracks(newData)
 }
 
 function printRecentTracks(data) {
@@ -30,7 +44,7 @@ function printRecentTracks(data) {
     recent.map(item => {
         const listItem = document.createElement('li')
         // log
-        console.log(item)
+        // console.log(item)
 
         const currentSize = item.image[3].size // delete
         const imageUrl = item.image[3]['#text']
@@ -45,19 +59,11 @@ function printRecentTracks(data) {
         <div class="artist-name">Artist: ${artist}</div>
         <div class="album-name">Album: ${album}</div>
         `
-        // console.log(imageUrl)
-        // console.log(song)
-        // console.log(text)
-        // console.log(image)
-        // console.log(album)
-        // console.log(artist)
-
         image.src = imageUrl
         image.alt = song
         image.style.height = '80px'
         image.style.width = '80px'
         textContainer.classList.add('text-container')
-        // textContainer.innerText = `${song} - ${artist} - ${album}`
         listItem.classList.add('last-fm-list-style')
         listItem.appendChild(image)
         listItem.appendChild(textContainer)
@@ -93,5 +99,10 @@ function printListening(data) {
 }
 
 if (url.includes('listens')) {
-    lastFmButton.addEventListener('click', callBackend)
+    // listeners
+    recentTracksBtn.addEventListener('click', () => {
+        callBackend('/last-fm/recent-tracks')
+    })
+    last7DaysBtn.addEventListener('click', () => callBackend('last-7-days'))
+    last30DaysBtn.addEventListener('click', () => callBackend('last-30-days'))
 }

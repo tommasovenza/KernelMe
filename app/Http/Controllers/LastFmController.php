@@ -44,10 +44,10 @@ class LastFmController extends Controller
         $response = Http::get($baseEndpoint, [
             'method' => 'user.getrecenttracks',
             'user' => $user,
-            'limit' => 10,
+            'limit' => 100,
             'api_key' => $lastFmKey,
             'format' => 'json',
-            'period' => '1month'
+            // 'period' => '1month'
         ])->throw();
 
         // get JSON
