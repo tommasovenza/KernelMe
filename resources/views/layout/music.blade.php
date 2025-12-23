@@ -25,34 +25,27 @@
             </div>
 
             <div class="music-card">
-                <img src="{{ asset('/images/music/stratocaster.jpg') }}" alt="stratocaster" class="instrument">
+                <img src="{{ asset('/images/music/stratocaster.jpg') }}" alt="Stratocaster" class="instrument">
             </div>
 
             <div class="music-card">
-                <img src="{{ asset('/images/music/telecaster.jpg') }}" alt="telecaster" class="instrument">
+                <img src="{{ asset('/images/music/guitars.jpg') }}" alt="Telecaster & Stratocaster" class="instrument">
             </div>
 
             <div class="music-card">
-                <img src="{{ asset('/images/music/guitars.jpg') }}" alt="guitars" class="instrument">
-            </div>
-            <div class="music-card">
-                <img src="{{ asset('/images/music/live-2.jpg') }}" alt="live photo 2" class="instrument">
+                <img src="{{ asset('/images/music/live.webp') }}" alt="Music Live" class="instrument">
             </div>
 
             <div class="music-card">
-                <img src="{{ asset('/images/music/live.jpg') }}" alt="live photo" class="instrument">
-            </div>
-            
-            <div class="music-card">
-                <img src="{{ asset('/images/music/lonely.png') }}" alt="lonely boy" class="instrument">
+                <img src="{{ asset('/images/music/malmantile.webp') }}" alt="Vespa @ Malmantile" class="instrument">
             </div>
 
             <div class="music-card">
-                <img src="{{ asset('/images/music/tommino.jpg') }}" alt="tommino" class="instrument">
+                <img src="{{ asset('/images/music/rockin.webp') }}" alt="Rockin Live" class="instrument">
             </div>
 
             <div class="music-card">
-                <img src="{{ asset('/images/music/vespa.jpg') }}" alt="vespa" class="instrument">
+                <img src="{{ asset('/images/music/sala.webp') }}" alt="Into The Studio" class="instrument">
             </div>
         </div>
     </div>
