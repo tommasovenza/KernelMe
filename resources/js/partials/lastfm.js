@@ -20,35 +20,47 @@ async function callBackend() {
 
 function printRecentTracks(data) {
     console.log(data)
+    // clean html
     outputDom.innerHTML = ''
+    // get recent tracks
     const recent = data.recenttracks.track
-
+    // create a new ul
     const newList = document.createElement('ul')
+    // loop
     recent.map(item => {
         const listItem = document.createElement('li')
-        //
+        // log
         console.log(item)
 
-        const currentSize = item.image[0].size
-        const imageUrl = item.image[0]['#text']
-        const currentArtist = item.artist.name
+        const currentSize = item.image[3].size // delete
+        const imageUrl = item.image[3]['#text']
         const song = item.name
-        const text = document.createElement('p')
+        const textContainer = document.createElement('div')
         const image = document.createElement('img')
         const album = item.album['#text']
         const artist = item.artist['#text']
 
+        textContainer.innerHTML = `
+        <div class="song-name">Song: <strong>${song}</strong></div>
+        <div class="artist-name">Artist: ${artist}</div>
+        <div class="album-name">Album: ${album}</div>
+        `
+        // console.log(imageUrl)
+        // console.log(song)
+        // console.log(text)
+        // console.log(image)
         // console.log(album)
         // console.log(artist)
 
         image.src = imageUrl
         image.alt = song
-        image.style.height = '40px'
-        image.style.width = '40px'
-        text.innerText = `${song} - ${artist} - ${album}`
+        image.style.height = '80px'
+        image.style.width = '80px'
+        textContainer.classList.add('text-container')
+        // textContainer.innerText = `${song} - ${artist} - ${album}`
         listItem.classList.add('last-fm-list-style')
         listItem.appendChild(image)
-        listItem.appendChild(text)
+        listItem.appendChild(textContainer)
         newList.appendChild(listItem)
     })
     outputDom.appendChild(newList)
