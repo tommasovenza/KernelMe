@@ -22,7 +22,8 @@ class LastFmController extends Controller
         $response = Http::get($this->baseEndpoint, [
             'method' => 'user.getrecenttracks',
             'user' => $this->user,
-            'limit' => 100,
+            'limit' => 10,
+            // 'limit' => 100,
             'api_key' => $lastFmKey,
             'format' => 'json',
             // 'period' => '1month'

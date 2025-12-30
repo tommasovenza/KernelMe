@@ -2,6 +2,8 @@ const url = window.location.href
 const recentTracksBtn = document.querySelector('#recent-tracks')
 const last7DaysBtn = document.querySelector('#last-7-days')
 const last30DaysBtn = document.querySelector('#last-30-days')
+const topArtistBtn = document.querySelector('#top-artist')
+const topAlbumBtn = document.querySelector('#top-album')
 const outputDom = document.querySelector('#showTracks')
 
 // functions
@@ -18,18 +20,13 @@ async function callBackend(endpoint) {
         printRecentTracks(data)
     } else if (cleanEndpoint.includes('7')) {
         console.log('seven')
-    } else {
+    } else if (cleanEndpoint.includes('30')) {
         console.log('thirty')
+    } else if (cleanEndpoint.includes('artist')) {
+        console.log('artist endpoint')
+    } else {
+        console.log('called album endpoint')
     }
-
-    // OLD
-    // const response = await fetch('/last-fm/top-tracks')
-    // // await for data
-    // const secondResponse = await fetch()
-    // const newData = await secondResponse.json()
-
-    // print data
-    // printTopTracks(data)
 }
 
 function printRecentTracks(data) {
@@ -72,37 +69,47 @@ function printRecentTracks(data) {
     outputDom.appendChild(newList)
 }
 
-function printListening(data) {
-    const cleanData = data.toptracks.track
-    console.log(cleanData)
+// function printListening(data) {
+//     const cleanData = data.toptracks.track
+//     console.log(cleanData)
 
-    const newList = document.createElement('ul')
-    cleanData.map(item => {
-        const listItem = document.createElement('li')
-        //
-        console.log(item)
+//     const newList = document.createElement('ul')
+//     cleanData.map(item => {
+//         const listItem = document.createElement('li')
+//         //
+//         console.log(item)
 
-        const currentSize = item.image[0].size
-        const imageUrl = item.image[0]['#text']
-        const currentArtist = item.artist.name
-        const song = item.name
-        const image = document.createElement('img')
-        image.src = imageUrl
-        image.alt = song
-        image.style.height = '40px'
-        image.style.width = '40px'
-        listItem.innerText = `${song} - ${currentArtist} - ${album}`
-        listItem.appendChild(image)
-        newList.appendChild(listItem)
-    })
-    outputDom.appendChild(newList)
-}
+//         const currentSize = item.image[0].size
+//         const imageUrl = item.image[0]['#text']
+//         const currentArtist = item.artist.name
+//         const song = item.name
+//         const image = document.createElement('img')
+//         image.src = imageUrl
+//         image.alt = song
+//         image.style.height = '40px'
+//         image.style.width = '40px'
+//         listItem.innerText = `${song} - ${currentArtist} - ${album}`
+//         listItem.appendChild(image)
+//         newList.appendChild(listItem)
+//     })
+//     outputDom.appendChild(newList)
+// }
 
-if (url.includes('listens')) {
+function init() {
     // listeners
     recentTracksBtn.addEventListener('click', () => {
         callBackend('/last-fm/recent-tracks')
     })
     last7DaysBtn.addEventListener('click', () => callBackend('last-7-days'))
     last30DaysBtn.addEventListener('click', () => callBackend('last-30-days'))
+    topArtistBtn.addEventListener('click', () => callBackend('top-artist'))
+    topAlbumBtn.addEventListener('click', () => callBackend('top-album'))
+
+    // set timeout
+    setTimeout(() => callBackend('/last-fm/recent-tracks'), 100)
+}
+
+// init page
+if (url.includes('listens')) {
+    init()
 }
