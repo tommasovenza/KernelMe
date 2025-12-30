@@ -14,15 +14,15 @@ async function callBackend(endpoint) {
     console.log(cleanEndpoint)
 
     // don't need an if else here!
-
     const response = await fetch(cleanEndpoint)
     const data = await response.json()
 
+    // console.log(data)
+
+    printData(data)
+
     // fetch endpoint
     // if (cleanEndpoint.includes('recent')) {
-    //     const response = await fetch(cleanEndpoint)
-    //     const data = await response.json()
-    //     printRecentTracks(data)
     // } else if (cleanEndpoint.includes('7')) {
     //     console.log('seven')
     // } else if (cleanEndpoint.includes('30')) {
@@ -34,20 +34,48 @@ async function callBackend(endpoint) {
     // }
 }
 
-function printRecentTracks(data) {
-    console.log(data)
+function printData(data) {
     // clean html
     outputDom.innerHTML = ''
+
+    try {
+        const key = Object.keys(data)[0]
+
+        // IMPORTANT => is better to read key and then print data
+        // if key === 'recenttracks' do this
+        // if key === 'topartists' do that
+
+        console.log(key)
+
+        // const recentTracks = data[key].track
+
+        // console.log(recentTracks)
+
+        // if (recentTracks === undefined) {
+        //     console.log('recent not found')
+
+        //     const topArtist = data[key].artist
+        //     console.log(topArtist)
+        //     return
+        // } else {
+        //     printRecentTracks(recentTracks)
+        // }
+    } catch (error) {
+        console.log(error)
+    }
+
     // get recent tracks
-    const recent = data.recenttracks.track
+    // const recent = data.recenttracks.track
+}
+
+function printRecentTracks(recentTracks) {
     // create a new ul
     const newList = document.createElement('ul')
     // loop
-    recent.map(item => {
+    recentTracks.map(item => {
         const listItem = document.createElement('li')
         // log
         // console.log(item)
-
         const currentSize = item.image[3].size // delete
         const imageUrl = item.image[3]['#text']
         const song = item.name
@@ -55,7 +83,6 @@ function printRecentTracks(data) {
         const image = document.createElement('img')
         const album = item.album['#text']
         const artist = item.artist['#text']
-
         textContainer.innerHTML = `
         <div class="song-name">Song: <strong>${song}</strong></div>
         <div class="artist-name">Artist: ${artist}</div>

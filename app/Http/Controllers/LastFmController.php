@@ -17,7 +17,7 @@ class LastFmController extends Controller
     public function recentTracks(): JsonResponse
     {
         // get Last Fm Key from .env file through config services
-        $lastFmKey = config('services.last_fm_key');
+        $lastFmKey = $this->getLastFMKey();
 
         // Call API through, PHP HTTP client => Guzzle
         $response = Http::get($this->baseEndpoint, [
@@ -49,12 +49,36 @@ class LastFmController extends Controller
 
     public function topArtist(): JsonResponse
     {
-        dd('top artist');
+        // get Last Fm Key from .env file through config services
+        $lastFmKey = $this->getLastFMKey();
+
+        // Call API through, PHP HTTP client => Guzzle
+        $response = Http::get($this->baseEndpoint, [
+            'method' => 'user.gettopartists',
+            'user' => $this->user,
+            'limit' => 10,
+            'api_key' => $lastFmKey,
+            'format' => 'json',
+            // 'period' => '1month'
+        ])->throw();
+
+        // get JSON
+        $json = $response->json();
+
+        // return json to
+        return response()->json($json, 200);
     }
 
     public function topAlbum(): JsonResponse
     {
         dd('top album');
+    }
+
+    public function getLastFMKey(): string
+    {
+        // get Last Fm Key from .env file through config services
+        $lastFmKey = config('services.last_fm_key');
+        return $lastFmKey;
     }
 
     // return show view
