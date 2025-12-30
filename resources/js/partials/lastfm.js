@@ -13,20 +13,25 @@ async function callBackend(endpoint) {
     const cleanEndpoint = endpoint.trim()
     console.log(cleanEndpoint)
 
+    // don't need an if else here!
+
+    const response = await fetch(cleanEndpoint)
+    const data = await response.json()
+
     // fetch endpoint
-    if (cleanEndpoint.includes('recent')) {
-        const response = await fetch(cleanEndpoint)
-        const data = await response.json()
-        printRecentTracks(data)
-    } else if (cleanEndpoint.includes('7')) {
-        console.log('seven')
-    } else if (cleanEndpoint.includes('30')) {
-        console.log('thirty')
-    } else if (cleanEndpoint.includes('artist')) {
-        console.log('artist endpoint')
-    } else {
-        console.log('called album endpoint')
-    }
+    // if (cleanEndpoint.includes('recent')) {
+    //     const response = await fetch(cleanEndpoint)
+    //     const data = await response.json()
+    //     printRecentTracks(data)
+    // } else if (cleanEndpoint.includes('7')) {
+    //     console.log('seven')
+    // } else if (cleanEndpoint.includes('30')) {
+    //     console.log('thirty')
+    // } else if (cleanEndpoint.includes('artist')) {
+    //     console.log('artist endpoint')
+    // } else {
+    //     console.log('called album endpoint')
+    // }
 }
 
 function printRecentTracks(data) {
@@ -100,10 +105,10 @@ function init() {
     recentTracksBtn.addEventListener('click', () => {
         callBackend('/last-fm/recent-tracks')
     })
-    last7DaysBtn.addEventListener('click', () => callBackend('last-7-days'))
-    last30DaysBtn.addEventListener('click', () => callBackend('last-30-days'))
-    topArtistBtn.addEventListener('click', () => callBackend('top-artist'))
-    topAlbumBtn.addEventListener('click', () => callBackend('top-album'))
+    last7DaysBtn.addEventListener('click', () => callBackend('/last-7-days'))
+    last30DaysBtn.addEventListener('click', () => callBackend('/last-30-days'))
+    topArtistBtn.addEventListener('click', () => callBackend('/top-artist'))
+    topAlbumBtn.addEventListener('click', () => callBackend('/top-album'))
 
     // set timeout
     setTimeout(() => callBackend('/last-fm/recent-tracks'), 100)

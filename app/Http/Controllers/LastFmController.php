@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\View\View;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\Http;
 
@@ -36,7 +37,28 @@ class LastFmController extends Controller
         return response()->json($json, 200);
     }
 
-    public function showLastFmView()
+    public function last7Days(): JsonResponse
+    {
+        dd('7 days');
+    }
+
+    public function last30Days(): JsonResponse
+    {
+        dd('30 days');
+    }
+
+    public function topArtist(): JsonResponse
+    {
+        dd('top artist');
+    }
+
+    public function topAlbum(): JsonResponse
+    {
+        dd('top album');
+    }
+
+    // return show view
+    public function showLastFmView(): View
     {
         return view('layout.lastfm.lastfm');
     }
