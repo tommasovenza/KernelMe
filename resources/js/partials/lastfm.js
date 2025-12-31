@@ -12,11 +12,16 @@ async function callBackend(endpoint) {
     const cleanEndpoint = endpoint.trim()
     // show animation
     showSpinner()
-    // get response
-    const response = await fetch(cleanEndpoint)
-    const data = await response.json()
-    // Process Data
-    processData(data)
+    try {
+        // get response
+        const response = await fetch(cleanEndpoint)
+        const data = await response.json()
+        // Process Data
+        processData(data)
+    } catch (error) {
+        console.log(error)
+        outputDom.innerText = `${error}`
+    }
     // remove Animation
     removeSpinner()
 }
@@ -25,27 +30,21 @@ function processData(data) {
     // clean html
     outputDom.innerHTML = ''
 
-    // Try
-    try {
-        // key // pull out keys from data
-        const key = Object.keys(data)[0]
-        // if else
-        if (key === 'recenttracks') {
-            const recentTracks = data[key].track
-            // print
-            printRecentTracks(recentTracks)
-        } else if (key === 'topartists') {
-            const topArtists = data[key].artist
-            // print
-            printTopArtistsOrAlbum(topArtists)
-        } else if (key === 'topalbums') {
-            // print
-            const topAlbums = data[key].album
-            printTopArtistsOrAlbum(topAlbums)
-        }
-    } catch (error) {
-        console.log(error)
-        outputDom.innerText = `${error}`
+    // key // pull out keys from data
+    const key = Object.keys(data)[0]
+    // if else
+    if (key === 'recenttracks') {
+        const recentTracks = data[key].track
+        // print
+        printRecentTracks(recentTracks)
+    } else if (key === 'topartists') {
+        const topArtists = data[key].artist
+        // print
+        printTopArtistsOrAlbum(topArtists)
+    } else if (key === 'topalbums') {
+        // print
+        const topAlbums = data[key].album
+        printTopArtistsOrAlbum(topAlbums)
     }
 }
 
