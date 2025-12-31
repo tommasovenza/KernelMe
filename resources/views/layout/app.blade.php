@@ -60,8 +60,12 @@
     <main>
         @yield('content')
     </main>
-
+    
+    {{-- Banner Component --}}
     <x-banner />
+
+    {{-- added a spinner --}}
+    <div class="spinner"></div>
 
     <footer class="footer pt-2">
         <div class="container">

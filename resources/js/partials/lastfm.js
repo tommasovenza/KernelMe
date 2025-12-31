@@ -10,11 +10,15 @@ const outputDom = document.querySelector('#showTracks')
 async function callBackend(endpoint) {
     // trim
     const cleanEndpoint = endpoint.trim()
+    // show animation
+    showSpinner()
     // get response
     const response = await fetch(cleanEndpoint)
     const data = await response.json()
     // Process Data
     processData(data)
+    // remove Animation
+    removeSpinner()
 }
 
 function processData(data) {
@@ -107,6 +111,14 @@ function printRecentTracks(recentTracks) {
         newList.appendChild(listItem)
     })
     outputDom.appendChild(newList)
+}
+
+function showSpinner() {
+    document.querySelector('.spinner').classList.add('show')
+}
+
+function removeSpinner() {
+    document.querySelector('.spinner').classList.remove('show')
 }
 
 function init() {
