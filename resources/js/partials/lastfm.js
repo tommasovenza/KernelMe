@@ -25,22 +25,58 @@ function processData(data) {
     try {
         // key // pull out keys from data
         const key = Object.keys(data)[0]
-        console.log(key)
-
         // if else
         if (key === 'recenttracks') {
             const recentTracks = data[key].track
-            console.log(recentTracks)
+            // print
             printRecentTracks(recentTracks)
         } else if (key === 'topartists') {
-            const topArtist = data[key].artist
-            console.log(topArtist)
+            const topArtists = data[key].artist
+            // print
+            printTopArtistsOrAlbum(topArtists)
         } else if (key === 'topalbums') {
-            console.log(data[key].album)
+            // print
+            const topAlbums = data[key].album
+            printTopArtistsOrAlbum(topAlbums)
         }
     } catch (error) {
         console.log(error)
     }
+}
+
+function printTopArtistsOrAlbum(data) {
+    // create a new ul
+    const newList = document.createElement('ul')
+    // loop
+    data.map(item => {
+        const listItem = document.createElement('li')
+        // log
+        // console.log(item)
+        const imageUrl = item.image[3]['#text']
+        const artistName = item.name
+        const playcount = item.playcount
+        const url = item.url
+        console.log(artistName)
+        console.log(url)
+        console.log(playcount)
+
+        const textContainer = document.createElement('div')
+        const image = document.createElement('img')
+        textContainer.innerHTML = `
+        <div class="playcount">PlayCount: <strong>${playcount}</strong></div>
+        <div class="artist-name"> <a href="${url}">Name: ${artistName}</a></div>
+        `
+        image.src = imageUrl
+        image.alt = artistName
+        image.style.height = '160px'
+        image.style.width = '160px'
+        textContainer.classList.add('text-container')
+        listItem.classList.add('last-fm-list-style')
+        listItem.appendChild(image)
+        listItem.appendChild(textContainer)
+        newList.appendChild(listItem)
+    })
+    outputDom.appendChild(newList)
 }
 
 function printRecentTracks(recentTracks) {
@@ -49,9 +85,6 @@ function printRecentTracks(recentTracks) {
     // loop
     recentTracks.map(item => {
         const listItem = document.createElement('li')
-        // log
-        // console.log(item)
-        const currentSize = item.image[3].size // delete
         const imageUrl = item.image[3]['#text']
         const song = item.name
         const textContainer = document.createElement('div')
@@ -75,32 +108,6 @@ function printRecentTracks(recentTracks) {
     })
     outputDom.appendChild(newList)
 }
-
-// function printListening(data) {
-//     const cleanData = data.toptracks.track
-//     console.log(cleanData)
-
-//     const newList = document.createElement('ul')
-//     cleanData.map(item => {
-//         const listItem = document.createElement('li')
-//         //
-//         console.log(item)
-
-//         const currentSize = item.image[0].size
-//         const imageUrl = item.image[0]['#text']
-//         const currentArtist = item.artist.name
-//         const song = item.name
-//         const image = document.createElement('img')
-//         image.src = imageUrl
-//         image.alt = song
-//         image.style.height = '40px'
-//         image.style.width = '40px'
-//         listItem.innerText = `${song} - ${currentArtist} - ${album}`
-//         listItem.appendChild(image)
-//         newList.appendChild(listItem)
-//     })
-//     outputDom.appendChild(newList)
-// }
 
 function init() {
     // listeners
