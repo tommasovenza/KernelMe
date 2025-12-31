@@ -45,6 +45,7 @@ function processData(data) {
         }
     } catch (error) {
         console.log(error)
+        outputDom.innerText = `${error}`
     }
 }
 
@@ -52,7 +53,7 @@ function printTopArtistsOrAlbum(data) {
     // create a new ul
     const newList = document.createElement('ul')
     // loop
-    data.map(item => {
+    for (const [index, item] of data.entries()) {
         const listItem = document.createElement('li')
         // log
         // console.log(item)
@@ -67,6 +68,7 @@ function printTopArtistsOrAlbum(data) {
         const textContainer = document.createElement('div')
         const image = document.createElement('img')
         textContainer.innerHTML = `
+        <div class="counter">N° <strong>${index + 1}</strong></div>
         <div class="playcount">PlayCount: <strong>${playcount}</strong></div>
         <div class="artist-name"> <a href="${url}">Name: ${artistName}</a></div>
         `
@@ -79,7 +81,7 @@ function printTopArtistsOrAlbum(data) {
         listItem.appendChild(image)
         listItem.appendChild(textContainer)
         newList.appendChild(listItem)
-    })
+    }
     outputDom.appendChild(newList)
 }
 
@@ -87,7 +89,7 @@ function printRecentTracks(recentTracks) {
     // create a new ul
     const newList = document.createElement('ul')
     // loop
-    recentTracks.map(item => {
+    for (const item of recentTracks) {
         const listItem = document.createElement('li')
         const imageUrl = item.image[3]['#text']
         const song = item.name
@@ -109,7 +111,7 @@ function printRecentTracks(recentTracks) {
         listItem.appendChild(image)
         listItem.appendChild(textContainer)
         newList.appendChild(listItem)
-    })
+    }
     outputDom.appendChild(newList)
 }
 
