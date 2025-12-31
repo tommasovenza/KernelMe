@@ -8,64 +8,39 @@ const outputDom = document.querySelector('#showTracks')
 
 // functions
 async function callBackend(endpoint) {
-    console.log('called last fm!')
-
+    // trim
     const cleanEndpoint = endpoint.trim()
-    console.log(cleanEndpoint)
-
-    // don't need an if else here!
+    // get response
     const response = await fetch(cleanEndpoint)
     const data = await response.json()
-
-    // console.log(data)
-
-    printData(data)
-
-    // fetch endpoint
-    // if (cleanEndpoint.includes('recent')) {
-    // } else if (cleanEndpoint.includes('7')) {
-    //     console.log('seven')
-    // } else if (cleanEndpoint.includes('30')) {
-    //     console.log('thirty')
-    // } else if (cleanEndpoint.includes('artist')) {
-    //     console.log('artist endpoint')
-    // } else {
-    //     console.log('called album endpoint')
-    // }
+    // Process Data
+    processData(data)
 }
 
-function printData(data) {
+function processData(data) {
     // clean html
     outputDom.innerHTML = ''
 
+    // Try
     try {
+        // key // pull out keys from data
         const key = Object.keys(data)[0]
-
-        // IMPORTANT => is better to read key and then print data
-        // if key === 'recenttracks' do this
-        // if key === 'topartists' do that
-
         console.log(key)
 
-        // const recentTracks = data[key].track
-
-        // console.log(recentTracks)
-
-        // if (recentTracks === undefined) {
-        //     console.log('recent not found')
-
-        //     const topArtist = data[key].artist
-        //     console.log(topArtist)
-        //     return
-        // } else {
-        //     printRecentTracks(recentTracks)
-        // }
+        // if else
+        if (key === 'recenttracks') {
+            const recentTracks = data[key].track
+            console.log(recentTracks)
+            printRecentTracks(recentTracks)
+        } else if (key === 'topartists') {
+            const topArtist = data[key].artist
+            console.log(topArtist)
+        } else if (key === 'topalbums') {
+            console.log(data[key].album)
+        }
     } catch (error) {
         console.log(error)
     }
-
-    // get recent tracks
-    // const recent = data.recenttracks.track
 }
 
 function printRecentTracks(recentTracks) {
