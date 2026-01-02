@@ -4,17 +4,20 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Mail\ContactMail;
+use App\Models\EmailReceived;
 use Illuminate\Support\Facades\Mail;
 
 class ContactController extends Controller
 {
     // Show Contact Page
-    public function showContactPage() {
+    public function showContactPage()
+    {
         return view('layout.contacts');
     }
-    
+
     // Submit Contact Form and send Email
-    public function submitContactForm(Request $request) {
+    public function submitContactForm(Request $request)
+    {
 
         // capture data
         $validatedData = $request->validate([
@@ -24,8 +27,14 @@ class ContactController extends Controller
             'message' => 'required|min:10',
         ]);
 
-        if($validatedData) {
-            // dd($firstName, $lastName, $email, $message);
+        if ($validatedData) {
+            // saving data in DB
+            $emailReceived = new EmailReceived();
+            $emailReceived->first_name = $validatedData['first_name'];
+            $emailReceived->last_name = $validatedData['last_name'];
+            $emailReceived->email = $validatedData['email'];
+            $emailReceived->message = $validatedData['message'];
+            $emailReceived->save();
 
             // sending email
             Mail::to('tommasovenza@gmail.com')->send(new ContactMail($validatedData));
