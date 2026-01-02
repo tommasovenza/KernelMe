@@ -9,11 +9,13 @@ use Illuminate\Http\RedirectResponse;
 class UserController extends Controller
 {
     //
-    public function showLogin() {
+    public function showLogin()
+    {
         return view('layout.login');
     }
 
-    public function authUser(Request $request) : RedirectResponse {
+    public function authUser(Request $request): RedirectResponse
+    {
 
         // getting credentials
         $credentials = $request->validate([
@@ -29,25 +31,23 @@ class UserController extends Controller
                 ->intended('/blog/create')
                 ->with('message', 'User Login Successfully');
         }
- 
+
         return back()->withErrors([
             'email' => 'The provided credentials do not match our records.',
         ])->onlyInput('email');
     }
 
     /**
-    * Log the user out of the application.
-    */
+     * Log the user out of the application.
+     */
     public function logout(Request $request): RedirectResponse
     {
         Auth::logout();
-    
-        $request->session()->invalidate();
-    
-        $request->session()->regenerateToken();
-    
-        return redirect('/')->with('message', 'User Logout Successfully');
-        
-    }
 
+        $request->session()->invalidate();
+
+        $request->session()->regenerateToken();
+
+        return redirect('/')->with('message', 'User Logout Successfully');
+    }
 }

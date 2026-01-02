@@ -18,7 +18,6 @@ class ContactController extends Controller
     // Submit Contact Form and send Email
     public function submitContactForm(Request $request)
     {
-
         // capture data
         $validatedData = $request->validate([
             'first_name' => 'required|min:3|max:255',
@@ -38,9 +37,13 @@ class ContactController extends Controller
 
             // sending email
             Mail::to('tommasovenza@gmail.com')->send(new ContactMail($validatedData));
+
             // 
             return back()
-                ->with('success', 'Thank you for your message!');
+                ->with('message', 'Thank you for your message, it has been sent!');
+        } else {
+            return back()
+                ->with('error', 'sorry, something was wrong!');
         }
     }
 }

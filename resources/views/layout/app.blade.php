@@ -61,8 +61,12 @@
         @yield('content')
     </main>
     
-    {{-- Banner Component --}}
-    <x-banner />
+    {{-- New Banner Component --}}
+    @if (session('message'))
+        <x-banner color="green" message="{{ session('message') }}"/>
+    @else 
+        <x-banner color="red" message="{{ session('error') }}"/>
+    @endif
 
     {{-- added a spinner --}}
     <div class="spinner"></div>
