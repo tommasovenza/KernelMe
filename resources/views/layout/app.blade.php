@@ -63,9 +63,9 @@
     
     {{-- New Banner Component --}}
     @if (session('message'))
-        <x-banner color="green" message="{{ session('message') }}"/>
+        <x-banner color="bg-green-500" message="{{ session('message') }}"/>
     @elseif(session('error'))
-        <x-banner color="red" message="{{ session('error') }}"/>
+        <x-banner color="bg-red-500" message="{{ session('error') }}"/>
     @endif
 
     {{-- added a spinner --}}

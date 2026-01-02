@@ -5,7 +5,7 @@ export default {
         './resources/**/**/**/*.blade.php',
         './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php'
     ],
-    safelist: ['bg-green-500', 'bg-red-500'],
+    // safelist: ['bg-green-500', 'bg-red-500'],
     theme: {
         extend: {
             fontFamily: {
