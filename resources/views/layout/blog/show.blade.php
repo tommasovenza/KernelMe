@@ -5,9 +5,11 @@
 @endsection
 
 @section('content')
-   <div class="container pb-10">
+<div class="container pb-10">
+        <a href="{{ route('blog') }}" class="mb-4 block">
+            <i class="fa fa-chevron-left" aria-hidden="true"></i> Go Back
+        </a>
         <h1 class="text-3xl">Blog Page</h1>
- 
         <ul class="mt-4 mb-4">
             <li><strong>Post ID:</strong> {{ $post->id }}</li>
             <li><strong>Post Title:</strong> {!! $post->title !!}</li>

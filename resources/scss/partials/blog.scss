@@ -1,0 +1,13 @@
+.blog-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+.blog-container .post {
+    border: 0.5px solid var(--text-color);
+    padding: 2em;
+    transition: background-color 0.15s ease, transform 0.15s ease,
+        box-shadow 0.15s ease;
+}
+.blog-container .post:hover {
+    background: color-mix(in srgb, var(--bg-color) 60%, white 40%);
+}
