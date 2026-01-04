@@ -15,7 +15,7 @@
                 @csrf
                 <div class="form-control">
                     <label for="title">Title</label>
-                    <input type="text" name="title" id="title">
+                    <input type="text" name="title" id="title" value="{{ old('title') }}">
                     @error('title')
                         <p class="text-red-500">{{ $message }}</p>
                     @enderror
@@ -23,7 +23,7 @@
 
                 <div class="form-control">
                     <label for="subtitle">Subtitle</label>
-                    <input type="text" name="subtitle" id="subtitle">
+                    <input type="text" name="subtitle" id="subtitle" value="{{ old('subtitle') }}">
                     @error('subtitle')
                         <p class="text-red-500">{{ $message }}</p>
                     @enderror
@@ -31,7 +31,7 @@
 
                 <div class="form-control">
                     <label for="content">Content</label>
-                    <textarea name="content" id="content" cols="30" rows="10"></textarea>
+                    <textarea name="content" id="content" cols="30" rows="10">{{ old('content') }}</textarea>
                     @error('content')
                         <p class="text-red-500">{{ $message }}</p>
                     @enderror
@@ -39,7 +39,7 @@
 
                 <div class="form-control">
                     <label for="excerpt">Excerpt</label>
-                    <textarea name="excerpt" id="excerpt" cols="30" rows="10"></textarea>
+                    <textarea name="excerpt" id="excerpt" cols="30" rows="10">{{ old('excerpt') }}</textarea>
                     @error('excerpt')
                         <p class="text-red-500">{{ $message }}</p>
                     @enderror
@@ -47,7 +47,7 @@
 
                 <div class="form-control">
                     <label for="tags">Tags</label>
-                    <input type="text" name="tags" id="tags">
+                    <input type="text" name="tags" id="tags" value="{{ old('tags') }}">
                     @error('tags')
                         <p class="text-red-500">{{ $message }}</p>
                     @enderror
@@ -55,7 +55,7 @@
 
                 <div class="form-control">
                     <label for="read_time">Read Time</label>
-                    <input type="text" name="read_time" id="read_time">
+                    <input type="text" name="read_time" id="read_time" value="{{ old('read_time') }}">
                     @error('read_time')
                         <p class="text-red-500">{{ $message }}</p>
                     @enderror
