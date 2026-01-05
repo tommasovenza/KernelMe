@@ -16,6 +16,11 @@ Route::get('/music', function () {
     return view('layout.music');
 })->name('music');
 
+// Privacy Policy Route
+Route::get('/privacy-policy', function () {
+    return view('layout.privacy');
+})->name('privacy');
+
 // Post Controller
 Route::get('/blog', [PostController::class, 'getPostsBlog'])->name('blog');
 Route::get('/blog/create', [PostController::class, 'postCreate'])->name('post.create')->middleware('auth');

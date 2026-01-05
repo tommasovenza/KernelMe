@@ -76,9 +76,13 @@
             {{-- footer info --}}
             <div class="footer-info-container flex justify-between items-center">
                 <div class="footer-info">
-                    <span class="block font-semibolg text-sm">Tommaso Venza</span>
+                    <span class="block font-semibold text-sm">Tommaso Venza</span>
                     <span class="block text-sm">&copy; {{ date("Y") }}</span>
+                    <span class="block text-sm"><a href="{{route('privacy')}}">Privacy Policy</a></span>
                 </div>
+
+
+
                 {{-- Social --}}
                 <div class="social">
                     <ul class="footer-social-menu">

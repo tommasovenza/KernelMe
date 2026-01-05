@@ -85,6 +85,34 @@
                             @enderror
                         </div>
 
+                        <div class="text-xs text-gray-600">
+                            I dati inseriti saranno utilizzati esclusivamente per rispondere al tuo messaggio,
+                            in conformità alla
+                            <a href="{{ route('privacy') }}" class="underline">
+                                Privacy Policy
+                            </a>.
+                        </div>
+
+                        {{-- checkbox taken vision --}}
+                        <div class="flex items-center gap-2 mt-2">
+                            <input
+                                id="privacy"
+                                name="privacy"
+                                type="checkbox"
+                                value="1"
+                                class="mt-1"
+                                required
+                            >
+                            <label for="privacy" class="text-sm">
+                                Dichiaro di aver letto la
+                                <a href="{{ route('privacy') }}" class="underline">Privacy Policy</a>.
+                            </label>
+                            @error('privacy')
+                                <div class="text-red-500 font-semibold">{{ $message }}</div>
+                            @enderror
+                        </div>
+
+
                         <button type="submit" class="rounded-md bg-blue-500 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-blue-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 disabled:bg-blue-200 disabled:text-gray-600 cursor-pointer">
                             Let's Talk
                         </button>

@@ -24,6 +24,7 @@ class ContactController extends Controller
             'last_name' => 'required|min:3|max:255',
             'email' => 'required|email',
             'message' => 'required|min:10',
+            'privacy' => 'required',
         ]);
 
         if ($validatedData) {
@@ -33,6 +34,8 @@ class ContactController extends Controller
             $emailReceived->last_name = $validatedData['last_name'];
             $emailReceived->email = $validatedData['email'];
             $emailReceived->message = $validatedData['message'];
+            $emailReceived->privacy = $validatedData['privacy'];
+            $emailReceived->ip = $request['ip'];
             $emailReceived->save();
 
             // sending email
