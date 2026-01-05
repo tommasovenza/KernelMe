@@ -5,3 +5,58 @@
     overflow: hidden;
     object-fit: cover;
 }
+
+/* Classes to change both names and styles */
+.container.blog-show .post-content h1 {
+    font-size: 2rem;
+    margin: 0 0 12px;
+}
+.container.blog-show .post-content h2 {
+    font-size: 1.5rem;
+    margin: 22px 0 10px;
+}
+.container.blog-show .post-content p {
+    margin: 0 0 12px;
+    line-height: 1.75;
+}
+.container.blog-show .post-content ul {
+    margin: 0 0 14px 22px;
+}
+.container.blog-show .post-content blockquote {
+    margin: 16px 0;
+    padding: 10px 12px;
+    border-left: 4px solid rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.03);
+    border-radius: 10px;
+}
+.container.blog-show .post-content pre {
+    padding: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 12px;
+    overflow-x: auto;
+}
+.container.blog-show .post-content code {
+    padding: 2px 6px;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+}
+.container.blog-show .post-content a {
+    color: inherit; /* resta nella palette del testo */
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+    text-decoration-color: rgba(0, 0, 0, 0.25);
+    transition: text-decoration-color 0.15s ease, background-color 0.15s ease;
+}
+
+.container.blog-show .post-content a:hover {
+    text-decoration-color: rgba(0, 0, 0, 0.65);
+    background-color: rgba(0, 0, 0, 0.05); /* leggero “highlight” */
+    border-radius: 6px;
+}
+
+.container.blog-show .post-content a:focus-visible {
+    outline: 2px solid rgba(0, 0, 0, 0.35);
+    outline-offset: 3px;
+    border-radius: 6px;
+}
