@@ -34,13 +34,12 @@ class ContactController extends Controller
             $emailReceived->last_name = $validatedData['last_name'];
             $emailReceived->email = $validatedData['email'];
             $emailReceived->message = $validatedData['message'];
-            $emailReceived->privacy = $validatedData['privacy'];
-            $emailReceived->ip = $request['ip'];
+            $emailReceived->privacy = 'accepted';
+            $emailReceived->ip = $request->ip();
             $emailReceived->save();
 
             // sending email
             Mail::to('tommasovenza@gmail.com')->send(new ContactMail($validatedData));
-
             // 
             return back()
                 ->with('message', 'Thank you for your message, it has been sent!');
