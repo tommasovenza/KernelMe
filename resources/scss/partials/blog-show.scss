@@ -5,6 +5,9 @@
     overflow: hidden;
     object-fit: cover;
 }
+.post-info-date-read.flex.justify-between.items-center {
+    width: 700px;
+}
 
 /* Classes to change both names and styles */
 .container.blog-show .post-content h1 {
@@ -59,4 +62,17 @@
     outline: 2px solid rgba(0, 0, 0, 0.35);
     outline-offset: 3px;
     border-radius: 6px;
+}
+
+@media (max-width: 800px) {
+    .post-info-date-read.flex.justify-between.items-center {
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 560px) {
+    .post-info-date-read.flex.justify-between.items-center {
+        flex-direction: column;
+        gap: 40px;
+    }
 }

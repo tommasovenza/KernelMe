@@ -30,7 +30,7 @@
                 </div>
             </div>
             {{-- Post Date Info and Read --}}
-            <div class="post-info-date-read flex justify-between items-center" style="width: 700px">
+            <div class="post-info-date-read flex justify-between items-center">
                 <div class="post-info-read">
                     <strong><i class="fa-solid fa-clock"></i></strong> <span>{{ $post->read_time }} read</span> 
                 </div>
