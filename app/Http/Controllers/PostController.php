@@ -54,7 +54,6 @@ class PostController extends Controller
         $post = Post::where('slug', $url)->first();
         // get all other posts
         $all_other_posts = Post::where('id', '!=', $post->id)->get()->random(3);
-        // dd($all_other_posts);
         // return show view
         return view('layout.blog.show', compact('post', 'all_other_posts'));
     }

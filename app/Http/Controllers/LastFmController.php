@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use Illuminate\View\View;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\Http;
@@ -36,16 +35,6 @@ class LastFmController extends Controller
         return response()->json($json, 200);
     }
 
-    public function last7Days(): JsonResponse
-    {
-        dd('7 days');
-    }
-
-    public function last30Days(): JsonResponse
-    {
-        dd('30 days');
-    }
-
     public function topArtist(): JsonResponse
     {
         // get Last Fm Key from .env file through config services
@@ -58,7 +47,6 @@ class LastFmController extends Controller
             'limit' => 20,
             'api_key' => $lastFmKey,
             'format' => 'json',
-            // 'period' => '1month'
         ])->throw();
 
         // get JSON
@@ -80,7 +68,6 @@ class LastFmController extends Controller
             'limit' => 20,
             'api_key' => $lastFmKey,
             'format' => 'json',
-            // 'period' => '1month'
         ])->throw();
 
         // get JSON

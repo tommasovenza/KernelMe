@@ -1,7 +1,6 @@
 const url = window.location.href
 const musicGrid = document.querySelector('.music-grid-container')
 const musicImages = document.querySelectorAll('.music-card > img')
-// console.log(musicImages)
 const modal = document.querySelector('#myModal')
 
 function closeModal(e) {
@@ -12,10 +11,8 @@ function closeModal(e) {
 
 function showMusicCard(e) {
     if (e.target.classList.contains('instrument')) {
-        console.log(e.target)
         // show modal
         modal.style.display = 'flex'
-        // const musicCard = document.createElement('div')
         // get src and alt attributes
         const src = e.target.src
         const alt = e.target.alt
