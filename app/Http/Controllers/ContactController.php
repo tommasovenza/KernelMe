@@ -18,6 +18,11 @@ class ContactController extends Controller
     // Submit Contact Form and send Email
     public function submitContactForm(Request $request)
     {
+        // exit if exists
+        if ($request['spam']) {
+            return back()->with('error', 'sorry, something was wrong!');
+        }
+
         // capture data
         $validatedData = $request->validate([
             'first_name' => 'required|min:3|max:255',

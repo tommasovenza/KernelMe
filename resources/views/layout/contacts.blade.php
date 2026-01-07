@@ -85,6 +85,16 @@
                             @enderror
                         </div>
 
+                        {{-- Spam Input --}}
+                        <div class="form-control spam flex flex-col hidden">
+                            <label for="spam">spam</label>
+                            <input type="text" name="spam" id="spam" cols="10" rows="10" placeholder="insert text there...">
+                            @error('spam')
+                                <div class="text-red-500 font-semibold">{{ $message }}</div>
+                            @enderror
+                        </div>
+
+                        {{-- Privacy Policy --}}
                         <div class="text-xs text-gray-600">
                             The data entered will be used exclusively to respond to your message, in accordance with
                             <a href="{{ route('privacy') }}" class="underline">
