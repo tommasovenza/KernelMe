@@ -21,31 +21,31 @@
 
         <div class="music-grid-container">
             <div class="music-card">
-                <img src="{{ asset('/images/music/les-paul.jpg') }}" alt="Gibson Les Paul" class="instrument">
+                <img src="{{ asset('/images/music/les-paul.jpg') }}" alt="Gibson Les Paul" class="instrument" loading="lazy">
             </div>
 
             <div class="music-card">
-                <img src="{{ asset('/images/music/stratocaster.jpg') }}" alt="Stratocaster" class="instrument">
+                <img src="{{ asset('/images/music/stratocaster.jpg') }}" alt="Stratocaster" class="instrument" loading="lazy">
             </div>
 
             <div class="music-card">
-                <img src="{{ asset('/images/music/guitars.jpg') }}" alt="Telecaster & Stratocaster" class="instrument">
+                <img src="{{ asset('/images/music/guitars.jpg') }}" alt="Telecaster & Stratocaster" class="instrument" loading="lazy">
             </div>
 
             <div class="music-card">
-                <img src="{{ asset('/images/music/live.webp') }}" alt="Music Live" class="instrument">
+                <img src="{{ asset('/images/music/live.webp') }}" alt="Music Live" class="instrument" loading="lazy">
             </div>
 
             <div class="music-card">
-                <img src="{{ asset('/images/music/malmantile.webp') }}" alt="Vespa @ Malmantile" class="instrument">
+                <img src="{{ asset('/images/music/malmantile.webp') }}" alt="Vespa @ Malmantile" class="instrument" loading="lazy">
             </div>
 
             <div class="music-card">
-                <img src="{{ asset('/images/music/rockin.webp') }}" alt="Rockin Live" class="instrument">
+                <img src="{{ asset('/images/music/rockin.webp') }}" alt="Rockin Live" class="instrument" loading="lazy">
             </div>
 
             <div class="music-card">
-                <img src="{{ asset('/images/music/sala.webp') }}" alt="Into The Studio" class="instrument">
+                <img src="{{ asset('/images/music/sala.webp') }}" alt="Into The Studio" class="instrument" loading="lazy">
             </div>
         </div>
     </div>

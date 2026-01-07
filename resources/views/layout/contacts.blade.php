@@ -86,8 +86,7 @@
                         </div>
 
                         <div class="text-xs text-gray-600">
-                            I dati inseriti saranno utilizzati esclusivamente per rispondere al tuo messaggio,
-                            in conformità alla
+                            The data entered will be used exclusively to respond to your message, in accordance with
                             <a href="{{ route('privacy') }}" class="underline">
                                 Privacy Policy
                             </a>.
@@ -104,7 +103,7 @@
                                 required
                             >
                             <label for="privacy" class="text-sm">
-                                Dichiaro di aver letto la
+                                I declare that I have read the
                                 <a href="{{ route('privacy') }}" class="underline">Privacy Policy</a>.
                             </label>
                             @error('privacy')

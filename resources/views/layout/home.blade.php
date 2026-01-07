@@ -8,7 +8,7 @@
     <div class="container pt-10 pb-10">
         <div class="home-heading">
             <h1 class="text-3xl font-semibold mb-4">Hey there 👋, I'm <span class="name">Tommaso Venza</span></h1>
-            <p>A Full Stack Web Developer based in the Italy with a passion for Laravel, CSS, Javascript.</p>
+            <p>A Full Stack Web Developer based in Italy with a passion for Laravel, CSS, Javascript.</p>
         </div>
     </div>
 
@@ -21,7 +21,7 @@
                 <div class="project-card" style="background-image: url('{{ asset('/images/projects/flixxmovie.jpg')}}');">
                     <div class="project-name">JS</div>
                     {{-- Anchor --}}
-                    <a href="https://flixxmovie.netlify.app/">
+                    <a href="https://flixxmovie.netlify.app/" target="_blank" rel="noopener noreferrer">
                         <div class="overlay">
                             <div class="text-2xl">FlixxMovie</div>
                         </div>
@@ -30,7 +30,7 @@
 
                 <div class="project-card" style="background-image: url('{{ asset('/images/projects/workopia.jpg')}}');">
                     <div class="project-name">PHP</div>
-                    <a href="https://www.workopia.it/">
+                    <a href="https://www.workopia.it/" target="_blank" rel="noopener noreferrer">
                         <div class="overlay">
                             <div class="text-2xl">Workopia</div>
                         </div>
@@ -39,7 +39,7 @@
 
                 <div class="project-card" style="background-image: url('{{ asset('/images/projects/tracalorie.jpg')}}');">
                     <div class="project-name">JS</div>
-                    <a href="https://trackalorie.netlify.app/">
+                    <a href="https://trackalorie.netlify.app/" target="_blank" rel="noopener noreferrer">
                         <div class="overlay">
                             <div class="text-2xl">Tracalorie</div>
                         </div>
@@ -48,7 +48,7 @@
 
                 <div class="project-card" style="background-image: url('{{ asset('/images/projects/BTP.jpg')}}');">
                     <div class="project-name">CSS</div>
-                    <a href="https://unruffled-liskov-45a932.netlify.app/">
+                    <a href="https://unruffled-liskov-45a932.netlify.app/" target="_blank" rel="noopener noreferrer">
                         <div class="overlay">
                             <div class="text-2xl">Best Tour Plan</div>
                         </div>
@@ -57,7 +57,7 @@
 
                 <div class="project-card" style="background-image: url('{{ asset('/images/projects/hangman.jpg')}}');">
                     <div class="project-name">JS</div>
-                    <a href="https://appeso.netlify.app/">
+                    <a href="https://appeso.netlify.app/" target="_blank" rel="noopener noreferrer">
                         <div class="overlay">
                             <div class="text-2xl">Hangman</div>
                         </div>
@@ -66,7 +66,7 @@
 
                 <div class="project-card" style="background-image: url('{{ asset('/images/projects/viewer.jpg')}}');">
                     <div class="project-name">JS</div>
-                    <a href="https://siena-imaging-frontend.netlify.app/">
+                    <a href="https://siena-imaging-frontend.netlify.app/" target="_blank" rel="noopener noreferrer">
                         <div class="overlay">
                             <div class="text-2xl">Viewer</div>
                         </div>
@@ -75,7 +75,7 @@
 
                 <div class="project-card" style="background-image: url('{{ asset('/images/projects/CRL.jpg')}}');">
                     <div class="project-name">CSS</div>
-                    <a href="https://final-challenge-crl.netlify.app/">
+                    <a href="https://final-challenge-crl.netlify.app/" target="_blank" rel="noopener noreferrer">
                         <div class="overlay">
                             <div class="text-2xl">Conquering Responsive Layout</div>
                         </div>
@@ -84,7 +84,7 @@
 
                 <div class="project-card" style="background-image: url('{{ asset('/images/projects/qr-maker.jpg')}}');">
                     <div class="project-name">JS</div>
-                    <a href="https://qr-maker-gen.netlify.app/">
+                    <a href="https://qr-maker-gen.netlify.app/" target="_blank" rel="noopener noreferrer">
                         <div class="overlay">
                             <div class="text-2xl">QR Maker</div>
                         </div>

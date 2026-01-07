@@ -19,7 +19,7 @@ async function callBackend(endpoint) {
         // Process Data
         processData(data)
     } catch (error) {
-        console.log(error)
+        //
         outputDom.innerText = `${error}`
     }
     // remove Animation
@@ -55,26 +55,23 @@ function printTopArtistsOrAlbum(data) {
     for (const [index, item] of data.entries()) {
         const listItem = document.createElement('li')
         // log
-        // console.log(item)
         const imageUrl = item.image[3]['#text']
         const artistName = item.name
         const playcount = item.playcount
         const url = item.url
-        console.log(artistName)
-        console.log(url)
-        console.log(playcount)
 
         const textContainer = document.createElement('div')
         const image = document.createElement('img')
         textContainer.innerHTML = `
-        <div class="counter">N° <strong>${index + 1}</strong></div>
-        <div class="playcount">PlayCount: <strong>${playcount}</strong></div>
-        <div class="artist-name"> <a href="${url}">Name: ${artistName}</a></div>
+        <div class="counter">N° | <strong>${index + 1}</strong></div>
+        <div class="playcount">PlayCount | <strong>${playcount}</strong></div>
+        <div class="artist-name"> <a href="${url}"> <strong>${artistName}</strong></a></div>
         `
         image.src = imageUrl
         image.alt = artistName
         image.style.height = '160px'
         image.style.width = '160px'
+        image.setAttribute('loading', 'lazy')
         textContainer.classList.add('text-container')
         listItem.classList.add('last-fm-list-style')
         listItem.appendChild(image)
@@ -97,14 +94,15 @@ function printRecentTracks(recentTracks) {
         const album = item.album['#text']
         const artist = item.artist['#text']
         textContainer.innerHTML = `
-        <div class="song-name">Song: <strong>${song}</strong></div>
-        <div class="artist-name">Artist: ${artist}</div>
-        <div class="album-name">Album: ${album}</div>
+        <div class="song-name">Song | <strong>${song}</strong></div>
+        <div class="artist-name">Artist | <strong>${artist}</strong></div>
+        <div class="album-name">Album | <strong>${album}</strong></div>
         `
         image.src = imageUrl
         image.alt = song
-        image.style.height = '80px'
-        image.style.width = '80px'
+        image.style.height = '160px'
+        image.style.width = '160px'
+        image.setAttribute('loading', 'lazy')
         textContainer.classList.add('text-container')
         listItem.classList.add('last-fm-list-style')
         listItem.appendChild(image)
