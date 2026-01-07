@@ -10,18 +10,21 @@ use Illuminate\Http\Request;
 class PostController extends Controller
 {
     // Index Post
-    public function getPostsBlog() {
+    public function getPostsBlog()
+    {
         // get all posts
         $posts = Post::all()->sortByDesc('updated_at');
         // return view
         return view('layout.blog.index', compact('posts'));
     }
     // Show Create Form View
-    public function postCreate() {
+    public function postCreate()
+    {
         return view('layout.blog.create');
     }
     // Store Blog Post Data
-    public function postStore(Request $request) {
+    public function postStore(Request $request)
+    {
         $validated = $request->validate([
             'title' => 'required',
             'subtitle' => 'required',
@@ -31,7 +34,7 @@ class PostController extends Controller
             'read_time' => 'required',
         ]);
 
-        if($validated) {
+        if ($validated) {
             // adding fields
             $validated['slug'] = Str::slug($validated['title']);
             $validated['date'] = Carbon::now();
@@ -45,10 +48,14 @@ class PostController extends Controller
     }
 
     // Show Post View
-    public function postShow($url) {
+    public function postShow($url)
+    {
         // get post from url
         $post = Post::where('slug', $url)->first();
+        // get all other posts
+        $all_other_posts = Post::where('id', '!=', $post->id)->get()->random(3);
+        // dd($all_other_posts);
         // return show view
-        return view('layout.blog.show', compact('post'));
+        return view('layout.blog.show', compact('post', 'all_other_posts'));
     }
 }

@@ -45,8 +45,23 @@
         $html = stripcslashes($post->content);
     @endphp
 
+    {{-- Blog Show Content --}}
     <div class="blog-show mt-12">
         <div class="post-content text-lg">{!! $html !!}</div>
+    </div>
+
+    {{-- All other posts Link --}}
+    <div class="blog-show mt-8 other-posts">
+        <div class="other-posts-content text-lg">
+            <h3 class="text-xl mb-8">Other Posts You May Like</h3>
+            <div class="other-post-list flex justify-around items-center w-full">
+                @foreach ($all_other_posts as $post)
+                <div class="card-post">
+                    <a href="{{ route('post.show', $post->slug) }}">{{ $post->title }}</a>
+                </div>
+                @endforeach
+            </div>
+        </div>
     </div>
 </div>
 @endsection
