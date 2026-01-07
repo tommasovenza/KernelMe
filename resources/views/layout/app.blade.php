@@ -26,7 +26,7 @@
                     <img src="{{asset('images/head.ico')}}" alt="logo">
                 </div>
                 <div class="image-text">
-                    <span class="text-xl font-semibold tracking-wide">Tommaso Venza</span>
+                    <span class="text-xl font-semibold tracking-wide">Kernel Me</span>
                 </div>
                 </a>
             </div>
@@ -80,8 +80,6 @@
                     <span class="block text-sm">&copy; {{ date("Y") }}</span>
                     <span class="block text-sm"><a href="{{route('privacy')}}">Privacy Policy</a></span>
                 </div>
-
-
 
                 {{-- Social --}}
                 <div class="social">
