@@ -23,16 +23,24 @@
             @foreach ($posts as $post)
             <div class="post">
                 <ul class="mt-4 mb-4 post-list">
-                    <li class="post-id">{{ $post->id }}</li>
                     <li class="title text-3xl font-bold mb-4"><a href="{{ route('post.show', $post->slug) }}">{{ $post->title }}</a></li>
                     <li class="subtitle">{{ $post->subtitle }}</li>
-                    <li class="slug">{{ $post->slug }}</li>
-                    {{-- <li>{{ $post->content }}</li> --}}
                     <li class="excerpt">{{ $post->excerpt }}</li>
-                    <li class="date">{{ $post->date }}</li>
-                    <li class="tags">{{ $post->tags }}</li>
-                    <li class="read_time">{{ $post->read_time }}</li>
                 </ul>
+
+                <div class="flex flex-col gap-4 mt-4">
+                    <div class="info-read">
+                        <strong><i class="fa-solid fa-clock"></i></strong> <span>{{ $post->read_time }} read</span> 
+                    </div>
+                    <div class="info flex justify-between items-center gap-4">
+                        <div class="date">
+                            <span>{{ date('M d, Y', strtotime($post->date)) }}</span>
+                        </div>
+                        <div class="tags">
+                            <span>{{ $post->tags }}</span>
+                        </div>
+                    </div>
+                </div>
             </div>
             @endforeach
         </div>
