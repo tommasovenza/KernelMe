@@ -23,7 +23,7 @@ class LastFmController extends Controller
         $response = Http::get($this->baseEndpoint, [
             'method' => 'user.getrecenttracks',
             'user' => $this->user,
-            'limit' => 20,
+            'limit' => 15,
             'api_key' => $lastFmKey,
             'format' => 'json',
             // 'period' => '1month'
@@ -90,7 +90,7 @@ class LastFmController extends Controller
         return response()->json($json, 200);
     }
 
-    public function getLastFMKey(): string
+    private function getLastFMKey(): string
     {
         // get Last Fm Key from .env file through config services
         $lastFmKey = config('services.last_fm_key');

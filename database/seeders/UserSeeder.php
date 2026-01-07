@@ -18,7 +18,13 @@ class UserSeeder extends Seeder
         User::create([
             'name' => 'Tommaso',
             'email' => 'tommasovenza@gmail.com',
-            'password' => Hash::make('123456'),
+            'password' => Hash::make($this->getPassword()),
         ]);
+    }
+
+    private function getPassword()
+    {
+        $password = config('services.password');
+        return $password;
     }
 }

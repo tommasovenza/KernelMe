@@ -45,5 +45,16 @@ return [
     */
 
     'last_fm_key' => env('LAST_FM_KEY'),
-    'last_fm_shared_secret' => env('LAST_FM_SHARED_SECRET')
+    'last_fm_shared_secret' => env('LAST_FM_SHARED_SECRET'),
+
+    /*
+    |--------------------------------------------------------------------------
+    | Admin Password
+    |--------------------------------------------------------------------------
+    |
+    | These configuration fetches from file env ADMIN PASSWORD
+    |
+    */
+
+    'password' => env('ADMIN_PASSWORD')
 ];
