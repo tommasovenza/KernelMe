@@ -41,24 +41,20 @@ body {
 }
 body.dark-theme {
     --bg-color: #0f172a;
-    // --text-color: #94a3b8;
     --text-color: #404143;
     --accent-color: #3b82f6;
     --text-secondary-color: #cbd5e1;
     --heading-color: #cbd5e1;
     --icon-header-color: #ffc800;
 }
-
 main {
     background-color: var(--bg-color);
     color: var(--heading-color);
 }
-
 /* container */
 .container {
     max-width: 80%;
     margin: 0 auto;
-    // background-color: var(--bg-color);
 }
 
 @media (max-width: 700px) {
