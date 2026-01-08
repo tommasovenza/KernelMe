@@ -38,12 +38,15 @@ Route::post('/contact-form', [ContactController::class, 'submitContactForm'])
     ->middleware('throttle:10,1');
 
 // User form
-Route::get('/login', [UserController::class, 'showLogin'])->name('show-login');
+Route::get('/login', [UserController::class, 'showLogin'])->name('show-login')->middleware('guest');;
 Route::post('/auth', [UserController::class, 'authUser'])->name('auth-user')->middleware('throttle:10,1');
 Route::post('/logout', [UserController::class, 'logout'])->name('logout')->middleware('auth');
 
 // Last Fm API
 Route::get('/my-listens', [LastFmController::class, 'showLastFmView'])->name('listens'); // show view
-Route::get('/last-fm/recent-tracks', [LastFmController::class, 'recentTracks']); // recent tracks
-Route::get('/top-artist', [LastFmController::class, 'topArtist']); // top artist
-Route::get('/top-album', [LastFmController::class, 'topAlbum']); // top album
+// added middleware for these API routes
+Route::middleware('throttle:60,1')->group(function () {
+    Route::get('/last-fm/recent-tracks', [LastFmController::class, 'recentTracks']); // recent tracks
+    Route::get('/top-artist', [LastFmController::class, 'topArtist']); // top artist
+    Route::get('/top-album', [LastFmController::class, 'topAlbum']); // top album
+});
