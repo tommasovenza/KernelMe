@@ -1,5 +1,6 @@
 // Element
 const icon = document.querySelector('.icon')
+const iconMobile = document.querySelector('.icon-mobile')
 // initial mode
 let lightMode = false
 
@@ -12,9 +13,11 @@ function checkLightDarkMode() {
         if (whichMode === 'dark') {
             body.classList.add('dark-theme')
             icon.innerHTML = `<i class="fa-solid fa-sun"></i>`
+            iconMobile.innerHTML = `<i class="fa-solid fa-sun"></i>`
         } else {
             body.classList.remove('dark-theme')
             icon.innerHTML = `<i class="fa-solid fa-moon"></i>`
+            iconMobile.innerHTML = `<i class="fa-solid fa-moon"></i>`
             localStorage.setItem('light-dark-mode', 'light')
             lightMode = true
         }
@@ -23,6 +26,8 @@ function checkLightDarkMode() {
 
 function changeMode(e) {
     //
+    console.log(e.target)
+
     if (e.target.classList.contains('fa-moon')) {
         lightMode = false
         localStorage.setItem('light-dark-mode', 'dark')
@@ -35,5 +40,7 @@ function changeMode(e) {
 
 // event listener
 icon.addEventListener('click', changeMode)
+// event listener for changing Dark/Light Mode on Mobile
+iconMobile.addEventListener('click', changeMode)
 // init
 checkLightDarkMode()

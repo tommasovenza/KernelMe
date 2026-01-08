@@ -21,7 +21,7 @@ Contacts
                             <i class="fa-brands fa-github"></i> Github: @tommasovenza
                         </a>
                     </li>
-                    <li>
+                    <li>            
                         <a href="https://www.linkedin.com/in/tommasovenza/">
                             <i class="fa-brands fa-linkedin-in"></i> Linkedin
                         </a>

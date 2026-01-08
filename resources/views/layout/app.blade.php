@@ -34,8 +34,10 @@
                     </div>
                 </a>
             </div>
+            
+            {{-- Navigation and Navbar List --}}
             <div class="navigation">
-                <ul>
+                <ul class="navbar-list">
                     <li><a href="/">Home</a></li>
                     <li><a href="{{ route('blog') }}">Blog</a></li>
                     <li><a href="{{ route('music') }}">Music</a></li>
@@ -56,10 +58,46 @@
                             <i class="fa-solid fa-moon"></i>
                         </a>
                     </li>
-                </ul>
+                </ul>{{-- Navbar List END --}}
+            </div>{{-- Navigation END --}}
+
+            <div class="menu-controls">
+                <div class="menu-hidden text-2xl">
+                    <i class="fas fa-bars"></i>
+                </div>  
+            </div>
+        </div>{{-- Container END --}}
+
+        {{-- Navigation and Navbar List --}}
+        <div class="navigation-mobile">
+            <ul class="navbar-mobile-list">
+                <li><a href="/">Home</a></li>
+                <li><a href="{{ route('blog') }}">Blog</a></li>
+                <li><a href="{{ route('music') }}">Music</a></li>
+                <li><a href="{{ route('listens') }}">Listens</a></li>
+                <li><a href="{{ route('contacts') }}">Contacts</a></li>
+                {{-- If Auth --}}
+                @auth
+                <li>
+                    <form action="{{ route('logout') }}" method="POST">
+                        @csrf
+                        <button type="submit">Logout</button>
+                    </form>
+                </li>
+                @endauth
+                <li>
+                    <a href="#" class="icon-mobile">
+                        {{-- icon --}}
+                        <i class="fa-solid fa-moon"></i>
+                    </a>
+                </li>
+            </ul>{{-- Navbar List Mobile END --}}
+
+            <div class="cross-hidden text-3xl">
+                <i class="fas fa-close"></i>
             </div>
         </div>
-    </header>
+    </header>{{-- Header END --}}
     {{-- Main --}}
     <main>
         @yield('content')
