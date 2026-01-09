@@ -1,8 +1,11 @@
 @extends('layout.app')
 
-@section('page_title')
-    Home
-@endsection
+@section('title', 'Tommaso Venza | Laravel, PHP and JS Web Developer')
+
+@section('meta_description', 'Portfolio of Tommaso Venza, web developer based in Italy. I work with Laravel, PHP and
+    JavaScript to build web applications, internal tools and content-driven sites, from backend logic to user interfaces.')
+
+@section('canonical', route('home'))
 
 @section('content')
     <div class="container pt-10 pb-10">

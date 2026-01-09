@@ -52,8 +52,15 @@ class PostController extends Controller
     {
         // get post from url
         $post = Post::where('slug', $url)->first();
+        // error handling
+        if (is_null($post)) {
+            abort(404);
+        }
         // get all other posts
-        $all_other_posts = Post::where('id', '!=', $post->id)->get()->random(3);
+        $all_other_posts = Post::where('id', '!=', $post->id)
+            ->get()
+            ->random(3);
+
         // return show view
         return view('layout.blog.show', compact('post', 'all_other_posts'));
     }

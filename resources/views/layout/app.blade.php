@@ -5,6 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    {{-- Title with fallback --}}
+    <title>
+        @yield('title', 'Tommaso Venza | Laravel, PHP and JS Web Developer')
+    </title>
+
+    {{-- Meta description con fallback --}}
+    <meta name="description" content="@yield('meta_description', 'Portfolio of Tommaso Venza, web developer working with Laravel, PHP and JavaScript. I build web applications, internal tools and content-driven sites.')">
+
+    {{-- Open Graph base --}}
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Tommaso Venza">
+    <meta property="og:title" content="@yield('og_title', View::yieldContent('title', 'Tommaso Venza | Laravel & PHP Web Developer'))">
+    <meta property="og:description" content="@yield('og_description', View::yieldContent('meta_description', 'Portfolio of Tommaso Venza, web developer working with Laravel, PHP and JavaScript. I build web applications, internal tools and content-driven sites.'))">
+    <meta property="og:url" content="@yield('og_url', url()->current())">
+    <meta property="og:image" content="{{ asset('img/og-image.jpg') }}">
+
+    {{-- Canonical --}}
+    <link rel="canonical" href="@yield('canonical', url()->current())">
     {{-- Favicon --}}
     <link rel="icon" type="image/x-icon" href="{{ asset('/images/head.ico') }}" />
     {{-- Token --}}
@@ -17,8 +36,6 @@
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     {{-- Vite Includes --}}
     @vite(['resources/css/app.css', 'resources/scss/app.scss', 'resources/js/app.js'])
-    {{-- Page Title --}}
-    <title>@yield('page_title', 'KernelMe')</title>
 </head>
 
 <body>

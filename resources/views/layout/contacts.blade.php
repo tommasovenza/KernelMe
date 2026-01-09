@@ -1,8 +1,11 @@
 @extends('layout.app')
 
-@section('page_title')
-    Contacts
-@endsection
+@section('title', 'Contact | Tommaso Venza')
+
+@section('meta_description', 'Get in touch with Tommaso Venza, web developer working with Laravel, PHP and JavaScript.
+    You can contact me for collaborations, projects or questions about my work.')
+
+@section('canonical', route('contacts'))
 
 @section('content')
     <div class="contacts-content">
