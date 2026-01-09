@@ -16,6 +16,37 @@ span.name::after {
     top: -98px;
     z-index: -1;
 }
+/* about & what i do */
+
+.about .content {
+    display: flex;
+    justify-content: space-around;
+    gap: 50px;
+    margin-top: 1em;
+}
+.about-card,
+.what-i-do-card {
+    padding: 1.325em;
+    width: 50%;
+    background-color: #ccd4e1;
+    color: var(--text-color);
+    border-radius: 0.4em;
+    box-shadow: 0 0 20px rgba($color: #000000, $alpha: 0.15);
+    line-height: 30px;
+}
+
+section.tech span {
+    color: var(--text-color);
+}
+
+section.tech img {
+    height: 50px;
+}
+
+body.dark-theme section.tech span {
+    color: #fff;
+}
+
 /* projects */
 section.projects .container > .projects-container {
     display: grid;
@@ -69,6 +100,16 @@ section.projects .container > .projects-container {
 .project-card:hover .overlay {
     color: #fff;
     opacity: 1;
+}
+
+@media (max-width: 1000px) {
+    .about .content {
+        flex-direction: column;
+    }
+    .about-card,
+    .what-i-do-card {
+        width: 100%;
+    }
 }
 
 // Media Queries
