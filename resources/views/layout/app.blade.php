@@ -27,14 +27,14 @@
             <div class="logo">
                 <a href="{{ route('home') }}" class="block flex items-center gap-4">
                     <div class="image-logo">
-                        <img src="{{asset('images/head.ico')}}" alt="logo">
+                        <img src="{{ asset('images/head.ico') }}" alt="logo">
                     </div>
                     <div class="image-text">
                         <span class="text-xl tracking-wide">Tommaso Venza</span>
                     </div>
                 </a>
             </div>
-            
+
             {{-- Navigation and Navbar List --}}
             <div class="navigation">
                 <ul class="navbar-list">
@@ -45,12 +45,12 @@
                     <li><a href="{{ route('contacts') }}">Contacts</a></li>
                     {{-- If Auth --}}
                     @auth
-                    <li>
-                        <form action="{{ route('logout') }}" method="POST">
-                            @csrf
-                            <button type="submit">Logout</button>
-                        </form>
-                    </li>
+                        <li>
+                            <form action="{{ route('logout') }}" method="POST">
+                                @csrf
+                                <button type="submit">Logout</button>
+                            </form>
+                        </li>
                     @endauth
                     <li>
                         <a href="#" class="icon">
@@ -64,7 +64,7 @@
             <div class="menu-controls">
                 <div class="menu-hidden text-2xl">
                     <i class="fas fa-bars"></i>
-                </div>  
+                </div>
             </div>
         </div>{{-- Container END --}}
 
@@ -78,12 +78,12 @@
                 <li><a href="{{ route('contacts') }}">Contacts</a></li>
                 {{-- If Auth --}}
                 @auth
-                <li>
-                    <form action="{{ route('logout') }}" method="POST">
-                        @csrf
-                        <button type="submit">Logout</button>
-                    </form>
-                </li>
+                    <li>
+                        <form action="{{ route('logout') }}" method="POST">
+                            @csrf
+                            <button type="submit">Logout</button>
+                        </form>
+                    </li>
                 @endauth
                 <li>
                     <a href="#" class="icon-mobile">
@@ -105,9 +105,9 @@
 
     {{-- New Banner Component --}}
     @if (session('message'))
-    <x-banner color="bg-green-500" message="{{ session('message') }}" />
+        <x-banner color="bg-green-500" message="{{ session('message') }}" />
     @elseif(session('error'))
-    <x-banner color="bg-red-500" message="{{ session('error') }}" />
+        <x-banner color="bg-red-500" message="{{ session('error') }}" />
     @endif
 
     {{-- added a spinner --}}
@@ -119,8 +119,8 @@
             <div class="footer-info-container flex justify-between items-center">
                 <div class="footer-info">
                     <span class="block font-semibold text-sm">Tommaso Venza</span>
-                    <span class="block text-sm">&copy; {{ date("Y") }}</span>
-                    <span class="block text-sm"><a href="{{route('privacy')}}">Privacy Policy</a></span>
+                    <span class="block text-sm">&copy; {{ date('Y') }}</span>
+                    <span class="block text-sm"><a href="{{ route('privacy') }}">Privacy Policy</a></span>
                 </div>
 
                 {{-- Social --}}
@@ -140,6 +140,7 @@
             </div>
         </div>
     </footer>
+
 </body>
 
 </html>

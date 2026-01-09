@@ -43,18 +43,22 @@
 }
 // Navigation Mobile
 .header .navigation-mobile {
-    display: none;
     position: relative;
+    width: 0;
+    height: 0;
+    opacity: 0;
 }
 .header .navigation-mobile.active {
-    position: absolute;
-    width: 100%;
     background-color: var(--bg-color);
-    height: 100vh;
-    transform: translateY(-14.5%);
-    z-index: 3;
     font-size: 2rem;
-    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    opacity: 1;
+    transition: 0.5s all ease;
 }
 .header .navigation-mobile.active ul {
     width: 100%;
@@ -69,7 +73,7 @@
 .header .navigation-mobile .cross-hidden {
     position: absolute;
     right: 40px;
-    top: 40px;
+    top: 100px;
     font-weight: bold;
     cursor: pointer;
 }
