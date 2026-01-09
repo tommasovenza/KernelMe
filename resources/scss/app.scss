@@ -35,7 +35,17 @@ img {
     display: block;
     width: 100%;
 }
+/* Set General Application Styles */
+html,
 body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     font-family: 'Inter', sans-serif;
     transition: 0.4s;
 }
@@ -50,7 +60,9 @@ body.dark-theme {
 main {
     background-color: var(--bg-color);
     color: var(--heading-color);
+    flex: 1;
 }
+
 /* container */
 .container {
     max-width: 80%;
