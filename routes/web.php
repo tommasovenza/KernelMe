@@ -5,6 +5,7 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\LastFmController;
 use App\Http\Controllers\ContactController;
+use App\Models\Post;
 
 // Home Route
 Route::get('/', function () {
@@ -49,4 +50,13 @@ Route::middleware('throttle:60,1')->group(function () {
     Route::get('/last-fm/recent-tracks', [LastFmController::class, 'recentTracks']); // recent tracks
     Route::get('/top-artist', [LastFmController::class, 'topArtist']); // top artist
     Route::get('/top-album', [LastFmController::class, 'topAlbum']); // top album
+});
+
+// Sitemap Route    
+Route::get('/sitemap.xml', function () {
+    $posts = Post::all();
+
+    return response()
+        ->view('sitemap', compact('posts'))
+        ->header('Content-Type', 'application/xml');
 });

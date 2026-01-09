@@ -17,4 +17,10 @@ class Post extends Model
         'tags',
         'read_time',
     ];
+
+    // 
+    public function getRouteKeyName(): string
+    {
+        return 'slug';
+    }
 }
