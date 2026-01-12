@@ -9,9 +9,23 @@
     width: 700px;
 }
 
-.container .featured-image {
+.container.blog-show .featured-image {
     height: 500px;
     object-fit: cover;
+}
+.container.blog-show .post-content img {
+    // max-width: 100%;
+    // max-height: 300px;
+    // border-radius: 8px;
+    // object-fit: contain;
+    // display: block;
+    // margin: 1.5rem auto;
+
+    display: block;
+    max-width: 100%;
+    height: auto; /* no crop */
+    border-radius: 8px;
+    margin: 1.5rem auto;
 }
 
 /* Classes to change both names and styles */
@@ -72,6 +86,13 @@
 @media (max-width: 800px) {
     .post-info-date-read {
         max-width: 500px;
+    }
+}
+
+// media queries for images
+@media (max-width: 767px) {
+    .container.blog-show .post-content img {
+        max-width: 100%;
     }
 }
 
