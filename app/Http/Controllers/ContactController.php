@@ -44,7 +44,7 @@ class ContactController extends Controller
             $emailReceived->save();
 
             // sending email
-            Mail::to('tommasovenza@gmail.com')->send(new ContactMail($validatedData));
+            Mail::to('tommasovenza@gmail.com')->send(new ContactMail($validatedData, $request->ip()));
             // 
             return back()
                 ->with('message', 'Thank you for your message, it has been sent!');
