@@ -127,3 +127,16 @@ section.projects .container > .projects-container {
         clip-path: polygon(35% 20%, 70% 20%, 70% 100%, 35% 100%);
     }
 }
+@media (max-width: 480px) {
+    span.name::after {
+        display: none;
+    }
+}
+@media (max-width: 300px) {
+    span.name::after {
+        display: none;
+    }
+    section.projects .container > .projects-container {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+}
