@@ -16,6 +16,7 @@ class Post extends Model
         'date',
         'tags',
         'read_time',
+        'featured_image'
     ];
 
     // 

@@ -9,6 +9,11 @@
     width: 700px;
 }
 
+.container .featured-image {
+    height: 500px;
+    object-fit: cover;
+}
+
 /* Classes to change both names and styles */
 .container.blog-show .post-content h1 {
     font-size: 2rem;

@@ -56,7 +56,15 @@
 
         {{-- Blog Show Content --}}
         <div class="blog-show mt-12">
-            <div class="post-content text-lg">{!! $html !!}</div>
+            <div class="post-content text-lg">
+                <div class="container">
+                    @if ($post->featured_image)
+                        <img class="featured-image" src="{{ asset('storage/' . $post->featured_image) }}"
+                            alt="{{ $post->title }}">
+                    @endif
+                    {!! $html !!}
+                </div>
+            </div>
         </div>
 
         {{-- All other posts Link --}}

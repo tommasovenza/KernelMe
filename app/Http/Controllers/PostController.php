@@ -32,16 +32,21 @@ class PostController extends Controller
             'excerpt' => 'required',
             'tags' => 'required',
             'read_time' => 'required',
+            'featured_image' => 'nullable|image|max:2048',
         ]);
 
         if ($validated) {
             // adding fields
             $validated['slug'] = Str::slug($validated['title']);
             $validated['date'] = Carbon::now();
+            // store file
+            $path = $request->file('featured_image')->store('posts', 'public');
+            // dd($path);
+            $validated['featured_image'] = $path;
             // add post
             Post::create($validated);
-
-            return redirect('blog')->with('message', 'Post created Successfully!');
+            return redirect('blog')
+                ->with('message', 'Post created Successfully!');
         } else {
             return redirect()->back()->with('message', 'Something goes wrong!');
         }

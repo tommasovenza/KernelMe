@@ -11,7 +11,7 @@
         </div>
 
         <div class="new-blog-post-form-wrapper">
-            <form action="{{ route('post.store') }}" method="POST" class="form-new-post">
+            <form action="{{ route('post.store') }}" method="POST" class="form-new-post" enctype="multipart/form-data">
                 @csrf
                 <div class="form-control">
                     <label for="title">Title</label>
@@ -61,7 +61,16 @@
                     @enderror
                 </div>
 
-                <button type="submit" class="rounded-md bg-blue-500 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-blue-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 disabled:bg-blue-200 disabled:text-gray-600 cursor-pointer mt-4">
+                <div class="form-control">
+                    <label for="featured_image">Read Time</label>
+                    <input type="file" name="featured_image" id="featured_image" value="{{ old('featured_image') }}">
+                    @error('featured_image')
+                        <p class="text-red-500">{{ $message }}</p>
+                    @enderror
+                </div>
+
+                <button type="submit"
+                    class="rounded-md bg-blue-500 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-blue-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 disabled:bg-blue-200 disabled:text-gray-600 cursor-pointer mt-4">
                     Create New
                 </button>
             </form>
