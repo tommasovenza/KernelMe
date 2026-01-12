@@ -2,7 +2,8 @@
 
 @section('title', 'Contact | Tommaso Venza')
 
-@section('meta_description', 'Get in touch with Tommaso Venza, web developer working with Laravel, PHP and JavaScript.
+@section('meta_description',
+    'Get in touch with Tommaso Venza, web developer working with Laravel, PHP and JavaScript.
     You can contact me for collaborations, projects or questions about my work.')
 
 @section('canonical', route('contacts'))
@@ -71,7 +72,7 @@
                             </div>
                         </div>
 
-                        {{-- Last Name Label --}}
+                        {{-- Email Label --}}
                         <div class="form-control email">
                             <label for="email">Email</label>
                             <input type="email" name="email" id="email" placeholder="kenmaster@email.com">
@@ -80,7 +81,7 @@
                             @enderror
                         </div>
 
-                        {{-- Last Name Label --}}
+                        {{-- Message Label --}}
                         <div class="form-control text-area flex flex-col">
                             <label for="message">Message</label>
                             <textarea name="message" id="message" cols="10" rows="10" placeholder="Hello there..."></textarea>
@@ -107,7 +108,7 @@
                             </a>.
                         </div>
 
-                        {{-- checkbox taken vision --}}
+                        {{-- Checkbox Taken Vision --}}
                         <div class="flex items-center gap-2 mt-2">
                             <input id="privacy" name="privacy" type="checkbox" value="1" class="mt-1" required>
                             <label for="privacy" class="text-sm">
@@ -118,8 +119,7 @@
                                 <div class="text-red-500 font-semibold">{{ $message }}</div>
                             @enderror
                         </div>
-
-
+                        {{-- Button Submit --}}
                         <button type="submit"
                             class="rounded-md bg-blue-500 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-blue-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 disabled:bg-blue-200 disabled:text-gray-600 cursor-pointer">
                             Let's Talk

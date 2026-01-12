@@ -2,7 +2,8 @@
 
 @section('title', 'Music & Life | Photos, guitars and live moments')
 
-@section('meta_description', "A small selection of photos around music: guitars, rehearsals, live moments and places.
+@section('meta_description',
+    "A small selection of photos around music: guitars, rehearsals, live moments and places.
     It's the personal side that sits next to my work as a web developer.")
 
 @section('canonical', route('music'))

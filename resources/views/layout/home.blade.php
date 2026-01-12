@@ -10,6 +10,7 @@
 
 @section('content')
     <div class="container pt-10 pb-10">
+        {{-- Hero Section --}}
         <div class="home-heading">
             <h1 class="text-3xl font-semibold mb-4">Hey there 👋, I'm <span class="name">Tommaso Venza</span></h1>
             <p class="text-lg hero-subtitle">Web developer working with Laravel, PHP, JS and modern web stacks.</p>
@@ -26,7 +27,7 @@
             </a>
         </div>
     </div>
-
+    {{-- About --}}
     <section class="about" id="about">
         <div class="container text-lg pb-4">
             <div class="content">
@@ -57,7 +58,7 @@
             </div>
         </div>
     </section>
-
+    {{-- Tech Section --}}
     <section class="max-w-4xl mx-auto mt-10 px-6 tech" id="tech">
         <h2 class="text-lg font-semibold mb-4">Tech I work with</h2>
 
@@ -90,11 +91,12 @@
         </div>
     </section>
 
-    <section class="projects pt-12 pb-12">
+    {{-- Client Projects Section --}}
+    <section class="projects client-project pt-12 pb-12" id="client-projects">
         <div class="container">
             {{-- Heading Project --}}
             <div class="heading-projects p-4">
-                <h2 class="text-center text-2xl text-blue-500 font-semibold">Projects</h2>
+                <h2 class="text-center text-2xl text-blue-500 font-semibold">Client Projects</h2>
             </div>
             {{-- Grid --}}
             <div class="projects-container pt-4">
@@ -154,7 +156,76 @@
                         </div>
                     </div>
                 </div>
+            </div>
+    </section>
 
+    {{-- Projects Section --}}
+    <section class="projects pt-12 pb-12">
+        <div class="container">
+            {{-- Heading Project --}}
+            <div class="heading-projects p-4">
+                <h2 class="text-center text-2xl text-blue-500 font-semibold">Projects</h2>
+            </div>
+            {{-- Grid --}}
+            <div class="projects-container pt-4">
+                {{-- First Project --}}
+                <div class="project">
+                    <div class="project-card"
+                        style="background-image: url('{{ asset('/images/projects/flixxmovie.jpg') }}');">
+                        <div class="project-name">JS</div>
+                        {{-- Anchor --}}
+                        <a href="https://flixxmovie.netlify.app/" target="_blank" rel="noopener noreferrer">
+                            <div class="overlay">
+                                <div class="text-2xl">FlixxMovie</div>
+                            </div>
+                        </a>
+                    </div>
+
+                    {{-- Bottom Content --}}
+                    <div class="project-content mt-4 flex justify-between items-center">
+                        <div class="github-link">
+                            <a href="https://github.com/tommasovenza/flixx-app" target="_blank"
+                                rel="noopener noreferrer">
+                                <img src="{{ asset('/images/tech-logos/github.svg') }}" alt="github logo"
+                                    style="height: 40px">
+                            </a>
+                        </div>
+
+                        <div class="project-link">
+                            <a href="https://flixxmovie.netlify.app/" target="_blank"
+                                rel="noopener noreferrer">FlixxMovie</a>
+                        </div>
+                    </div>
+                </div>
+
+                {{-- Second Project --}}
+                <div class="project">
+                    <div class="project-card"
+                        style="background-image: url('{{ asset('/images/projects/workopia.jpg') }}');">
+                        <div class="project-name">PHP</div>
+                        <a href="https://www.workopia.it/" target="_blank" rel="noopener noreferrer">
+                            <div class="overlay">
+                                <div class="text-2xl">Workopia</div>
+                            </div>
+                        </a>
+                    </div>
+
+                    {{-- Bottom Content --}}
+                    <div class="project-content mt-4 flex justify-between items-center">
+                        <div class="github-link">
+                            <a href="https://github.com/tommasovenza/workopia-php" target="_blank"
+                                rel="noopener noreferrer">
+                                <img src="{{ asset('/images/tech-logos/github.svg') }}" alt="github logo"
+                                    style="height: 40px">
+                            </a>
+                        </div>
+
+                        <div class="project-link">
+                            <a href="https://www.workopia.it/" target="_blank" rel="noopener noreferrer">Workopia</a>
+                        </div>
+                    </div>
+                </div>
+                {{-- Project --}}
                 <div class="project">
                     <div class="project-card"
                         style="background-image: url('{{ asset('/images/projects/tracalorie.jpg') }}');">
@@ -182,7 +253,7 @@
                         </div>
                     </div>
                 </div>
-
+                {{-- Project --}}
                 <div class="project">
                     <div class="project-card" style="background-image: url('{{ asset('/images/projects/BTP.jpg') }}');">
                         <div class="project-name">CSS</div>
@@ -209,7 +280,7 @@
                         </div>
                     </div>
                 </div>
-
+                {{-- Project --}}
                 <div class="project">
                     <div class="project-card"
                         style="background-image: url('{{ asset('/images/projects/hangman.jpg') }}');">
@@ -236,7 +307,7 @@
                         </div>
                     </div>
                 </div>
-
+                {{-- Project --}}
                 <div class="project">
                     <div class="project-card"
                         style="background-image: url('{{ asset('/images/projects/viewer.jpg') }}');">
@@ -264,7 +335,7 @@
                         </div>
                     </div>
                 </div>
-
+                {{-- Project --}}
                 <div class="project">
                     <div class="project-card" style="background-image: url('{{ asset('/images/projects/CRL.jpg') }}');">
                         <div class="project-name">CSS</div>
@@ -291,7 +362,7 @@
                         </div>
                     </div>
                 </div>
-
+                {{-- Project --}}
                 <div class="project">
                     <div class="project-card"
                         style="background-image: url('{{ asset('/images/projects/qr-maker.jpg') }}');">
