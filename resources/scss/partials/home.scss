@@ -128,6 +128,9 @@ section.projects .container > .projects-container {
     }
 }
 @media (max-width: 480px) {
+    span.name {
+        color: var(--text-secondary-color);
+    }
     span.name::after {
         display: none;
     }
@@ -138,5 +141,8 @@ section.projects .container > .projects-container {
     }
     section.projects .container > .projects-container {
         grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+    .projects {
+        max-width: 250px;
     }
 }

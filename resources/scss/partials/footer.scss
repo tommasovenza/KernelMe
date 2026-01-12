@@ -26,3 +26,9 @@
 .footer-social-menu li {
     font-size: 1.5rem;
 }
+
+@media (max-width: 350px) {
+    .footer-info-container {
+        flex-direction: column;
+    }
+}
