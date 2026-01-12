@@ -90,7 +90,7 @@
         </div>
     </section>
 
-    <section class="projects pt-24 pb-12">
+    <section class="projects pt-12 pb-12">
         <div class="container">
             {{-- Heading Project --}}
             <div class="heading-projects p-4">
