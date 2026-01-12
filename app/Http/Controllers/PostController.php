@@ -39,16 +39,23 @@ class PostController extends Controller
             // adding fields
             $validated['slug'] = Str::slug($validated['title']);
             $validated['date'] = Carbon::now();
-            // store file
-            $path = $request->file('featured_image')->store('posts', 'public');
-            // dd($path);
-            $validated['featured_image'] = $path;
+            // check if image has been uploaded
+            if ($request->file('featured_image')) {
+                // store file and getting its path
+                $path = $request->file('featured_image')->store('posts', 'public');
+                // saving path
+                $validated['featured_image'] = $path;
+            }
             // add post
             Post::create($validated);
+            // redirect
             return redirect('blog')
                 ->with('message', 'Post created Successfully!');
         } else {
-            return redirect()->back()->with('message', 'Something goes wrong!');
+            // exit
+            return redirect()
+                ->back()
+                ->with('message', 'Something goes wrong!');
         }
     }
 

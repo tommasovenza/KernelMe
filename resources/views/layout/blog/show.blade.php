@@ -60,7 +60,7 @@
                 <div class="container">
                     @if ($post->featured_image)
                         <img class="featured-image" src="{{ asset('storage/' . $post->featured_image) }}"
-                            alt="{{ $post->title }}">
+                            alt="{{ $post->title }}" class="mb-4 rounded-lg" loading="lazy">
                     @endif
                     {!! $html !!}
                 </div>
