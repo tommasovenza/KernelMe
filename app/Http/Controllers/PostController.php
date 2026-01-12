@@ -58,8 +58,13 @@ class PostController extends Controller
         }
         // get all other posts
         $all_other_posts = Post::where('id', '!=', $post->id)
-            ->get()
-            ->random(3);
+            ->get();
+
+        $length = $all_other_posts->count();
+        // count length post
+        if ($length > 2) {
+            $all_other_posts = $all_other_posts->random(3);
+        }
 
         // return show view
         return view('layout.blog.show', compact('post', 'all_other_posts'));

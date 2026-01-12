@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('date')->nullable();
             $table->string('tags')->nullable();
             $table->string('read_time')->nullable();
+            $table->string('featured_image')->nullable();
             $table->timestamps();
         });
     }
