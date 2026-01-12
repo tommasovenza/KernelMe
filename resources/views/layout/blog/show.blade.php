@@ -27,7 +27,7 @@
                 </div>
                 {{-- Title --}}
                 <div class="post-title">
-                    <h1 class="text-5xl font-semibold">{!! $post->title !!}</h1>
+                    <h1 class="text-2xl md:text-3xl lg:text-5xl font-semibold">{!! $post->title !!}</h1>
                 </div>
                 {{-- Post Image and Author --}}
                 <div class="post-info flex gap-4 items-center">
@@ -39,7 +39,7 @@
                     </div>
                 </div>
                 {{-- Post Date Info and Read --}}
-                <div class="post-info-date-read flex justify-between items-center">
+                <div class="post-info-date-read">
                     <div class="post-info-read">
                         <strong><i class="fa-solid fa-clock"></i></strong> <span>{{ $post->read_time }} read</span>
                     </div>

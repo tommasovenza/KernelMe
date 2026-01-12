@@ -65,14 +65,18 @@
 }
 
 @media (max-width: 800px) {
-    .post-info-date-read.flex.justify-between.items-center {
+    .post-info-date-read {
         max-width: 500px;
     }
 }
 
 @media (max-width: 560px) {
-    .post-info-date-read.flex.justify-between.items-center {
+    .post-info-date-read,
+    .other-post-list {
         flex-direction: column;
         gap: 40px;
+    }
+    .post-date-tags {
+        max-width: 300px;
     }
 }
