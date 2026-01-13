@@ -76,6 +76,24 @@
     border-radius: 6px;
 }
 
+.other-post-list {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.card-post {
+    max-width: 300px;
+}
+
+// card post img
+.card-post img {
+    max-width: 300px;
+    height: auto;
+    border-radius: 0.3em;
+    cursor: pointer;
+}
+
 @media (max-width: 800px) {
     .post-info-date-read {
         max-width: 500px;
@@ -86,14 +104,17 @@
     .container.blog-show .post-content img {
         max-width: 100%;
     }
+    .post-info-date-read,
+    .other-post-list {
+        gap: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
 }
 
 @media (max-width: 560px) {
-    .post-info-date-read,
-    .other-post-list {
-        flex-direction: column;
-        gap: 40px;
-    }
     .post-date-tags {
         max-width: 300px;
     }

@@ -68,13 +68,29 @@
         </div>
 
         {{-- All other posts Link --}}
-        <div class="blog-show mt-8 other-posts">
+        <div class="blog-show pt-24 other-posts">
             <div class="other-posts-content text-lg">
-                <h3 class="text-xl mb-8">Other Posts You May Like</h3>
-                <div class="other-post-list flex justify-around items-center w-full">
+                <h3 class="text-3xl mb-8">Other Posts You May Like</h3>
+                <div class="other-post-list">
                     @foreach ($all_other_posts as $post)
                         <div class="card-post">
-                            <a href="{{ route('post.show', $post->slug) }}">{{ $post->title }}</a>
+                            <a href="{{ route('post.show', $post->slug) }}">
+                                @if ($post->featured_image !== null)
+                                    <img src="{{ asset('storage/' . $post->featured_image) }}" alt="{{ $post->title }}">
+                                @endif
+                            </a>
+                            <div class="post-title mt-4">
+                                <h3 class="text-2xl">{{ $post->title }}</h3>
+                                <div class="post-info-wrapper flex justify-between items-center">
+                                    <h5>{{ date('M d, Y', strtotime($post->date)) }}</h5>
+                                    <span><strong><i class="fa-solid fa-clock"></i></strong> {{ $post->read_time }}</span>
+                                </div>
+                            </div>
+                            {{-- list post --}}
+                            <ul class="card-list mt-4">
+                                <li>{{ $post->excerpt }}</li>
+                                <li>{{ $post->tags }}</li>
+                            </ul>
                         </div>
                     @endforeach
                 </div>
