@@ -116,7 +116,7 @@
         </div>
     </header>{{-- Header END --}}
     {{-- Main --}}
-    <main>
+    <main class="pb-12">
         @yield('content')
     </main>
 
@@ -130,7 +130,7 @@
     {{-- added a spinner --}}
     <div class="spinner"></div>
 
-    <footer class="footer pt-2">
+    <footer class="footer pt-8">
         <div class="container">
             {{-- footer info --}}
             <div class="footer-info-container flex justify-between items-center">

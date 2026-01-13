@@ -96,7 +96,7 @@
         <div class="container">
             {{-- Heading Project --}}
             <div class="heading-projects p-4">
-                <h2 class="text-center text-2xl text-blue-500 font-semibold">Client Projects</h2>
+                <h2 class="text-center text-3xl text-blue-500 font-semibold">Client Projects</h2>
             </div>
             {{-- Grid --}}
             <div class="projects-container pt-4">
@@ -339,7 +339,7 @@
         <div class="container">
             {{-- Heading Project --}}
             <div class="heading-projects p-4">
-                <h2 class="text-center text-2xl text-blue-500 font-semibold">Projects</h2>
+                <h2 class="text-center text-3xl text-blue-500 font-semibold">Projects</h2>
             </div>
             {{-- Grid --}}
             <div class="projects-container pt-4">
