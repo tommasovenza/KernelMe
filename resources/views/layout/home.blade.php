@@ -59,7 +59,7 @@
         </div>
     </section>
     {{-- Tech Section --}}
-    <section class="max-w-4xl mx-auto mt-10 px-6 tech" id="tech">
+    <section class="max-w-4xl mx-auto mt-12 px-6 tech" id="tech">
         <h2 class="text-lg font-semibold mb-4">Tech I work with</h2>
 
         <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-4 text-sm text-gray-300">
@@ -92,7 +92,7 @@
     </section>
 
     {{-- Client Projects Section --}}
-    <section class="projects client-project pt-12 pb-12" id="client-projects">
+    <section class="projects client-project pt-18 pb-12" id="client-projects">
         <div class="container">
             {{-- Heading Project --}}
             <div class="heading-projects p-4">
@@ -335,7 +335,7 @@
     </section>
 
     {{-- Projects Section --}}
-    <section class="projects pt-4 pb-12">
+    <section class="projects pt-12 pb-12">
         <div class="container">
             {{-- Heading Project --}}
             <div class="heading-projects p-4">
@@ -343,7 +343,37 @@
             </div>
             {{-- Grid --}}
             <div class="projects-container pt-4">
-                {{-- First Project --}}
+                {{-- Flixx Movie --}}
+                <div class="project">
+                    <div class="project-card"
+                        style="background-image: url('{{ asset('/images/projects/flixxmovie.jpg') }}');">
+                        <div class="project-name">JS</div>
+                        {{-- Anchor --}}
+                        <a href="https://flixxmovie.netlify.app/" target="_blank" rel="noopener noreferrer">
+                            <div class="overlay">
+                                <div class="text-2xl">FlixxMovie</div>
+                            </div>
+                        </a>
+                    </div>
+
+                    {{-- Bottom Content --}}
+                    <div class="project-content mt-4 flex justify-between items-center">
+                        <div class="github-link">
+                            <a href="https://github.com/tommasovenza/flixx-app" target="_blank"
+                                rel="noopener noreferrer">
+                                <img src="{{ asset('/images/tech-logos/github.svg') }}" alt="github logo"
+                                    style="height: 40px">
+                            </a>
+                        </div>
+
+                        <div class="project-link">
+                            <a href="https://flixxmovie.netlify.app/" target="_blank"
+                                rel="noopener noreferrer">FlixxMovie</a>
+                        </div>
+                    </div>
+                </div>
+
+                {{-- Tracalorie Project --}}
                 <div class="project">
                     <div class="project-card"
                         style="background-image: url('{{ asset('/images/projects/tracalorie.jpg') }}');">
@@ -372,7 +402,7 @@
                     </div>
                 </div>
 
-                {{-- Project --}}
+                {{-- QR Maker Project --}}
                 <div class="project">
                     <div class="project-card"
                         style="background-image: url('{{ asset('/images/projects/qr-maker.jpg') }}');">
@@ -428,36 +458,6 @@
                         </div>
                     </div>
                 </div>
-
-                {{-- Project --}}
-                <div class="project">
-                    <div class="project-card"
-                        style="background-image: url('{{ asset('/images/projects/viewer.jpg') }}');">
-                        <div class="project-name">JS</div>
-                        <a href="https://siena-imaging-frontend.netlify.app/" target="_blank" rel="noopener noreferrer">
-                            <div class="overlay">
-                                <div class="text-2xl">Viewer</div>
-                            </div>
-                        </a>
-                    </div>
-
-                    {{-- Bottom Content --}}
-                    <div class="project-content mt-4 flex justify-between items-center">
-                        <div class="github-link">
-                            <a href="https://github.com/tommasovenza/SI-frontend-dev-pos" target="_blank"
-                                rel="noopener noreferrer">
-                                <img src="{{ asset('/images/tech-logos/github.svg') }}" alt="github logo"
-                                    style="height: 40px">
-                            </a>
-                        </div>
-
-                        <div class="project-link">
-                            <a href="https://siena-imaging-frontend.netlify.app/" target="_blank"
-                                rel="noopener noreferrer">Viewer</a>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </div>
     </section>
