@@ -100,39 +100,10 @@
             </div>
             {{-- Grid --}}
             <div class="projects-container pt-4">
-                {{-- First Project --}}
+                {{-- Workopia Project --}}
                 <div class="project">
                     <div class="project-card"
-                        style="background-image: url('{{ asset('/images/projects/flixxmovie.jpg') }}');">
-                        <div class="project-name">JS</div>
-                        {{-- Anchor --}}
-                        <a href="https://flixxmovie.netlify.app/" target="_blank" rel="noopener noreferrer">
-                            <div class="overlay">
-                                <div class="text-2xl">FlixxMovie</div>
-                            </div>
-                        </a>
-                    </div>
-
-                    {{-- Bottom Content --}}
-                    <div class="project-content mt-4 flex justify-between items-center">
-                        <div class="github-link">
-                            <a href="https://github.com/tommasovenza/flixx-app" target="_blank" rel="noopener noreferrer">
-                                <img src="{{ asset('/images/tech-logos/github.svg') }}" alt="github logo"
-                                    style="height: 40px">
-                            </a>
-                        </div>
-
-                        <div class="project-link">
-                            <a href="https://flixxmovie.netlify.app/" target="_blank"
-                                rel="noopener noreferrer">FlixxMovie</a>
-                        </div>
-                    </div>
-                </div>
-
-                {{-- Second Project --}}
-                <div class="project">
-                    <div class="project-card"
-                        style="background-image: url('{{ asset('/images/projects/workopia.jpg') }}');">
+                        style="background-image: url('{{ asset('/images/projects/workopia.webp') }}');">
                         <div class="project-name">PHP</div>
                         <a href="https://www.workopia.it/" target="_blank" rel="noopener noreferrer">
                             <div class="overlay">
@@ -156,11 +127,215 @@
                         </div>
                     </div>
                 </div>
+
+                {{-- Kernel Me Project --}}
+                <div class="project">
+                    <div class="project-card"
+                        style="background-image: url('{{ asset('/images/projects/kernelme.webp') }}');">
+                        <div class="project-name">Laravel</div>
+                        <a href="https://tommasovenza.com" target="_blank" rel="noopener noreferrer">
+                            <div class="overlay">
+                                <div class="text-2xl">Kernel Me</div>
+                            </div>
+                        </a>
+                    </div>
+
+                    {{-- Bottom Content --}}
+                    <div class="project-content mt-4 flex justify-between items-center">
+                        <div class="github-link">
+                            <a href="https://github.com/tommasovenza/KernelMe" target="_blank" rel="noopener noreferrer">
+                                <img src="{{ asset('/images/tech-logos/github.svg') }}" alt="github logo"
+                                    style="height: 40px">
+                            </a>
+                        </div>
+
+                        <div class="project-link">
+                            <a href="https://tommasovenza.com" target="_blank" rel="noopener noreferrer">Kernel Me</a>
+                        </div>
+                    </div>
+                </div>
+
+                {{-- Siena Imaging Project --}}
+                <div class="project">
+                    <div class="project-card"
+                        style="background-image: url('{{ asset('/images/projects/siena-imaging.webp') }}');">
+                        <div class="project-name">Wordpress</div>
+                        {{-- Anchor --}}
+                        <a href="https://www.sienaimaging.it" target="_blank" rel="noopener noreferrer">
+                            <div class="overlay">
+                                <div class="text-2xl">Siena Imaging</div>
+                            </div>
+                        </a>
+                    </div>
+
+                    {{-- Bottom Content --}}
+                    <div class="project-content mt-4 flex justify-between items-center">
+                        <div class="github-link">
+                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                <img src="{{ asset('/images/tech-logos/elementor.svg') }}" alt="elementor logo"
+                                    style="height: 40px">
+                            </a>
+                        </div>
+
+                        <div class="project-link">
+                            <a href="https://www.sienaimaging.it" target="_blank" rel="noopener noreferrer">Siena
+                                Imaging</a>
+                        </div>
+                    </div>
+                </div>
+
+                {{-- AvantGarde Project --}}
+                <div class="project">
+                    <div class="project-card"
+                        style="background-image: url('{{ asset('/images/projects/avantgarde.webp') }}');">
+                        <div class="project-name">Wordpress</div>
+                        {{-- Anchor --}}
+                        <a href="https://avantgardecalzature.com" target="_blank" rel="noopener noreferrer">
+                            <div class="overlay">
+                                <div class="text-2xl">AvantGarde Calzature</div>
+                            </div>
+                        </a>
+                    </div>
+
+                    {{-- Bottom Content --}}
+                    <div class="project-content mt-4 flex justify-between items-center">
+                        <div class="github-link">
+                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                <img src="{{ asset('/images/tech-logos/elementor.svg') }}" alt="elementor logo"
+                                    style="height: 40px">
+                            </a>
+                        </div>
+
+                        <div class="project-link">
+                            <a href="https://avantgardecalzature.com" target="_blank"
+                                rel="noopener noreferrer">AvantGarde
+                                Calzature</a>
+                        </div>
+                    </div>
+                </div>
+
+                {{-- Real Media Project --}}
+                <div class="project">
+                    <div class="project-card"
+                        style="background-image: url('{{ asset('/images/projects/real-media.webp') }}');">
+                        <div class="project-name">Wordpress</div>
+                        {{-- Anchor --}}
+                        <a href="https://real-media.it" target="_blank" rel="noopener noreferrer">
+                            <div class="overlay">
+                                <div class="text-2xl">Real Media</div>
+                            </div>
+                        </a>
+                    </div>
+
+                    {{-- Bottom Content --}}
+                    <div class="project-content mt-4 flex justify-between items-center">
+                        <div class="github-link">
+                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                <img src="{{ asset('/images/tech-logos/elementor.svg') }}" alt="elementor logo"
+                                    style="height: 40px">
+                            </a>
+                        </div>
+
+                        <div class="project-link">
+                            <a href="https://real-media.it" target="_blank" rel="noopener noreferrer">Real Media
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                {{-- Isaq Consulting Project --}}
+                <div class="project">
+                    <div class="project-card"
+                        style="background-image: url('{{ asset('/images/projects/isaq.webp') }}');">
+                        <div class="project-name">Wordpress</div>
+                        {{-- Anchor --}}
+                        <a href="https://consulenzapersonalizzata.isaqconsulting.it/" target="_blank"
+                            rel="noopener noreferrer">
+                            <div class="overlay">
+                                <div class="text-2xl">Isaq Consulting</div>
+                            </div>
+                        </a>
+                    </div>
+
+                    {{-- Bottom Content --}}
+                    <div class="project-content mt-4 flex justify-between items-center">
+                        <div class="github-link">
+                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                <img src="{{ asset('/images/tech-logos/elementor.svg') }}" alt="elementor logo"
+                                    style="height: 40px">
+                            </a>
+                        </div>
+
+                        <div class="project-link">
+                            <a href="https://consulenzapersonalizzata.isaqconsulting.it/" target="_blank"
+                                rel="noopener noreferrer">Isaq Consulting
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                {{-- Natalini Firenze Project --}}
+                <div class="project">
+                    <div class="project-card"
+                        style="background-image: url('{{ asset('/images/projects/natalinisas.webp') }}');">
+                        <div class="project-name">Wordpress</div>
+                        {{-- Anchor --}}
+                        <a href="https://natalinisas.it" target="_blank" rel="noopener noreferrer">
+                            <div class="overlay">
+                                <div class="text-2xl">Natalini Firenze</div>
+                            </div>
+                        </a>
+                    </div>
+
+                    {{-- Bottom Content --}}
+                    <div class="project-content mt-4 flex justify-between items-center">
+                        <div class="github-link">
+                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                <img src="{{ asset('/images/tech-logos/elementor.svg') }}" alt="elementor logo"
+                                    style="height: 40px">
+                            </a>
+                        </div>
+
+                        <div class="project-link">
+                            <a href="https://natalinisas.it" target="_blank" rel="noopener noreferrer">Natalini Firenze
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                {{-- The Gallery ADV Project --}}
+                <div class="project">
+                    <div class="project-card"
+                        style="background-image: url('{{ asset('/images/projects/gallery.webp') }}');">
+                        <div class="project-name">Wordpress</div>
+                        {{-- Anchor --}}
+                        <a href="https://thegalleryadv.com/" target="_blank" rel="noopener noreferrer">
+                            <div class="overlay">
+                                <div class="text-2xl">The Gallery ADV</div>
+                            </div>
+                        </a>
+                    </div>
+
+                    {{-- Bottom Content --}}
+                    <div class="project-content mt-4 flex justify-between items-center">
+                        <div class="github-link">
+                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                <img src="{{ asset('/images/tech-logos/elementor.svg') }}" alt="elementor logo"
+                                    style="height: 40px">
+                            </a>
+                        </div>
+
+                        <div class="project-link">
+                            <a href="https://thegalleryadv.com" target="_blank" rel="noopener noreferrer">The Gallery ADV
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
     </section>
 
     {{-- Projects Section --}}
-    <section class="projects pt-12 pb-12">
+    <section class="projects pt-4 pb-12">
         <div class="container">
             {{-- Heading Project --}}
             <div class="heading-projects p-4">
@@ -169,63 +344,6 @@
             {{-- Grid --}}
             <div class="projects-container pt-4">
                 {{-- First Project --}}
-                <div class="project">
-                    <div class="project-card"
-                        style="background-image: url('{{ asset('/images/projects/flixxmovie.jpg') }}');">
-                        <div class="project-name">JS</div>
-                        {{-- Anchor --}}
-                        <a href="https://flixxmovie.netlify.app/" target="_blank" rel="noopener noreferrer">
-                            <div class="overlay">
-                                <div class="text-2xl">FlixxMovie</div>
-                            </div>
-                        </a>
-                    </div>
-
-                    {{-- Bottom Content --}}
-                    <div class="project-content mt-4 flex justify-between items-center">
-                        <div class="github-link">
-                            <a href="https://github.com/tommasovenza/flixx-app" target="_blank"
-                                rel="noopener noreferrer">
-                                <img src="{{ asset('/images/tech-logos/github.svg') }}" alt="github logo"
-                                    style="height: 40px">
-                            </a>
-                        </div>
-
-                        <div class="project-link">
-                            <a href="https://flixxmovie.netlify.app/" target="_blank"
-                                rel="noopener noreferrer">FlixxMovie</a>
-                        </div>
-                    </div>
-                </div>
-
-                {{-- Second Project --}}
-                <div class="project">
-                    <div class="project-card"
-                        style="background-image: url('{{ asset('/images/projects/workopia.jpg') }}');">
-                        <div class="project-name">PHP</div>
-                        <a href="https://www.workopia.it/" target="_blank" rel="noopener noreferrer">
-                            <div class="overlay">
-                                <div class="text-2xl">Workopia</div>
-                            </div>
-                        </a>
-                    </div>
-
-                    {{-- Bottom Content --}}
-                    <div class="project-content mt-4 flex justify-between items-center">
-                        <div class="github-link">
-                            <a href="https://github.com/tommasovenza/workopia-php" target="_blank"
-                                rel="noopener noreferrer">
-                                <img src="{{ asset('/images/tech-logos/github.svg') }}" alt="github logo"
-                                    style="height: 40px">
-                            </a>
-                        </div>
-
-                        <div class="project-link">
-                            <a href="https://www.workopia.it/" target="_blank" rel="noopener noreferrer">Workopia</a>
-                        </div>
-                    </div>
-                </div>
-                {{-- Project --}}
                 <div class="project">
                     <div class="project-card"
                         style="background-image: url('{{ asset('/images/projects/tracalorie.jpg') }}');">
@@ -253,115 +371,7 @@
                         </div>
                     </div>
                 </div>
-                {{-- Project --}}
-                <div class="project">
-                    <div class="project-card" style="background-image: url('{{ asset('/images/projects/BTP.jpg') }}');">
-                        <div class="project-name">CSS</div>
-                        <a href="https://unruffled-liskov-45a932.netlify.app/" target="_blank" rel="noopener noreferrer">
-                            <div class="overlay">
-                                <div class="text-2xl">Best Tour Plan</div>
-                            </div>
-                        </a>
-                    </div>
 
-                    {{-- Bottom Content --}}
-                    <div class="project-content mt-4 flex justify-between items-center">
-                        <div class="github-link">
-                            <a href="https://github.com/tommasovenza/landing-hotel-booking" target="_blank"
-                                rel="noopener noreferrer">
-                                <img src="{{ asset('/images/tech-logos/github.svg') }}" alt="github logo"
-                                    style="height: 40px">
-                            </a>
-                        </div>
-
-                        <div class="project-link">
-                            <a href="https://unruffled-liskov-45a932.netlify.app/" target="_blank"
-                                rel="noopener noreferrer">Best Tour Plan</a>
-                        </div>
-                    </div>
-                </div>
-                {{-- Project --}}
-                <div class="project">
-                    <div class="project-card"
-                        style="background-image: url('{{ asset('/images/projects/hangman.jpg') }}');">
-                        <div class="project-name">JS</div>
-                        <a href="https://appeso.netlify.app/" target="_blank" rel="noopener noreferrer">
-                            <div class="overlay">
-                                <div class="text-2xl">Hangman</div>
-                            </div>
-                        </a>
-                    </div>
-
-                    {{-- Bottom Content --}}
-                    <div class="project-content mt-4 flex justify-between items-center">
-                        <div class="github-link">
-                            <a href="https://github.com/tommasovenza/hangman-game" target="_blank"
-                                rel="noopener noreferrer">
-                                <img src="{{ asset('/images/tech-logos/github.svg') }}" alt="github logo"
-                                    style="height: 40px">
-                            </a>
-                        </div>
-
-                        <div class="project-link">
-                            <a href="https://appeso.netlify.app/" target="_blank" rel="noopener noreferrer">Hangman</a>
-                        </div>
-                    </div>
-                </div>
-                {{-- Project --}}
-                <div class="project">
-                    <div class="project-card"
-                        style="background-image: url('{{ asset('/images/projects/viewer.jpg') }}');">
-                        <div class="project-name">JS</div>
-                        <a href="https://siena-imaging-frontend.netlify.app/" target="_blank" rel="noopener noreferrer">
-                            <div class="overlay">
-                                <div class="text-2xl">Viewer</div>
-                            </div>
-                        </a>
-                    </div>
-
-                    {{-- Bottom Content --}}
-                    <div class="project-content mt-4 flex justify-between items-center">
-                        <div class="github-link">
-                            <a href="https://github.com/tommasovenza/SI-frontend-dev-pos" target="_blank"
-                                rel="noopener noreferrer">
-                                <img src="{{ asset('/images/tech-logos/github.svg') }}" alt="github logo"
-                                    style="height: 40px">
-                            </a>
-                        </div>
-
-                        <div class="project-link">
-                            <a href="https://siena-imaging-frontend.netlify.app/" target="_blank"
-                                rel="noopener noreferrer">Viewer</a>
-                        </div>
-                    </div>
-                </div>
-                {{-- Project --}}
-                <div class="project">
-                    <div class="project-card" style="background-image: url('{{ asset('/images/projects/CRL.jpg') }}');">
-                        <div class="project-name">CSS</div>
-                        <a href="https://final-challenge-crl.netlify.app/" target="_blank" rel="noopener noreferrer">
-                            <div class="overlay">
-                                <div class="text-2xl">Conquering Responsive Layout</div>
-                            </div>
-                        </a>
-                    </div>
-
-                    {{-- Bottom Content --}}
-                    <div class="project-content mt-4 flex justify-between items-center">
-                        <div class="github-link">
-                            <a href="https://github.com/tommasovenza/final-challenge-CRL" target="_blank"
-                                rel="noopener noreferrer">
-                                <img src="{{ asset('/images/tech-logos/github.svg') }}" alt="github logo"
-                                    style="height: 40px">
-                            </a>
-                        </div>
-
-                        <div class="project-link">
-                            <a href="https://final-challenge-crl.netlify.app/" target="_blank"
-                                rel="noopener noreferrer">Responsive Layout</a>
-                        </div>
-                    </div>
-                </div>
                 {{-- Project --}}
                 <div class="project">
                     <div class="project-card"
@@ -390,6 +400,64 @@
                         </div>
                     </div>
                 </div>
+
+                {{-- Hangman Project --}}
+                <div class="project">
+                    <div class="project-card"
+                        style="background-image: url('{{ asset('/images/projects/hangman.jpg') }}');">
+                        <div class="project-name">JS</div>
+                        <a href="https://appeso.netlify.app/" target="_blank" rel="noopener noreferrer">
+                            <div class="overlay">
+                                <div class="text-2xl">Hangman</div>
+                            </div>
+                        </a>
+                    </div>
+
+                    {{-- Bottom Content --}}
+                    <div class="project-content mt-4 flex justify-between items-center">
+                        <div class="github-link">
+                            <a href="https://github.com/tommasovenza/hangman-game" target="_blank"
+                                rel="noopener noreferrer">
+                                <img src="{{ asset('/images/tech-logos/github.svg') }}" alt="github logo"
+                                    style="height: 40px">
+                            </a>
+                        </div>
+
+                        <div class="project-link">
+                            <a href="https://appeso.netlify.app/" target="_blank" rel="noopener noreferrer">Hangman</a>
+                        </div>
+                    </div>
+                </div>
+
+                {{-- Project --}}
+                <div class="project">
+                    <div class="project-card"
+                        style="background-image: url('{{ asset('/images/projects/viewer.jpg') }}');">
+                        <div class="project-name">JS</div>
+                        <a href="https://siena-imaging-frontend.netlify.app/" target="_blank" rel="noopener noreferrer">
+                            <div class="overlay">
+                                <div class="text-2xl">Viewer</div>
+                            </div>
+                        </a>
+                    </div>
+
+                    {{-- Bottom Content --}}
+                    <div class="project-content mt-4 flex justify-between items-center">
+                        <div class="github-link">
+                            <a href="https://github.com/tommasovenza/SI-frontend-dev-pos" target="_blank"
+                                rel="noopener noreferrer">
+                                <img src="{{ asset('/images/tech-logos/github.svg') }}" alt="github logo"
+                                    style="height: 40px">
+                            </a>
+                        </div>
+
+                        <div class="project-link">
+                            <a href="https://siena-imaging-frontend.netlify.app/" target="_blank"
+                                rel="noopener noreferrer">Viewer</a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
