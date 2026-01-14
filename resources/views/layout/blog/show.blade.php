@@ -80,7 +80,9 @@
                                 @endif
                             </a>
                             <div class="post-title mt-4">
-                                <h3 class="text-2xl">{{ $post->title }}</h3>
+                                <h3 class="text-2xl">
+                                    <a href="{{ route('post.show', $post->slug) }}">{{ $post->title }}</a>
+                                </h3>
                                 <div class="post-info-wrapper flex justify-between items-center">
                                     <h5>{{ date('M d, Y', strtotime($post->date)) }}</h5>
                                     <span><strong><i class="fa-solid fa-clock"></i></strong> {{ $post->read_time }}</span>
