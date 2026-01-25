@@ -62,7 +62,7 @@
                 </div>
 
                 <div class="form-control">
-                    <label for="featured_image">Read Time</label>
+                    <label for="featured_image">Upload Image</label>
                     <input type="file" name="featured_image" id="featured_image" value="{{ old('featured_image') }}">
                     @error('featured_image')
                         <p class="text-red-500">{{ $message }}</p>
