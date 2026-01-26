@@ -32,7 +32,7 @@ class PostController extends Controller
             'excerpt' => 'required',
             'tags' => 'required',
             'read_time' => 'required',
-            'featured_image' => 'nullable|image|max:2048',
+            'featured_image' => 'nullable|file|max:10240|mimetypes:image/jpeg,image/png,image/webp,image/avif',
         ]);
 
         if ($validated) {
