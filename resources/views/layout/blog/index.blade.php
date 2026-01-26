@@ -26,7 +26,7 @@
         </div>
 
         <div class="blog-container mt-8">
-            @foreach ($posts as $post)
+            @forelse ($posts as $post)
                 <div class="post">
                     <ul class="mt-4 mb-4 post-list">
                         <li class="title text-3xl font-bold mb-4"><a
@@ -49,7 +49,13 @@
                         </div>
                     </div>
                 </div>
-            @endforeach
+            @empty
+                <div class="post">
+                    <ul class="mt-4 mb-4 post-list">
+                        <li>Sorry there are no posts found!</li>
+                    </ul>
+                </div>
+            @endforelse
         </div>
     </div>
 @endsection

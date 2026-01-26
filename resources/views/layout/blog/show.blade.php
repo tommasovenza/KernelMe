@@ -79,8 +79,8 @@
                                     <img src="{{ asset('storage/' . $post->featured_image) }}" alt="{{ $post->title }}">
                                 @endif
                             </a>
-                            <div class="post-title mt-4">
-                                <h3 class="text-2xl">
+                            <div class="post-title">
+                                <h3 class="text-2xl mt-4 mb-8 font-bold">
                                     <a href="{{ route('post.show', $post->slug) }}">{{ $post->title }}</a>
                                 </h3>
                                 <div class="post-info-wrapper flex justify-between items-center">
