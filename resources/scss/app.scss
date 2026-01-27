@@ -1,15 +1,20 @@
+/* Tailwind CSS Includes */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* CSS Includes */
-@use './partials/header';
-@use './partials/home.scss';
-@use './partials/music.scss';
-@use './partials/last-fm.scss';
-@use './partials/spinner.scss';
-@use './partials/login.scss';
-@use './partials/add-new-blog-post.scss';
-@use './partials/blog.scss';
-@use './partials/blog-show.scss';
-@use './partials/contacts.scss';
-@use './partials/footer.scss';
+@import url(partials/header.scss);
+@import url(partials/home.scss);
+@import url(partials/music.scss);
+@import url(partials/last-fm.scss);
+@import url(partials/spinner.scss);
+@import url(partials/login.scss);
+@import url(partials/add-new-blog-post.scss);
+@import url(partials/blog.scss);
+@import url(partials/blog-show.scss);
+@import url(partials/contacts.scss);
+@import url(partials/footer.scss);
 
 /* Font Inter Include */
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
