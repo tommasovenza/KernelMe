@@ -61,6 +61,7 @@
                     @if ($post->featured_image)
                         <img class="featured-image" src="{{ asset('storage/' . $post->featured_image) }}"
                             alt="{{ $post->title }}" class="mb-4 rounded-lg" loading="lazy">
+                        <h2 class="font-semibold pt-4 pb-8">{{ $post->subtitle }}</h2>
                     @endif
                     {!! $html !!}
                 </div>

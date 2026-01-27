@@ -31,7 +31,6 @@
                     <ul class="mt-4 mb-4 post-list">
                         <li class="title text-3xl font-bold mb-4"><a
                                 href="{{ route('post.show', $post->slug) }}">{{ $post->title }}</a></li>
-                        <li class="subtitle">{{ $post->subtitle }}</li>
                         <li class="excerpt">{{ $post->excerpt }}</li>
                     </ul>
 

@@ -17,10 +17,10 @@ class PostSeeder extends Seeder
         // seeder
         $data = [
             [
-                "title" => "Fare il lavoro di un intero team non è una medaglia",
-                "subtitle" => "Cosa ho imparato costruendo e mantenendo da solo un gestionale per clinical trials",
-                "tags" => "Career, Team Dynamics, Backend, Clinical Trials",
-                "excerpt" => "Per un periodo ho fatto il lavoro di un intero team su un gestionale per clinical trials. Sembrava una medaglia al valore, in realtà è stata una lezione brutalmente onesta su responsabilità, limiti e crescita come sviluppatore.",
+                "title" => "Quando ti trattano come un team di 10 sviluppatori, ma sei solo",
+                "subtitle" => "Storia di un gestionale troppo grande per una persona sola, e di cosa succede quando l’eroe solitario decide di cambiare campo di gioco",
+                "tags" => "Career, Dev Life, Burnout",
+                "excerpt" => "Per anni ho gestito da solo un sistema che in un’azienda normale sarebbe sulle spalle di un team intero. In questo post racconto cosa significa portare sulle proprie spalle un gestionale enorme, tra responsabilità invisibili, burnout sfiorato e la decisione di cambiare finalmente strada.",
                 "content" => <<<HTML
 <p>
     Per un periodo della mia vita lavorativa mi sono ritrovato a fare il lavoro di un intero team.
