@@ -142,7 +142,7 @@ class PostSeeder extends Seeder
     deve avere una parola chiave chiara: <strong>equilibrio</strong>.
 </p>
 HTML,
-                "featured_image" => "posts/team-of-10-cover.webp",
+                "featured_image" => "posts/solo-dev-vs-team-di-10.webp",
             ],
         ];
 
