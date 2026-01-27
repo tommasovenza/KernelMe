@@ -47,7 +47,7 @@
                         <img src="{{ asset('images/head.ico') }}" alt="logo">
                     </div>
                     <div class="image-text">
-                        <span class="text-xl tracking-wide">Tommaso Venza</span>
+                        <span class="text-xl">Tommaso Venza</span>
                     </div>
                 </a>
             </div>

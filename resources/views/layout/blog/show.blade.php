@@ -72,7 +72,7 @@
             <div class="other-posts-content text-lg">
                 <h3 class="text-3xl mb-8">Other Posts You May Like</h3>
                 <div class="other-post-list">
-                    @foreach ($all_other_posts as $post)
+                    @forelse ($all_other_posts as $post)
                         <div class="card-post">
                             <a href="{{ route('post.show', $post->slug) }}">
                                 @if ($post->featured_image !== null)
@@ -94,7 +94,14 @@
                                 <li>{{ $post->tags }}</li>
                             </ul>
                         </div>
-                    @endforeach
+                    @empty
+                        {{-- list post --}}
+                        <ul class="card-list mt-4">
+                            <li>
+                                <p>There are no other posts!</p>
+                            </li>
+                        </ul>
+                    @endforelse
                 </div>
             </div>
         </div>
