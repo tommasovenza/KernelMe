@@ -29,7 +29,6 @@
     display: none;
     cursor: pointer;
 }
-
 .header .navigation ul {
     display: flex;
     align-items: center;
@@ -47,6 +46,8 @@
     width: 0;
     height: 0;
     opacity: 0;
+    transform: translateX(-100%);
+    pointer-events: none;
 }
 .header .navigation-mobile.active {
     background-color: var(--bg-color);
@@ -59,6 +60,8 @@
     z-index: 3;
     opacity: 1;
     transition: 0.5s all ease;
+    transform: translateX(0);
+    pointer-events: all;
 }
 .header .navigation-mobile.active ul {
     width: 100%;
