@@ -7,7 +7,6 @@ function closeMenu() {
 }
 
 function showMenu(e) {
-    console.log(e.target)
     if (
         e.target.classList.contains('fa-bars') ||
         e.target.classList.contains('menu-hidden')

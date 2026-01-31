@@ -7,7 +7,6 @@ let lightMode = false
 function checkLightDarkMode() {
     if (localStorage.getItem('light-dark-mode') !== null) {
         const whichMode = localStorage.getItem('light-dark-mode')
-        console.log(whichMode)
 
         const body = document.body
         if (whichMode === 'dark') {
