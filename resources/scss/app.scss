@@ -3,6 +3,9 @@
 @tailwind components;
 @tailwind utilities;
 
+// import font awesome
+@import '@fortawesome/fontawesome-free/css/all.min.css';
+
 /* CSS Includes */
 @import url(partials/header.scss);
 @import url(partials/home.scss);

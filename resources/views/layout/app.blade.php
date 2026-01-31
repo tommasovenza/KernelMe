@@ -21,19 +21,12 @@
     <meta property="og:description" content="@yield('og_description', View::yieldContent('meta_description', 'Portfolio of Tommaso Venza, web developer working with Laravel, PHP and JavaScript. I build web applications, internal tools and content-driven sites.'))">
     <meta property="og:url" content="@yield('og_url', url()->current())">
     <meta property="og:image" content="{{ asset('img/og-image.jpg') }}">
-
     {{-- Canonical --}}
     <link rel="canonical" href="@yield('canonical', url()->current())">
     {{-- Favicon --}}
     <link rel="icon" type="image/x-icon" href="{{ asset('/images/head.ico') }}" />
     {{-- Token --}}
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    {{-- Font Awesome --}}
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
-        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    {{-- Alpine JS --}}
-    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     {{-- Vite Includes --}}
     @vite(['resources/css/app.css', 'resources/scss/app.scss', 'resources/js/app.js'])
 </head>
