@@ -19,7 +19,7 @@ class ContactController extends Controller
     public function submitContactForm(Request $request)
     {
         // exit if exists
-        if ($request['spam']) {
+        if ($request['company']) {
             return back()->with('error', 'sorry, something was wrong!');
         }
 

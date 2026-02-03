@@ -11,7 +11,7 @@
     <p>Email: {{ $email['email'] }}</p>
     <p>Message: {{ $email['message'] }}</p>
     <p>Privacy: {{ $email['privacy'] }}</p>
-    <p>ID: {{ $ip }}</p>
+    <p>IP: {{ $ip }}</p>
 </body>
 
 </html>

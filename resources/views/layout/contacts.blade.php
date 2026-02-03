@@ -91,13 +91,10 @@
                         </div>
 
                         {{-- Spam Input --}}
-                        <div class="form-control spam flex flex-col hidden">
-                            <label for="spam">spam</label>
-                            <input type="text" name="spam" id="spam" cols="10" rows="10"
+                        <div class="form-control company flex flex-col hidden">
+                            <label for="company">company</label>
+                            <input type="text" name="company" id="company" cols="10" rows="10"
                                 placeholder="insert text there...">
-                            @error('spam')
-                                <div class="text-red-500 font-semibold">{{ $message }}</div>
-                            @enderror
                         </div>
 
                         {{-- Privacy Policy --}}
