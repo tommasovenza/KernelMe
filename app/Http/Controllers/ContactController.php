@@ -18,8 +18,8 @@ class ContactController extends Controller
     // Submit Contact Form and send Email
     public function submitContactForm(Request $request)
     {
-        // exit if exists
-        if ($request['company']) {
+        // exit if it's true
+        if ($request->filled('company')) {
             return back()->with('error', 'sorry, something was wrong!');
         }
 
@@ -42,6 +42,9 @@ class ContactController extends Controller
             $emailReceived->privacy = 'accepted';
             $emailReceived->ip = $request->ip();
             $emailReceived->save();
+
+            // getting spam value
+            $validatedData['company'] = $request->input('company');
 
             // sending email
             Mail::to('tommasovenza@gmail.com')->send(new ContactMail($validatedData, $request->ip()));

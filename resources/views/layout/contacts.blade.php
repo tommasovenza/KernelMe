@@ -57,7 +57,8 @@
                             {{-- First Name Label --}}
                             <div class="form-control first-name flex flex-col w-full">
                                 <label for="first_name">First Name</label>
-                                <input type="text" name="first_name" id="first_name" placeholder="Ken">
+                                <input type="text" name="first_name" id="first_name" placeholder="Ken"
+                                    autocomplete="off">
                                 @error('first_name')
                                     <div class="text-red-500 font-semibold">{{ $message }}</div>
                                 @enderror
@@ -65,7 +66,8 @@
                             {{-- Last Name Label --}}
                             <div class="form-control last-name flex flex-col w-full">
                                 <label for="last_name">Last Name</label>
-                                <input type="text" name="last_name" id="last_name" placeholder="Master">
+                                <input type="text" name="last_name" id="last_name" placeholder="Master"
+                                    autocomplete="off">
                                 @error('last_name')
                                     <div class="text-red-500 font-semibold">{{ $message }}</div>
                                 @enderror
@@ -75,7 +77,8 @@
                         {{-- Email Label --}}
                         <div class="form-control email">
                             <label for="email">Email</label>
-                            <input type="email" name="email" id="email" placeholder="kenmaster@email.com">
+                            <input type="email" name="email" id="email" placeholder="kenmaster@email.com"
+                                autocomplete="off">
                             @error('email')
                                 <div class="text-red-500 font-semibold">{{ $message }}</div>
                             @enderror
@@ -90,11 +93,11 @@
                             @enderror
                         </div>
 
-                        {{-- Spam Input --}}
-                        <div class="form-control company flex flex-col hidden">
+                        {{-- Honeypot Input --}}
+                        <div class="form-control company flex flex-col">
                             <label for="company">company</label>
                             <input type="text" name="company" id="company" cols="10" rows="10"
-                                placeholder="insert text there...">
+                                placeholder="insert text there..." autocomplete="off">
                         </div>
 
                         {{-- Privacy Policy --}}

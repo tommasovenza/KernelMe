@@ -12,6 +12,7 @@
     <p>Message: {{ $email['message'] }}</p>
     <p>Privacy: {{ $email['privacy'] }}</p>
     <p>IP: {{ $ip }}</p>
+    <p>Spam Value Debug: {{ $email['company'] }}</p>
 </body>
 
 </html>

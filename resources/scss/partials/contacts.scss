@@ -53,6 +53,13 @@
     height: 150px;
 }
 
+.form-control.company {
+    position: absolute;
+    left: -9999px;
+    top: auto;
+    overflow: hidden;
+}
+
 // Media queries
 @media (max-width: 1024px) {
     .container.contacts {
