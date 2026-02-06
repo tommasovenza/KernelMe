@@ -2,14 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\View\View;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\RedirectResponse;
 
+
 class UserController extends Controller
 {
     //
-    public function showLogin()
+    public function showLogin(): View
     {
         return view('layout.login');
     }
@@ -28,7 +30,7 @@ class UserController extends Controller
             $request->session()->regenerate();
             // return view('layout.blog.create');
             return redirect()
-                ->intended('/blog/create')
+                ->intended('blog')
                 ->with('message', 'User Login Successfully');
         }
 

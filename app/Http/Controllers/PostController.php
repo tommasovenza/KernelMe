@@ -2,28 +2,33 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Post;
 use Carbon\Carbon;
+use App\Models\Post;
+use Illuminate\View\View;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 
 class PostController extends Controller
 {
     // Index Post
-    public function getPostsBlog()
+    public function getPostsBlog(): View
     {
         // get all posts
         $posts = Post::all()->sortByDesc('updated_at');
         // return view
         return view('layout.blog.index', compact('posts'));
     }
+
     // Show Create Form View
-    public function postCreate()
+    public function postCreate(): View
     {
         return view('layout.blog.create');
     }
+
     // Store Blog Post Data
-    public function postStore(Request $request)
+    public function postStore(Request $request): RedirectResponse
     {
         $validated = $request->validate([
             'title' => 'required',
@@ -59,8 +64,21 @@ class PostController extends Controller
         }
     }
 
+    // Delete Post
+    public function postDestroy($id): RedirectResponse
+    {
+        // get post
+        $post = Post::find($id);
+        // delete featured image from storage
+        Storage::disk('public')->delete($post->featured_image);
+        // delete Post
+        $post->delete();
+        // redirect
+        return redirect('blog')->with('message', 'Post Deleted Successfully');
+    }
+
     // Show Post View
-    public function postShow($url)
+    public function postShow($url): View
     {
         // get post from url
         $post = Post::where('slug', $url)->first();

@@ -26,11 +26,12 @@ Route::get('/privacy-policy', function () {
 Route::get('/blog', [PostController::class, 'getPostsBlog'])->name('blog');
 // Admin Routes for adding Posts
 Route::middleware(['auth', 'throttle:20,1'])->group(function () {
-    Route::get('/blog/create', [PostController::class, 'postCreate'])->name('post.create');
-    Route::post('/post/store', [PostController::class, 'postStore'])->name('post.store');
+    Route::get('/posts/create', [PostController::class, 'postCreate'])->name('post.create');
+    Route::post('/posts/store', [PostController::class, 'postStore'])->name('post.store');
+    Route::delete('/posts/{post}', [PostController::class, 'postDestroy'])->name('post.destroy');
 });
 // Show Post
-Route::get('/post/{post}', [PostController::class, 'postShow'])->name('post.show');
+Route::get('/posts/{post}', [PostController::class, 'postShow'])->name('post.show');
 
 // Contact Form Controller
 Route::get('/contacts', [ContactController::class, 'showContactPage'])->name('contacts');

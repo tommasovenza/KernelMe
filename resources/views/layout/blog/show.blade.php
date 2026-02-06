@@ -18,7 +18,7 @@
         {{-- Heading --}}
         <div class="post-heading">
             {{-- Heading Content --}}
-            <div class="post-heading-content flex flex-col justify-center items-center gap-8">
+            <div class="post-heading-content flex flex-col justify-center items-center gap-8 relative">
                 {{-- Back Link --}}
                 <div class="nav-back">
                     <a href="{{ route('blog') }}" class="mb-4 block">
@@ -37,6 +37,18 @@
                     <div class="author">
                         Tommaso Venza
                     </div>
+                    @auth
+                        <div class="delete-test absolute top-[0] right-[0]">
+                            <form action="{{ route('post.destroy', $post->id) }}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <button onclick="return confirm('Sure Want Delete?')"
+                                    class="rounded-md bg-red-500 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-red-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-500 cursor-pointer mt-4">Delete
+                                    me
+                                </button>
+                            </form>
+                        </div>
+                    @endauth
                 </div>
                 {{-- Post Date Info and Read --}}
                 <div class="post-info-date-read">
