@@ -32,21 +32,16 @@
         <div class="container text-lg pb-4">
             <div class="content">
                 <div class="about-card">
-                    <h2>About</h2>
-                    <p>
-                        I’m a web developer based in Italy. I currently work on a clinical trials
-                        management platform at <strong>Siena Imaging</strong>, dealing with both
-                        development and day-to-day technical operations in a medical and enterprise context.
-                    </p>
-                    <p>
-                        Alongside my main job, I build personal projects to explore ideas and improve my skills:
-                        this portfolio, a Last.fm dashboard, a small PHP job board and other experiments.
-                        I enjoy working across the stack, with a focus on clean backend code and simple,
-                        readable interfaces.
-                    </p>
+                    <h2 class="text-xl font-semibold mb-2">About</h2>
+
+                    <p>I’m a software developer based in Italy, currently working at <strong>Etruria PA</strong> on web
+                        applications for the
+                        public administration. Previously I worked on a clinical trials management platform at Siena
+                        Imaging. I build side projects like this portfolio, a Last.fm dashboard and a small PHP job board,
+                        working across the stack with a focus on clean backend code and simple, readable interfaces.</p>
                 </div>
                 <div class="what-i-do-card">
-                    <h2>What I work on</h2>
+                    <h2 class="text-xl font-semibold mb-2">What I work on</h2>
 
                     <ul>
                         <li>Web applications and internal tools built with Laravel.</li>
