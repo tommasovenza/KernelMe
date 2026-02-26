@@ -5,8 +5,6 @@ const last30DaysBtn = document.querySelector('#last-30-days')
 const topArtistBtn = document.querySelector('#top-artist')
 const topAlbumBtn = document.querySelector('#top-album')
 const outputDom = document.querySelector('#showTracks')
-const artists = []
-const endpoints = []
 
 // functions
 async function callBackend(endpoint) {
@@ -52,6 +50,8 @@ function processData(data) {
 
 function printTopArtistsOrAlbum(data) {
     // console.log(data)
+    const artists = []
+    // const endpoints = []
     // create a new ul
     const newList = document.createElement('ul')
     // loop
@@ -85,23 +85,18 @@ function printTopArtistsOrAlbum(data) {
         newList.appendChild(listItem)
     }
 
-    artists.forEach(artist => {
-        let newArtistName = ''
-        for (let index = 0; index < artist.length; index++) {
-            let letter = artist[index]
-            // console.log(letter)
-            if (letter === ' ') {
-                letter = '+'
-            }
-            newArtistName += letter
-        }
-        // console.log(newArtistName)
-        endpoints.push(
-            `'https://api.deezer.com/search/artist?q=${newArtistName}&limit=1'`
-        )
-    })
-    console.log(endpoints)
-    endpoints.forEach(endpoint => console.log(endpoint))
+    const endpoints = createEnpoints(artists)
+    // console.log(endpoints)
+    try {
+        endpoints.forEach(endpoint => {
+            console.log(endpoint)
+            fetch(endpoint)
+                .then(res => console.log(res.json()))
+                .then(data => console.log(data))
+        })
+    } catch (error) {
+        throw error
+    }
 
     outputDom.appendChild(newList)
 }
@@ -135,6 +130,26 @@ function printRecentTracks(recentTracks) {
         newList.appendChild(listItem)
     }
     outputDom.appendChild(newList)
+}
+
+function createEnpoints(artists) {
+    const endpoints = []
+    artists.forEach(artist => {
+        let newArtistName = ''
+        for (let index = 0; index < artist.length; index++) {
+            let letter = artist[index]
+            // console.log(letter)
+            if (letter === ' ') {
+                letter = '+'
+            }
+            newArtistName += letter
+        }
+        // console.log(newArtistName)
+        endpoints.push(
+            `https://api.deezer.com/search/artist?q=${newArtistName}&limit=1`
+        )
+    })
+    return endpoints
 }
 
 function showSpinner() {
