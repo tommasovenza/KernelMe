@@ -5,6 +5,8 @@ const last30DaysBtn = document.querySelector('#last-30-days')
 const topArtistBtn = document.querySelector('#top-artist')
 const topAlbumBtn = document.querySelector('#top-album')
 const outputDom = document.querySelector('#showTracks')
+const artists = []
+const endpoints = []
 
 // functions
 async function callBackend(endpoint) {
@@ -49,6 +51,7 @@ function processData(data) {
 }
 
 function printTopArtistsOrAlbum(data) {
+    // console.log(data)
     // create a new ul
     const newList = document.createElement('ul')
     // loop
@@ -59,6 +62,9 @@ function printTopArtistsOrAlbum(data) {
         const artistName = item.name
         const playcount = item.playcount
         const url = item.url
+
+        // push artist name
+        artists.push(artistName.toLowerCase())
 
         const textContainer = document.createElement('div')
         const image = document.createElement('img')
@@ -78,6 +84,25 @@ function printTopArtistsOrAlbum(data) {
         listItem.appendChild(textContainer)
         newList.appendChild(listItem)
     }
+
+    artists.forEach(artist => {
+        let newArtistName = ''
+        for (let index = 0; index < artist.length; index++) {
+            let letter = artist[index]
+            // console.log(letter)
+            if (letter === ' ') {
+                letter = '+'
+            }
+            newArtistName += letter
+        }
+        // console.log(newArtistName)
+        endpoints.push(
+            `'https://api.deezer.com/search/artist?q=${newArtistName}&limit=1'`
+        )
+    })
+    console.log(endpoints)
+    endpoints.forEach(endpoint => console.log(endpoint))
+
     outputDom.appendChild(newList)
 }
 
