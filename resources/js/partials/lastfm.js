@@ -99,12 +99,27 @@ async function printTopArtistsOrAlbum(data) {
         listItem.appendChild(textContainer)
         newList.appendChild(listItem)
     }
-
-    // call backend
-    const images = await passingDataToBackend(artists)
-    console.log(images)
-
+    // printing list item
     outputDom.appendChild(newList)
+
+    // call backend to fetch images
+    const images = await passingDataToBackend(artists)
+    // console.log(images)
+    // get all images field
+    let fields = document.querySelectorAll('.last-fm-list-style > img')
+    // set a counter
+    let counter = 0
+    // foreach on data
+    for (const key in images) {
+        // skipping
+        if (!Object.hasOwn(images, key)) continue
+        // get current image
+        const imageUrl = images[key]
+        // printing
+        fields[counter].src = imageUrl
+        // incrementing counter
+        counter++
+    }
 }
 
 function printRecentTracks(recentTracks) {
