@@ -6,6 +6,21 @@ const topArtistBtn = document.querySelector('#top-artist')
 const topAlbumBtn = document.querySelector('#top-album')
 const outputDom = document.querySelector('#showTracks')
 
+async function passingDataToBackend(artists) {
+    const backendRoute = '/fetch-artists-images'
+    console.log(artists)
+    const stringArtists = artists.join(',')
+    console.log(stringArtists)
+
+    const response = await fetch(
+        `${backendRoute}?artists=${encodeURIComponent(stringArtists)}`
+    )
+    const data = await response.json()
+    console.log(data)
+
+    return data
+}
+
 // functions
 async function callBackend(endpoint) {
     // trim
@@ -48,7 +63,7 @@ function processData(data) {
     }
 }
 
-function printTopArtistsOrAlbum(data) {
+async function printTopArtistsOrAlbum(data) {
     // console.log(data)
     const artists = []
     // const endpoints = []
@@ -85,18 +100,9 @@ function printTopArtistsOrAlbum(data) {
         newList.appendChild(listItem)
     }
 
-    const endpoints = createEnpoints(artists)
-    // console.log(endpoints)
-    try {
-        endpoints.forEach(endpoint => {
-            console.log(endpoint)
-            fetch(endpoint)
-                .then(res => console.log(res.json()))
-                .then(data => console.log(data))
-        })
-    } catch (error) {
-        throw error
-    }
+    // call backend
+    const images = await passingDataToBackend(artists)
+    console.log(images)
 
     outputDom.appendChild(newList)
 }

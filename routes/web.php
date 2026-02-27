@@ -51,6 +51,7 @@ Route::middleware('throttle:60,1')->group(function () {
     Route::get('/last-fm/recent-tracks', [LastFmController::class, 'recentTracks']); // recent tracks
     Route::get('/top-artist', [LastFmController::class, 'topArtist']); // top artist
     Route::get('/top-album', [LastFmController::class, 'topAlbum']); // top album
+    Route::get('/fetch-artists-images', [LastFmController::class, 'fetchArtistsImages']); // fetch artists images
 });
 
 // Sitemap Route    

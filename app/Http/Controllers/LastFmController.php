@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\View\View;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\Http;
+use Symfony\Component\HttpFoundation\Request;
 
 class LastFmController extends Controller
 {
@@ -75,6 +76,24 @@ class LastFmController extends Controller
 
         // return json to
         return response()->json($json, 200);
+    }
+
+    public function fetchArtistsImages(Request $request): JsonResponse
+    {
+        $deezerEndpoint = 'https://api.deezer.com/search/artist';
+        $artists = explode(',', $request->query('artists'));
+        // dd($artists);
+
+        $results = [];
+        foreach ($artists as $artist) {
+            $response = Http::get($deezerEndpoint, [
+                'q' => trim($artist),
+                'limit' => 1,
+            ]);
+            $data = $response->json();
+            $results[trim($artist)] = $data['data'][0]['picture_xl'] ?? null;
+        }
+        return response()->json($results);
     }
 
     private function getLastFMKey(): string
