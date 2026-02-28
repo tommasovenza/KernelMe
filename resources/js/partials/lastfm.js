@@ -7,17 +7,17 @@ const topAlbumBtn = document.querySelector('#top-album')
 const outputDom = document.querySelector('#showTracks')
 
 async function passingDataToBackend(artists) {
+    // endpoint for fetching artist
     const backendRoute = '/fetch-artists-images'
-    console.log(artists)
+    // creating strings for fetching data later from backend
     const stringArtists = artists.join(',')
-    console.log(stringArtists)
-
+    // get response
     const response = await fetch(
         `${backendRoute}?artists=${encodeURIComponent(stringArtists)}`
     )
+    // get data
     const data = await response.json()
-    console.log(data)
-
+    // return data
     return data
 }
 
@@ -55,7 +55,7 @@ function processData(data) {
     } else if (key === 'topartists') {
         const topArtists = data[key].artist
         // print
-        printTopArtistsOrAlbum(topArtists)
+        printTopArtistsOrAlbum(topArtists, 'artists')
     } else if (key === 'topalbums') {
         // print
         const topAlbums = data[key].album
@@ -63,24 +63,21 @@ function processData(data) {
     }
 }
 
-async function printTopArtistsOrAlbum(data) {
-    // console.log(data)
+async function printTopArtistsOrAlbum(data, string = '') {
     const artists = []
-    // const endpoints = []
     // create a new ul
     const newList = document.createElement('ul')
     // loop
     for (const [index, item] of data.entries()) {
         const listItem = document.createElement('li')
-        // log
+        // variables
         const imageUrl = item.image[3]['#text']
         const artistName = item.name
         const playcount = item.playcount
         const url = item.url
-
-        // push artist name
+        // push artists name
         artists.push(artistName.toLowerCase())
-
+        // printing
         const textContainer = document.createElement('div')
         const image = document.createElement('img')
         textContainer.innerHTML = `
@@ -99,26 +96,27 @@ async function printTopArtistsOrAlbum(data) {
         listItem.appendChild(textContainer)
         newList.appendChild(listItem)
     }
-    // printing list item
+    // appending list item into DOM
     outputDom.appendChild(newList)
-
-    // call backend to fetch images
-    const images = await passingDataToBackend(artists)
-    // console.log(images)
-    // get all images field
-    let fields = document.querySelectorAll('.last-fm-list-style > img')
-    // set a counter
-    let counter = 0
-    // foreach on data
-    for (const key in images) {
-        // skipping
-        if (!Object.hasOwn(images, key)) continue
-        // get current image
-        const imageUrl = images[key]
-        // printing
-        fields[counter].src = imageUrl
-        // incrementing counter
-        counter++
+    // printing artists
+    if (string === 'artists') {
+        // call backend to fetch images
+        const images = await passingDataToBackend(artists)
+        // get all images field
+        let fields = document.querySelectorAll('.last-fm-list-style > img')
+        // set a counter
+        let counter = 0
+        // foreach on data
+        for (const key in images) {
+            // skipping
+            if (!Object.hasOwn(images, key)) continue
+            // get current image
+            const imageUrl = images[key]
+            // printing
+            fields[counter].src = imageUrl
+            // incrementing counter
+            counter++
+        }
     }
 }
 
