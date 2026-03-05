@@ -23,4 +23,6 @@ Homestead.json
 Homestead.yaml
 Thumbs.db
 /.prettierrc
-
+/database/seeders/PostSeeder_old.php
+/database/seeders/PostSeeder_old2.php
+/database/seeders/PostSeeder_old3.php

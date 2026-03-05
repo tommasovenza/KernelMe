@@ -14,132 +14,144 @@ class PostSeeder extends Seeder
      */
     public function run(): void
     {
-        // seeder
         $data = [
             [
-                "title" => "Quando ti trattano come un team di 10 sviluppatori, ma sei solo",
-                "subtitle" => "Storia di un gestionale troppo grande per una persona sola, e di cosa succede quando l’eroe solitario decide di cambiare campo di gioco",
-                "tags" => "Career, Dev Life, Burnout",
-                "excerpt" => "Per anni ho gestito da solo un sistema che in un’azienda normale sarebbe sulle spalle di un team intero. In questo post racconto cosa significa portare sulle proprie spalle un gestionale enorme, tra responsabilità invisibili, burnout sfiorato e la decisione di cambiare finalmente strada.",
+                "title" => "Guida pratica a sopravvivere quando sei l'unico adulto in sala",
+                "subtitle" => "Tre anni, un gestionale per clinical trials, zero release. Una storia vera raccontata senza filtri — ma con molto sarcasmo.",
+                "tags" => "Career, Dev Life, Burnout, Sarcasm",
+                "excerpt" => "Tre anni su un progetto che non è mai andato in produzione. Non per colpa del codice — ma per colpa di chi decideva senza capire cosa stava decidendo. Questo è quello che ho imparato, con il sorriso.",
                 "content" => <<<HTML
 <p>
-    Per un periodo della mia vita lavorativa mi sono ritrovato a fare il lavoro di un intero team.
-    Un gestionale per clinical trials sulle spalle, da solo: analisi, sviluppo, bugfix, supporto,
-    spiegazioni agli utenti, workaround, release, patch dell'ultimo minuto.
+    Esiste un tipo molto specifico di azienda tech italiana.
 </p>
 
 <p>
-    All'inizio sembra quasi una medaglia al valore: <em>“Se lo fanno fare a me da solo, vuol dire che si fidano”</em>.
-    In realtà, col tempo, ho capito che è un equilibrio pericoloso: ti allena tantissimo,
-    ma se nessuno protegge i tuoi confini, ti brucia.
-</p>
-
-<h2>Cosa significa essere “il sistema”</h2>
-
-<p>
-    Quando sei l'unica persona su un progetto critico, non sei uno sviluppatore:
-    sei praticamente <strong>il sistema</strong>.
-</p>
-
-<ul>
-    <li>Se qualcosa si rompe, ti cercano.</li>
-    <li>Se c'è una nuova esigenza, la scrivono pensando direttamente a te.</li>
-    <li>Se un flusso non è chiaro, ti invitano alla call per “spiegare come funziona”.</li>
-</ul>
-
-<p>
-    Tecnicamente impari un sacco:
-</p>
-
-<ul>
-    <li>Capire l'architettura end-to-end</li>
-    <li>Gestire dati delicati e processi regolati</li>
-    <li>Scrivere codice pensando a utenti reali, non solo a casi da tutorial</li>
-</ul>
-
-<p>
-    Ma impari anche una cosa meno romantica: se sei l'unico punto di contatto, sei anche
-    il collo di bottiglia e il parafulmine ufficiale.
-</p>
-
-<h2>I compromessi tecnici (e mentali)</h2>
-
-<p>
-    Quando devi tenere insieme <em>tutto</em>, non sempre puoi fare la scelta “tecnicamente perfetta”.
-    A volte devi scegliere la soluzione che:
-</p>
-
-<ul>
-    <li>Funziona entro domani</li>
-    <li>È abbastanza sicura da non esplodere in produzione</li>
-    <li>Non richiede riscrivere mezzo sistema da zero</li>
-</ul>
-
-<p>
-    Questo crea una tensione continua fra quello che <em>vorresti</em> scrivere e quello che
-    <em>puoi</em> permetterti di scrivere nel contesto reale dell'azienda.
+    Ha un CTO con il titolo di CTO ma senza le competenze di un developer junior alla sua prima settimana.
+    Ha manager che gestiscono con la tecnica avanzata del <em>"vediamo come va"</em> —
+    tecnica che, lo anticipo, non va mai particolarmente bene.
+    Ha processi scritti da qualcuno in un momento di ottimismo che non vengono seguiti da nessuno.
+    E ha, nascosto da qualche parte in organico, un developer solitario che tiene tutto in piedi
+    mentre gli altri organizzano riunioni su come tenere tutto in piedi.
 </p>
 
 <p>
-    Non è un fallimento: è la differenza tra un progetto accademico e un prodotto che la gente usa
-    ogni giorno. Però, se questa tensione rimane tutta sulle spalle di una persona sola, prima o poi
-    inizia a pesare.
+    Per tre anni quel developer sono stato io. Questa è la storia.
 </p>
 
-<h2>Visibilità, riconoscimento e realtà</h2>
+<h2>Il progetto</h2>
 
 <p>
-    Uno degli aspetti più strani è il gap fra il tuo contributo reale e la percezione che
-    l'azienda ha di te.
-</p>
-
-<ul>
-    <li>Tu sai quante cose hai tenuto insieme con soluzioni creative e notti lunghe.</li>
-    <li>Chi usa il gestionale si rende conto che “funziona”, e si aspetta che continui così.</li>
-    <li>Chi decide dall'alto spesso vede solo una voce “software” nel bilancio.</li>
-</ul>
-
-<p>
-    Fare il lavoro di un team non significa automaticamente avere il peso, lo stipendio o
-    il rispetto di un team. E questa è una delle lezioni più dure da digerire.
-</p>
-
-<h2>Quello che mi porto dietro davvero</h2>
-
-<p>
-    Nonostante tutto, rifarei quell'esperienza? Sì, ma non alle stesse condizioni
-    e non con gli stessi confini inesistenti.
+    Gestionale per clinical trials. Dati medici. Processi regolati dalla normativa europea.
+    Roba seria, insomma.
 </p>
 
 <p>
-    Da quella fase mi porto dietro alcune cose concrete:
-</p>
-
-<ul>
-    <li>La capacità di vedere un sistema come un <strong>insieme</strong>, non come una somma di ticket</li>
-    <li>La consapevolezza dei miei limiti: cosa posso reggere e cosa no</li>
-    <li>La voglia di lavorare in team dove il carico non è scaricato su una persona sola “perché tanto ce la fa”</li>
-</ul>
-
-<p>
-    Mi porto dietro anche un filtro in più: quando sento discorsi del tipo
-    “tanto lo fa lui”, mi si accende subito un campanello. L'eroe solitario nel lungo periodo
-    è un rischio, non un modello.
-</p>
-
-<h2>Non è una medaglia, è un segnale</h2>
-
-<p>
-    Fare il lavoro di un intero team per un po' può farti crescere tantissimo,
-    tecnicamente e caratterialmente.
-    Ma se diventa la normalità, non è una medaglia al valore: è un segnale che qualcosa
-    nell'organizzazione non funziona.
+    Una persona sola — io — a progettarlo, svilupparlo, mantenerlo, supportarlo,
+    spiegarlo e tenerlo in vita.
 </p>
 
 <p>
-    KernelMe, per me, è anche questo: uno spazio dove rimettere in ordine le cose che ho imparato,
-    raccontare il dietro le quinte e ricordarmi che il prossimo passo della mia carriera
-    deve avere una parola chiave chiara: <strong>equilibrio</strong>.
+    Tre anni di lavoro. <strong>Mai andato in produzione.</strong>
+</p>
+
+<p>
+    Lascio un momento di silenzio per far assorbire questa informazione.
+</p>
+
+<h2>La visione strategica</h2>
+
+<p>
+    Il motivo per cui il sistema non ha mai visto un utente reale non è tecnico.
+    Il codice funzionava. L'architettura reggeva.
+</p>
+
+<p>
+    Il motivo è che le decisioni venivano prese da persone che non capivano cosa stavano decidendo.
+    Requisiti cambiati settimana dopo settimana. Priorità ribaltate senza preavviso.
+    E a un certo punto la proposta definitiva: cambiare l'architettura intera in corsa,
+    per inseguire un trial clinico importante che avrebbe dovuto essere <em>la svolta</em>.
+</p>
+
+<p>
+    La decisione è stata presa senza una stima dei tempi reali. Senza capire cosa significava
+    tecnicamente. Con la certezza tipica di chi non ha mai scritto una riga di codice
+    che <em>"non dovrebbe essere complicato"</em>.
+</p>
+
+<p>
+    Il trial non è arrivato. Meno male — perché non eravamo pronti.
+    Non lo era il software, non lo era l'azienda.
+</p>
+
+<p>
+    Alla riunione successiva, chi aveva proposto e approvato quella strategia ha guardato il soffitto
+    con l'espressione di chi stava pensando ai fatti suoi.
+    Nessuna parola. Nessuna responsabilità. <strong>Classe cristallina.</strong>
+</p>
+
+<h2>Il paradosso del developer invisibile</h2>
+
+<p>
+    Tre anni su un progetto che non è mai andato in produzione insegnano una cosa precisa:
+    puoi fare tutto bene e finire comunque nel niente,
+    se intorno a te nessuno sa dove sta andando.
+</p>
+
+<p>
+    Non è un fallimento tecnico. È un fallimento organizzativo che ricade su chi ha lavorato davvero.
+</p>
+
+<p>
+    La cosa più bizzarra? Durante quei tre anni il progetto veniva presentato all'esterno
+    come una priorità assoluta. Nelle slide era sempre <em>"quasi pronto"</em>.
+    Nelle riunioni interne era sempre <em>"ci manca poco"</em>.
+    Nel mio computer era una cosa seria che meritava tempo, risorse e decisioni coerenti —
+    tre cose che non sono mai arrivate insieme nello stesso momento.
+</p>
+
+<h2>Il finale</h2>
+
+<p>
+    Ho rassegnato le dimissioni.
+    Sono stato incoraggiato ad anticipare le ferie — presumibilmente per gestire meglio
+    la narrativa interna durante la mia assenza.
+</p>
+
+<p>
+    Ho accettato con piacere. Ferie pagate mentre altri gestiscono narrazioni
+    sono sempre un buon compromesso.
+</p>
+
+<p>
+    Un mese dopo firmavo con un'altra azienda.
+</p>
+
+<h2>Quello che mi porto dietro</h2>
+
+<p>
+    Ho imparato a vedere i sistemi interi, non solo i ticket.
+    Ho imparato che saper leggere un'organizzazione vale quanto saper scrivere codice.
+    Ho imparato a riconoscere presto le aziende che cercano eroi solitari da consumare —
+    e a non candidarmi.
+</p>
+
+<p>
+    E ho imparato la lezione più importante, quella che non trovi in nessun corso online:
+</p>
+
+<blockquote>
+    <p>
+        Un progetto che non va mai in produzione non è un progetto.
+        È una scusa per non decidere mai niente — pagata da chi lavora davvero.
+    </p>
+    <p>
+        <strong>Sapere quando andarsene è una competenza tecnica.</strong>
+    </p>
+</blockquote>
+
+<p>
+    KernelMe è il posto dove metto queste cose per iscritto.
+    Perché ricordarsi da dove si viene aiuta a capire dove si vuole andare.
 </p>
 HTML,
                 "featured_image" => "posts/solo-dev-vs-team-di-10.webp",
@@ -147,14 +159,13 @@ HTML,
         ];
 
         for ($i = 0; $i < 1; $i++) {
-            // create
             Post::create([
                 "title" => $data[$i]["title"],
                 "subtitle" => $data[$i]["subtitle"],
                 "slug" => Str::slug($data[$i]["title"]),
                 "content" => $data[$i]["content"],
                 "excerpt" => $data[$i]["excerpt"],
-                "date" => Carbon::now(),
+                "date" => Carbon::create(2025, 1, 27),
                 "tags" => $data[$i]["tags"],
                 "read_time" => "4 min",
                 "featured_image" => $data[$i]["featured_image"],
