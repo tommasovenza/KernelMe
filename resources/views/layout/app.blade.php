@@ -10,10 +10,10 @@
     <title>
         @yield('title', 'Tommaso Venza | Laravel, PHP and JS Web Developer')
     </title>
-
+    {{-- Google Site Verification --}}
+    <meta name="google-site-verification" content="rVlyrpC5Iws3rTVsW-kcUWIaq9wXMJdCpl8SHu5zL5Q" />
     {{-- Meta description con fallback --}}
     <meta name="description" content="@yield('meta_description', 'Portfolio of Tommaso Venza, web developer working with Laravel, PHP and JavaScript. I build web applications, internal tools and content-driven sites.')">
-
     {{-- Open Graph base --}}
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Tommaso Venza">
