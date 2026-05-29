@@ -7,6 +7,9 @@ export default {
     ],
     // safelist: ['bg-green-500', 'bg-red-500'],
     theme: {
+        screen: {
+            xs: '400px'
+        },
         extend: {
             fontFamily: {
                 body: ['Inter', 'sans-serif']

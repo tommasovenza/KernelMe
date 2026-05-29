@@ -38,7 +38,7 @@
                         <div class="info-read">
                             <strong><i class="fa-solid fa-clock"></i></strong> <span>{{ $post->read_time }} read</span>
                         </div>
-                        <div class="info flex justify-between items-center gap-4">
+                        <div class="info flex flex-col md:flex-row justify-between items-center gap-4">
                             <div class="date">
                                 <span>{{ date('M d, Y', strtotime($post->date)) }}</span>
                             </div>

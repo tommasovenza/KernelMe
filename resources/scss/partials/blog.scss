@@ -1,11 +1,13 @@
 .blog-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 }
 .blog-container .post {
     border: 0.5px solid var(--text-color);
     padding: 2em;
-    transition: background-color 0.15s ease, transform 0.15s ease,
+    transition:
+        background-color 0.15s ease,
+        transform 0.15s ease,
         box-shadow 0.15s ease;
 }
 .blog-container .post:hover {
