@@ -6,11 +6,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class Entry extends Model
 {
-    //
+    // Fillable
     protected $fillable = [
         'date',
         'time',
         'type',
         'notes'
+    ];
+
+    // Casts
+    protected $casts = [
+        'date' => 'date',
     ];
 }

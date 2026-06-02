@@ -5,6 +5,7 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\LastFmController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\TestController;
 use App\Models\Post;
 
 // Home Route
@@ -62,3 +63,6 @@ Route::get('/sitemap.xml', function () {
         ->view('sitemap', compact('posts'))
         ->header('Content-Type', 'application/xml');
 });
+
+// Test Route
+Route::get('/test', [TestController::class, 'test']);
