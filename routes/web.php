@@ -6,6 +6,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\LastFmController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\TestController;
+use App\Http\Controllers\TimesheetController;
 use App\Models\Post;
 
 // Home Route
@@ -66,3 +67,9 @@ Route::get('/sitemap.xml', function () {
 
 // Test Route
 Route::get('/test', [TestController::class, 'test']);
+
+// Timesheet Route
+// Admin Routes for adding new Timesheet Entry
+Route::middleware(['auth', 'throttle:20,1'])->group(function () {
+    Route::get('/timesheet/create', [TimesheetController::class, 'timesheetCreate'])->name('timesheet.create');
+});
