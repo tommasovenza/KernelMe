@@ -1,0 +1,54 @@
+.new-timesheet-form-wrapper {
+    border: 1em;
+}
+.timesheet-summary {
+    width: 100%;
+    background-color: beige;
+    padding: 1em;
+    color: #333;
+    border-radius: 0.6em;
+}
+.timesheet-summary .current-month {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.timesheet-summary .timesheet-summary-controls,
+.timesheet-summary .arrow-controls,
+.timesheet-summary .left,
+.timesheet-summary .right,
+.timesheet-summary .time,
+.timesheet-summary .time-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.timesheet-summary .time-heading {
+    flex-direction: column;
+}
+
+.arrow-controls {
+    gap: 0.5em;
+    cursor: pointer;
+}
+
+.arrow-controls .left,
+.arrow-controls .right {
+    background-color: white;
+    padding: 0.3em 0.8em;
+    border-radius: 0.6em;
+    font-size: 1.325em;
+}
+
+.timesheet-summary .time {
+    width: 100%;
+    height: 100px;
+    padding: 0.3em 0.8em;
+    border-radius: 0.6em;
+    background-color: var(--text-secondary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.timesheet-summary .time h3 {
+    font-size: 1.5em;
+}
