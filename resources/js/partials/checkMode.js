@@ -1,45 +1,36 @@
 // Element
+const body = document.body
 const icon = document.querySelector('.icon')
 const iconMobile = document.querySelector('.icon-mobile')
-// initial mode
-let lightMode = false
+let whichMode = localStorage.getItem('light-dark-mode') || 'dark'
 
 function checkLightDarkMode() {
-    if (localStorage.getItem('light-dark-mode') !== null) {
-        const whichMode = localStorage.getItem('light-dark-mode')
-
-        const body = document.body
-        if (whichMode === 'dark') {
-            body.classList.add('dark-theme')
-            icon.innerHTML = `<i class="fa-solid fa-sun"></i>`
-            iconMobile.innerHTML = `<i class="fa-solid fa-sun"></i>`
-        } else {
-            body.classList.remove('dark-theme')
-            icon.innerHTML = `<i class="fa-solid fa-moon"></i>`
-            iconMobile.innerHTML = `<i class="fa-solid fa-moon"></i>`
-            localStorage.setItem('light-dark-mode', 'light')
-            lightMode = true
-        }
+    // check
+    if (whichMode === 'dark') {
+        body.classList.add('dark-theme')
+        icon.innerHTML = `<i class="fa-solid fa-sun"></i>`
+        iconMobile.innerHTML = `<i class="fa-solid fa-sun"></i>`
+    } else {
+        body.classList.remove('dark-theme')
+        icon.innerHTML = `<i class="fa-solid fa-moon"></i>`
+        iconMobile.innerHTML = `<i class="fa-solid fa-moon"></i>`
     }
+    localStorage.setItem('light-dark-mode', whichMode)
 }
 
 function changeMode(e) {
-    //
-    console.log(e.target)
-
     if (e.target.classList.contains('fa-moon')) {
-        lightMode = false
-        localStorage.setItem('light-dark-mode', 'dark')
+        whichMode = 'dark'
+        localStorage.setItem('light-dark-mode', whichMode)
     } else {
-        lightMode = true
-        localStorage.setItem('light-dark-mode', 'light')
+        whichMode = 'light'
+        localStorage.setItem('light-dark-mode', whichMode)
     }
     checkLightDarkMode()
 }
 
-// event listener
+// Dark/Light Mode on Desktop and Mobile
 icon.addEventListener('click', changeMode)
-// event listener for changing Dark/Light Mode on Mobile
 iconMobile.addEventListener('click', changeMode)
 // init
 checkLightDarkMode()
