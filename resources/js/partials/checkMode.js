@@ -1,11 +1,10 @@
-// Element
+// Elements
 const body = document.body
 const icon = document.querySelector('.icon')
 const iconMobile = document.querySelector('.icon-mobile')
 let whichMode = localStorage.getItem('light-dark-mode') || 'dark'
 
 function checkLightDarkMode() {
-    // check
     if (whichMode === 'dark') {
         body.classList.add('dark-theme')
         icon.innerHTML = `<i class="fa-solid fa-sun"></i>`
@@ -15,17 +14,17 @@ function checkLightDarkMode() {
         icon.innerHTML = `<i class="fa-solid fa-moon"></i>`
         iconMobile.innerHTML = `<i class="fa-solid fa-moon"></i>`
     }
-    localStorage.setItem('light-dark-mode', whichMode)
 }
 
 function changeMode(e) {
     if (e.target.classList.contains('fa-moon')) {
         whichMode = 'dark'
-        localStorage.setItem('light-dark-mode', whichMode)
     } else {
         whichMode = 'light'
-        localStorage.setItem('light-dark-mode', whichMode)
     }
+    // save state in localStorage
+    localStorage.setItem('light-dark-mode', whichMode)
+    // reapply theme and icons
     checkLightDarkMode()
 }
 

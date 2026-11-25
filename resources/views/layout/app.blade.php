@@ -31,7 +31,7 @@
     @vite(['resources/css/app.css', 'resources/scss/app.scss', 'resources/js/app.js'])
 </head>
 
-<body>
+<body class="dark-theme">
     <header class="header">
         <div class="container">
             <div class="logo">
